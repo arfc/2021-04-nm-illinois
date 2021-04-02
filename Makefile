@@ -1,4 +1,4 @@
-manuscript = title
+manuscript = 2021-04-nm-illinois
 references = $(wildcard *.bib)
 latexopt   = -halt-on-error -file-line-error
 
