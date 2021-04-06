@@ -41,3 +41,16 @@ standards.
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|
 | Nuclear Plant | 1000 | 1989 | 2029 | 0.92 | [1] | pg. 1|
+
+#### References
+[1] I made up some numbers -- don't do that.
+
+
+### Energy Cost
+|Generation|Fixed Cost [M$/MW]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Source|Page Numbers|
+|:-----|-----:|-----:|-----:|-----:|-----:|
+|Natural Gas|||||
+|Solar Power|||||
+|Wind Power|||||
+|Coal|||||
+|Nuclear|||||
