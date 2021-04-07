@@ -53,8 +53,8 @@ provide a reference.
 |Generation|Fixed Cost [M$/MW]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
 |Natural Gas||||||
-|Solar Power|||N/A|||
-|Wind Power|||N/A|||
+|Solar Power||||N/A||
+|Wind Power||||N/A||
 |Coal||||||
 |Nuclear||||||
 
@@ -74,6 +74,8 @@ provide a reference.
 |Wind|||N/A|N/A|N/A||||
 |Coal|||||N/A|N/A|||
 |Nuclear|||N/A|N/A|N/A|N/A|||
+
+
 \* CO2eq should be the "life cycle" emissions of each energy source.
 
 ### Jobs*
