@@ -58,9 +58,10 @@ provide a reference.
 |Coal||||||
 |Nuclear||||||
 
+
 ### Electricity Demand in Illinois
 |Scenario|Average Demand in 2050 [TWh]|Source|Notes|
-|:-------|------:|:-------:|:---------------------:|
+|:-------|------:|:-------:|:---------------------|
 |Steady Demand|140.7|EIA (full citation needed)|Demand has remained flat for the last ten years. This scenario extends that trend.|
 |High Demand|||Illinois transportation is fully electrified by 2050. How much will that increase the electricity demand?|
 
