@@ -58,5 +58,38 @@ provide a reference.
 |Coal|||||
 |Nuclear|||||
 
+### Electricity Demand in Illinois
+|Scenario|Average Demand in 2050 [TWh]|Source|Notes|
+|:-------|------:|:-------:|:---------------------:|
+|Steady Demand|140.7|EIA (full citation needed)|Demand has remained flat for the last ten years. This scenario extends that trend.|
+|High Demand|||Illinois transportation is fully electrified by 2050. How much will that increase the electricity demand?|
+
+
+### Waste and Consequences
+|Generation|Power Density [MW/km^2]|CO2eq* [tCO2eq/MWh]|CO2 [tCO2/MWh]||NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste [kg/MWh]|Source|Page Numbers|
+|:--------|----:|----:|----:|----:|----:|----:|----:|----:|
+|Natural Gas|||||N/A|N/A|||
+|Solar|||||||||
+|Wind|||N/A|N/A|N/A||||
+|Coal|||||N/A|N/A|||
+|Nuclear|||N/A|N/A|N/A|N/A|||
+
+
+### Jobs
+
+|Generation|Manufacturing|Installation|Operation|End-of-life|Source|Page Numbers|
+|:------|------:|------:|------:|------:|------:|------:|
+|Natural Gas|||||||
+|Solar|||||||
+|Wind|||||||
+|Coal|||||||
+|Nuclear|||||||
+
+\*"Jobs" are measured in labour-years per MWh. Also "job-years" per MWh. This
+unit is superior to simply counting the number of employed individuals because
+it accounts for differences in career span. For example, nuclear power plants
+require more employees during plant operation than a solar farm. Thus, "job-
+years."
+
 ### References
 [1] I made up some numbers -- don't do that.
