@@ -45,7 +45,8 @@ standards.
 lifespan for that technology. Indicate that this is the case and provide a
 reference. <br>
 \*\* If a capacity factor is not available, this can be estimated using a
-typical capacity factor for that capacity.
+typical capacity factor for that technology. Indicate that this is the case and
+provide a reference.
 
 #### References
 [1] I made up some numbers -- don't do that.
