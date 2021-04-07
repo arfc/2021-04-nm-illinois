@@ -66,7 +66,7 @@ provide a reference.
 
 
 ### Waste and Consequences
-|Generation|Power Density [MW/km^2]|CO2eq* [tCO2eq/MWh]|CO2 [tCO2/MWh]||NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste [kg/MWh]|Source|Page Numbers|
+|Generation|Power Density [MW/km^2]|CO2eq* [tCO2eq/MWh]|CO2 [tCO2/MWh]|NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste [kg/MWh]|Source|Page Numbers|
 |:--------|----:|----:|----:|----:|----:|----:|----:|----:|
 |Natural Gas|||||N/A|N/A|||
 |Solar|||||||||
