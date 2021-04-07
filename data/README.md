@@ -48,9 +48,6 @@ reference. <br>
 typical capacity factor for that technology. Indicate that this is the case and
 provide a reference.
 
-#### References
-[1] I made up some numbers -- don't do that.
-
 
 ### Energy Cost
 |Generation|Fixed Cost [M$/MW]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Source|Page Numbers|
@@ -60,3 +57,6 @@ provide a reference.
 |Wind Power|||||
 |Coal|||||
 |Nuclear|||||
+
+### References
+[1] I made up some numbers -- don't do that.
