@@ -20,14 +20,14 @@ standards.
 
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
-| Solar Farm | 50 | 2016 | 2041 | 0.19 |-| [1] | pg. 1|
+| Solar Farm | 50 | 2016 | 2041 | 0.19 |N/A| [1] | pg. 1|
 
 
 #### Wind Farms
 
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
-| Wind Farm | 100.5 | 2009 | 2034 | 0.33 |-| [1] | pg. 1|
+| Wind Farm | 100.5 | 2009 | 2034 | 0.33 |N/A| [1] | pg. 1|
 
 #### Coal
 
@@ -53,8 +53,8 @@ provide a reference.
 |Generation|Fixed Cost [M$/MW]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
 |Natural Gas||||||
-|Solar Power||||||
-|Wind Power||||||
+|Solar Power|||N/A|||
+|Wind Power|||N/A|||
 |Coal||||||
 |Nuclear||||||
 
