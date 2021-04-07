@@ -35,12 +35,15 @@ standards.
 |:------|------:|------:|------:|------:|------:|------:|
 | Coal Plant | 500 | 1997 | 2037 | 0.55 | [1] | pg. 1|
 
-
 #### Nuclear
 
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|
 | Nuclear Plant | 1000 | 1989 | 2029 | 0.92 | [1] | pg. 1|
+
+\* If a retirement year is unavailable, this can be estimated using a typical
+lifespan for that technology. Indicate that this is the case and provide a
+reference.
 
 #### References
 [1] I made up some numbers -- don't do that.
