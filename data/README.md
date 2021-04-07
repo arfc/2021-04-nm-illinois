@@ -50,13 +50,13 @@ provide a reference.
 
 
 ### Energy Cost
-|Generation|Fixed Cost [M$/MW]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Source|Page Numbers|
-|:-----|-----:|-----:|-----:|-----:|-----:|
-|Natural Gas|||||
-|Solar Power|||||
-|Wind Power|||||
-|Coal|||||
-|Nuclear|||||
+|Generation|Fixed Cost [M$/MW]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
+|:-----|-----:|-----:|-----:|------:|-----:|-----:|
+|Natural Gas||||||
+|Solar Power||||||
+|Wind Power||||||
+|Coal||||||
+|Nuclear||||||
 
 ### Electricity Demand in Illinois
 |Scenario|Average Demand in 2050 [TWh]|Source|Notes|
