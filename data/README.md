@@ -82,11 +82,11 @@ provide a reference.
 ### Waste and Consequences
 |Generation|Power Density [MW/km^2]|CO2eq*[tCO2eq/MWh]|CO2 [tCO2/MWh]|NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste [kg/MWh]|Source|Page Numbers|
 |:--------|----:|----:|----:|----:|----:|----:|----:|----:|----:|
-|Natural Gas|||||N/A|N/A|||
-|Solar|||N/A|N/A|N/A||||
-|Wind|||N/A|N/A|N/A||||
-|Coal|||||N/A|N/A|||
-|Nuclear|||N/A|N/A|N/A|N/A|||
+|Natural Gas||||||N/A|N/A||
+|Solar|||N/A|N/A|N/A|N/A|||
+|Wind|||N/A|N/A|N/A|N/A|||
+|Coal||||||N/A|N/A||
+|Nuclear|||N/A|N/A|N/A||N/A||
 
 
 \* CO2eq should be the "life cycle" emissions of each energy source.
