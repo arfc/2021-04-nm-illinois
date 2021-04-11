@@ -70,6 +70,44 @@ standards.
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
 | Coal Plant | 500 | 1997 | 2037 | 0.55 |0.40| [1] | pg. 1|
+Joppa Steam	| 183.3|	1953|	 | | | |
+Joppa Steam	| 183.3|	1953|	 | | | |
+Joppa Steam	| 183.3|	1954|	 | | | |
+Joppa Steam	| 183.3|	1954|	 | | | |
+Joppa Steam	| 183.3|	1955|	 | | | |
+Joppa Steam	| 183.3|	1955|	 | | | |
+Waukegan|	326.4|	1958| | | | |
+Waukegan|	355.3|	1962| | | | |
+Marion|	33.0|	1963| | | | |
+Marion|	33.0|	1963| | | | |
+Marion|	33.0|	1963| | | | |
+Will County|	598.4 |	1963|| | | |
+Kincaid Generation LLC|	659.5|	1967|| | | |
+Kincaid Generation LLC|	659.5|	1968|| | | |
+E D Edwards|	280.5|	1968|	| | | |
+Baldwin Energy Complex|	625.1|	1970| | | | |
+Powerton|	892.8|	1972|| | | |
+E D Edwards|	363.8|	1972|| | | |
+Baldwin Energy Complex|	634.5|	1973|| | | |
+Powerton|	892.8|	1975|	| | | |
+Baldwin Energy Complex|	634.5|	1975|| | | |
+Newton|	617.4|	1977|| | | |
+Marion|	173.0|	1978|| | | |
+Dallman|	207.3|	1978|| | | |
+Archer Daniels Midland Decatur|	31.0|	1987|	| | | |
+Archer Daniels Midland Decatur|	31.0|	1987|	| | | |
+Archer Daniels Midland Decatur|	31.0|	1987|	| | | |
+Archer Daniels Midland Decatur|	31.0|	1987|	| | | |
+Tate & Lyle Decatur Plant Cogen|	64.8|	1989| | | | |
+Ingredion Incorporated|	22.5|	1991|| | | |
+Ingredion Incorporated|	22.5|	1991|| | | |
+Archer Daniels Midland Decatur|	31.0|	1994|| | | |
+Archer Daniels Midland Decatur|	75.0|	1997|| | | |
+SIUC|	3.5|	1998|| | | |
+Archer Daniels Midland Decatur|	105.0|	2005|| | | |
+Dallman|	230.1|	2009|	| | | |
+Prairie State Generating Station|	883.0|	2012|| | | |
+Prairie State Generating Station|	883.0|	2012|| | | |
 
 #### Nuclear
 
