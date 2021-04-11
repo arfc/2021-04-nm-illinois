@@ -12,6 +12,27 @@ CREATE TABLE "time_periods" (
 	FOREIGN KEY("flag") REFERENCES "time_period_labels"("t_period_labels"),
 	PRIMARY KEY("t_periods")
 );
+-- Periods when coal plants were built
+INSERT INTO `time_periods` VALUES (1953,'e');
+INSERT INTO `time_periods` VALUES (1954,'e');
+INSERT INTO `time_periods` VALUES (1955,'e');
+INSERT INTO `time_periods` VALUES (1958,'e');
+INSERT INTO `time_periods` VALUES (1962,'e');
+INSERT INTO `time_periods` VALUES (1963,'e');
+INSERT INTO `time_periods` VALUES (1967,'e');
+INSERT INTO `time_periods` VALUES (1968,'e');
+INSERT INTO `time_periods` VALUES (1970,'e');
+INSERT INTO `time_periods` VALUES (1973,'e');
+INSERT INTO `time_periods` VALUES (1975,'e');
+INSERT INTO `time_periods` VALUES (1977,'e');
+INSERT INTO `time_periods` VALUES (1978,'e');
+INSERT INTO `time_periods` VALUES (1989,'e');
+INSERT INTO `time_periods` VALUES (1991,'e');
+INSERT INTO `time_periods` VALUES (1994,'e');
+INSERT INTO `time_periods` VALUES (1997,'e');
+INSERT INTO `time_periods` VALUES (1998,'e');
+
+
 -- Periods when nuclear plants were built
 INSERT INTO `time_periods` VALUES (1969,'e');
 INSERT INTO `time_periods` VALUES (1971,'e');
@@ -127,8 +148,10 @@ INSERT INTO `technologies` VALUES ('DRESDEN_U3','p','electric','Dresden Unit 3',
 INSERT INTO `technologies` VALUES ('BRAIDWOOD_U1','p','electric','Braidwood Unit 1','uranium');
 INSERT INTO `technologies` VALUES ('BRAIDWOOD_U2','p','electric','Braidwood Unit 2','uranium');
 INSERT INTO `technologies` VALUES ('CLINTON_U1','p','electric','Clinton Unit 1','uranium');
-INSERT INTO `technologies` VALUES ('NATGAS_PLANT','p','electric','Natural Gas Plants','natural gas');
-INSERT INTO `technologies` VALUES ('COAL_PLANT','p','electric','Coal Power Plants','coal');
+INSERT INTO `technologies` VALUES ('NATGAS_PLANT_NEW','p','electric','Natural Gas Plants -- New','natural gas');
+INSERT INTO `technologies` VALUES ('NATGAS_PLANT_EXISTING','p','electric','Natural Gas Plants -- Existing','natural gas');
+INSERT INTO `technologies` VALUES ('COAL_PLANT_NEW','p','electric','Coal Power Plants -- New','coal');
+INSERT INTO `technologies` VALUES ('COAL_PLANT_EXISTING','p','electric','Coal Power Plants -- Existing','coal');
 INSERT INTO `technologies` VALUES ('WIND_FARM','p','electric','Wind Farm','wind power');
 INSERT INTO `technologies` VALUES ('SOLAR_FARM','p','electric','SOLAR_FARMar Farm','SOLAR_FARMar power');
 
@@ -728,10 +751,12 @@ INSERT INTO `LifetimeTech` VALUES ('IL','DRESDEN_U2',60.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','DRESDEN_U3',60.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','CLINTON_U1',40.0,'');
 
-INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT',40.0,'');
-INSERT INTO `LifetimeTech` VALUES ('IL','COAL_PLANT',40.0,'');
-INSERT INTO `LifetimeTech` VALUES ('IL','WIND_FARM',40.0,'');
-INSERT INTO `LifetimeTech` VALUES ('IL','SOLAR_FARM',40.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT_EXISTING',40.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT_NEW',40.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','COAL_PLANT_EXISTING',80.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','COAL_PLANT_NEW',80.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','WIND_FARM',30.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','SOLAR_FARM',25.0,'');
 
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
@@ -850,6 +875,31 @@ INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2018, 25.2, 'MW', 'MW 
 INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2019, 105.3, 'MW', 'MW electric');
 INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2020, 253.9, 'MW', 'MW electric');
 
+-- IL Coal Capacity from EIA
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1953, 366.6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1954, 366.6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1955, 366.6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1958, 326.4 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1962, 355.3 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1963, 697.4 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1967, 659.5 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1968, 940.0 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1970, 625.1 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1972, 1256.6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1973, 634.5 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1975, 892.8 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1977, 617.4 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1978, 280.3 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1987, 124.0 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1989, 64.8 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1991, 45.0 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1994, 355.3 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1997, 355.3 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1998, 3.5 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2005, 105.0 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2009, 230.1 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2012, 1766.0 'MW','MWe');
+
 
 CREATE TABLE "EmissionLimit" (
 	"regions"	text,
@@ -898,6 +948,8 @@ CREATE TABLE "Efficiency" (
 The efficiency for all technologies is unity until the fuel commodities are
 introduced.
 */
+
+-- EXISTING Nuclear Facilities
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'BYRON_U1', 1985, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'BYRON_U2', 1987, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'BRAIDWOOD_U1', 1987, 'ELC', 1.00, 'MWe to MWe');
@@ -910,25 +962,28 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'DRESDEN_U2', 1969, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'DRESDEN_U3', 1971, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'CLINTON_U1', 1987, 'ELC', 1.00, 'MWe to MWe');
 
+
+-- EXISTING Coal facilities
+
 -- 2020s
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2021, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2022, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2023, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2024, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2025, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2026, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2027, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2028, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2029, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2021, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2022, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2023, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2024, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2025, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2026, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2027, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2028, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2029, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2021, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2022, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2023, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2024, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2025, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2026, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2027, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2028, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2029, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2021, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2022, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2023, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2024, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2025, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2026, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2027, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2028, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2029, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2021, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2022, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2023, 'ELC', 1.00, 'MWe to MWe');
@@ -949,24 +1004,24 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2028, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2029, 'ELC', 1.00, 'MWe to MWe');
 
 -- 2030s
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2031, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2032, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2033, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2034, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2035, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2036, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2037, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2038, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2039, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2031, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2032, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2033, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2034, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2035, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2036, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2037, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2038, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2039, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2031, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2032, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2033, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2034, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2035, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2036, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2037, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2038, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2039, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2031, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2032, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2033, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2034, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2035, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2036, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2037, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2038, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2039, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2031, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2032, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2033, 'ELC', 1.00, 'MWe to MWe');
@@ -987,24 +1042,24 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2038, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2039, 'ELC', 1.00, 'MWe to MWe');
 
 -- 2040s
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2041, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2042, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2043, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2044, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2045, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2046, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2047, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2048, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2049, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2041, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2042, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2043, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2044, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2045, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2046, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2047, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2048, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2049, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2041, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2042, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2043, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2044, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2045, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2046, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2047, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2048, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2049, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2041, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2042, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2043, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2044, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2045, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2046, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2047, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2048, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2049, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2041, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2042, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2043, 'ELC', 1.00, 'MWe to MWe');
@@ -1024,8 +1079,8 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2047, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2048, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2049, 'ELC', 1.00, 'MWe to MWe');
 
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2050, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2050, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2050, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2050, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2050, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2050, 'ELC', 1.00, 'MWe to MWe');
 
@@ -1162,8 +1217,10 @@ INSERT INTO `CapacityToActivity` VALUES ('IL','QUAD_CITIES_U2',8.76,'MW capacity
 INSERT INTO `CapacityToActivity` VALUES ('IL','BRAIDWOOD_U1',8.76,'MW capacity to GWh');
 INSERT INTO `CapacityToActivity` VALUES ('IL','BRAIDWOOD_U2',8.76,'MW capacity to GWh');
 
-INSERT INTO `CapacityToActivity` VALUES ('IL','NATGAS_PLANT',8.76,'MW capacity to GWh');
-INSERT INTO `CapacityToActivity` VALUES ('IL','COAL_PLANT',8.76,'MW capacity to GWh');
+INSERT INTO `CapacityToActivity` VALUES ('IL','NATGAS_PLANT_EXISTING',8.76,'MW capacity to GWh');
+INSERT INTO `CapacityToActivity` VALUES ('IL','NATGAS_PLANT_NEW',8.76,'MW capacity to GWh');
+INSERT INTO `CapacityToActivity` VALUES ('IL','COAL_PLANT_EXISTING',8.76,'MW capacity to GWh');
+INSERT INTO `CapacityToActivity` VALUES ('IL','COAL_PLANT_NEW',8.76,'MW capacity to GWh');
 INSERT INTO `CapacityToActivity` VALUES ('IL','WIND_FARM',8.76,'MW capacity to GWh');
 INSERT INTO `CapacityToActivity` VALUES ('IL','SOLAR_FARM',8.76,'MW capacity to GWh');
 
@@ -1260,19 +1317,34 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','CLINTON_U1',0.92
 
 -- CAPACITY FACTORS FOR NON-NUCLEAR
 -- TO DO: Update the capacity factors for these technologies in winter.
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT_EXISTING',0.405,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT_NEW',0.405,'');
+
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT_EXISTING',0.55,'');
+
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT_NEW',0.55,'');
+
 
 INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','WIND_FARM',0.33,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','WIND_FARM',0.33,'');
