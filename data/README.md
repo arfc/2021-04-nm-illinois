@@ -23,7 +23,23 @@ standards.
 
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
-| Solar Farm | 50 | 2016 | 2041 | 0.19 |N/A| [1] | pg. 1|
+| Unnamed | 0.2 | 2007 | 2032*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2008 | 2033*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2009 | 2034*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2010 | 2035*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2011 | 2036*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2012 | 2037*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2013 | 2038*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2014 | 2039*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2015 | 2040*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2016 | 2041*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2017 | 2042*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2018 | 2043*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2020 | 2044*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed | 0.2 | 2019 | 2045*** | 0.19 |N/A| [5][6] | Website|
+
+
+\*\*\* Assumes a 25 year lifespan. Source coming...
 
 
 #### Wind Farms
@@ -112,4 +128,7 @@ years."
 [2] [EIA, Illinois Profile Overview](https://www.eia.gov/state/?sid=IL)
 [3] [Nuclear Regulatory Commission](https://www.nrc.gov/info-finder/region-state/illinois.html)
 [4] [EIA, Non-fossil fuel Capacity Factors](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_6_07_b)
+[5] [Solar Energy Industries Association](https://www.seia.org/state-solar-policy/illinois-solar)
+[6] [Solar Power in Illinois -- Wikipedia, needs better source](https://en.wikipedia.org/wiki/Solar_power_in_Illinois)
+[7] [Wind Exchange -- DOE-EERE](https://windexchange.energy.gov/maps-data/321)
 [1] I made up some numbers -- don't do that.
