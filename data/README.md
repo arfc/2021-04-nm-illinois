@@ -23,20 +23,20 @@ standards.
 
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
-| Unnamed | 0.2 | 2007 | 2032*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2008 | 2033*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2009 | 2034*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2010 | 2035*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2011 | 2036*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2012 | 2037*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2013 | 2038*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2014 | 2039*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2015 | 2040*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2016 | 2041*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2017 | 2042*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2018 | 2043*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2020 | 2044*** | 0.19 |N/A| [5][6] | Website|
-| Unnamed | 0.2 | 2019 | 2045*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2007 | 2032*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2008 | 2033*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2009 | 2034*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2010 | 2035*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2011 | 2036*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2012 | 2037*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2013 | 2038*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2014 | 2039*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2015 | 2040*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2016 | 2041*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2017 | 2042*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2018 | 2043*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2020 | 2044*** | 0.19 |N/A| [5][6] | Website|
+| Unnamed Solar Farm | 0.2 | 2019 | 2045*** | 0.19 |N/A| [5][6] | Website|
 
 
 \*\*\* Assumes a 25 year lifespan. Source coming...
