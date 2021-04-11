@@ -789,6 +789,14 @@ INSERT INTO `LifetimeLoanTech` VALUES ('IL','DRESDEN_U2', 40.0, 'initial license
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','DRESDEN_U3', 40.0, 'initial license is 40 yrs');
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','CLINTON_U1', 40.0, 'initial license is 40 yrs');
 
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','COAL_PLANT_NEW', 25.0, 'assume 25 year payoff period');
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','NATGAS_PLANT_NEW', 25.0, 'assume 25 year payoff period');
+
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','WIND_FARM', 10.0, 'assume 10 year payoff period');
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','SOLAR_FARM', 10.0, 'assume 10 year payoff period');
+
+
+
 CREATE TABLE "GrowthRateSeed" (
 	"regions"	text,
 	"tech"	text,
@@ -965,6 +973,30 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'CLINTON_U1', 1987, 'ELC', 1.00,
 
 -- EXISTING Coal facilities
 
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1953, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1954, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1955, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1958, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1962, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1963, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1967, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1968, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1970, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1972, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1973, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1975, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1977, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1978, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1987, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1989, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1991, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1994, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1997, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1998, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 2005, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 2009, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 2012, 'ELC', 1.00, 'MWe to MWe');
+
 -- 2020s
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2021, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2022, 'ELC', 1.00, 'MWe to MWe');
@@ -1078,7 +1110,7 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2046, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2047, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2048, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2049, 'ELC', 1.00, 'MWe to MWe');
-
+-- 2050
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2050, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2050, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2050, 'ELC', 1.00, 'MWe to MWe');
