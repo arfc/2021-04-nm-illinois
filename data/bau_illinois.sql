@@ -1418,11 +1418,11 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','WIND_FARM',0.33,''
 INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','WIND_FARM',0.33,'');
 
 INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','SOLAR_FARM',0.19,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','SOLAR_FARM',0.19,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','SOLAR_FARM',0.19,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_FARM',0.19,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','SOLAR_FARM',0.19,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_FARM',0.19,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_FARM',0.0,'');
 
 
 CREATE TABLE "CapacityFactorProcess" (
