@@ -137,7 +137,7 @@ provide a reference.
 ### Energy Cost
 |Generation|Fixed Cost [M$/MW-year]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
-|Natural Gas||||||
+|Natural Gas|0.012382|0.972256|0.0000018978||[11][12]|Table 2; Table 1, p.7
 |Solar Power||||N/A||
 |Wind Power||||N/A||
 |Coal||||||
