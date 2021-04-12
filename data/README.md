@@ -139,7 +139,7 @@ provide a reference.
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
 |Natural Gas|0.0123816|0.972256|0.0000018978||[11][12]|Table 2; Table 1, p.7
 |Solar Power|0.0154769|1.332539|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
-|Wind Power|0.0267320|1.640555<sup>a</sup>|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
+|Wind Power|0.0267320|<sup>a</sup>1.640555|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
 |Coal - Existing|N/A<sup>b</sup>|N/A|0.0000416101||[14]| Website
 |Coal - New<sup>c</sup>|0.060426|5.963442|0.0000111434||[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
 |Nuclear - PWR|0.057347|4.313245|0.0000280305||[9][10][13]|p.2; Table 3, p.16;Table 3.4b, p.49
