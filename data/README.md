@@ -140,12 +140,15 @@ provide a reference.
 |Natural Gas|0.012382|0.972256|0.0000018978||[11][12]|Table 2; Table 1, p.7
 |Solar Power|0.0154769|1.332539|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
 |Wind Power|0.02673197|1.640555<sup>a</sup>|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
-|Coal||||||
+|Coal - Existing|N/A<sup>b</sup>|N/A|0.0000416||[14]| Website
+|Coal - New<sup>c</sup>|0.060426|5.9634421|0.0000111434||[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
 |Nuclear - PWR|0.057347|4.313245|0.000028||[9][10][13]|p.2; Table 3, p.16;Table 3.4b, p.49
 |Nuclear - SMR|0.096414|6.283130|0.000003||[11]|Table 2
 |Nuclear - Advanced|0.123450|6.130897|0.000002||[11][12]|Table 2; Table 1, p.7
 
-<sup>a</sup>The average value between S\&L and IEA since they are equally recent.
+<sup>a</sup>The average value between S\&L and IEA since they are equally recent.<br>
+<sup>b</sup>Assumes fully depreciated coal plant.<br>
+<sup>c</sup>Assumes new coal plants would be supercritical with 90\% carbon capture.
 
 ### Electricity Demand in Illinois
 |Scenario|Average Demand in 2050 [TWh]|Source|Notes|
@@ -196,4 +199,5 @@ years."
 [11] "Capital Costs and Performance Characteristics for Utility Scale Power Generating Technologies" (Sargent and Lundy, 2020)<br>
 [12] "Capital Cost Estimates for Utility Scale Electricity Generating Plants" (EIA, 2016)<br>
 [13] "Projected Costs of Generating Electricity" (IEA, 2020)<br>
+[14] "Lazard's LCOE Analysis, Version 14.0" (Lazard, 2020)<br>
 [1] I made up some numbers -- don't do that.
