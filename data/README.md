@@ -135,13 +135,13 @@ provide a reference.
 
 
 ### Energy Cost
-|Generation|Fixed Cost [M$/MW]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
+|Generation|Fixed Cost [M$/MW-year]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
 |Natural Gas||||||
 |Solar Power||||N/A||
 |Wind Power||||N/A||
 |Coal||||||
-|Nuclear||||||
+|Nuclear - PWR|0.057347|4.544496|0.000028|[9][10]||
 
 
 ### Electricity Demand in Illinois
@@ -188,4 +188,6 @@ years."
 [6] [Solar Power in Illinois -- Wikipedia, needs better source](https://en.wikipedia.org/wiki/Solar_power_in_Illinois)<br>
 [7] [Wind Exchange -- DOE-EERE](https://windexchange.energy.gov/maps-data/321)<br>
 [8] [Electric Generator Inventory -- EIA](https://www.eia.gov/electricity/data/eia860M/)<br>
+[9] "Nuclear Costs in Context" (NEI, 2018)
+[10] "Nuclear Power Economics and Project Structuring" (WNA, 2017)
 [1] I made up some numbers -- don't do that.
