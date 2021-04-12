@@ -139,12 +139,13 @@ provide a reference.
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
 |Natural Gas|0.012382|0.972256|0.0000018978||[11][12]|Table 2; Table 1, p.7
 |Solar Power||||N/A||
-|Wind Power||||N/A||
+|Wind Power|0.02673197|1.640555$^a$|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
 |Coal||||||
 |Nuclear - PWR|0.057347|4.313245|0.000028||[9][10][13]|p.2; Table 3, p.16;Table 3.4b, p.49
 |Nuclear - SMR|0.096414|6.283130|0.000003||[11]|Table 2
 |Nuclear - Advanced|0.123450|6.130897|0.000002||[11][12]|Table 2; Table 1, p.7
 
+$^a$The average value between S\&L and IEA since they are equally recent.
 
 ### Electricity Demand in Illinois
 |Scenario|Average Demand in 2050 [TWh]|Source|Notes|
