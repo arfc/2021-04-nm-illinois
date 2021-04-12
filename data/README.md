@@ -46,7 +46,24 @@ standards.
 
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
-| Wind Farm | 100.5 | 2009 | 2034 | 0.33 |N/A| [1] | pg. 1|
+| Unnamed Wind Farm | 50.4 | 2003 | 2033 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 0.7 | 2004 | 2034 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 56.1 | 2005 | 2035 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 0.0 | 2006 | 2036 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 592.2 | 2007 | 2037 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 215.7 | 2008 | 2038 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 632.4 | 2009 | 2039 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 497.1 | 2010 | 2040 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 697.4 | 2011 | 2041 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 826.0 | 2012 | 2042 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 0.0 | 2013 | 2043 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 0.0 | 2014 | 2044 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 274.0 | 2015 | 2045 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 184.0 | 2016 | 2046 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 306.0 | 2017 | 2047 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 529.0 | 2018 | 2048 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 489.0 | 2019 | 2049 | 0.33 |N/A| [7] | Website|
+| Unnamed Wind Farm | 1059.0 | 2020 | 2050 | 0.33 |N/A| [7] | Website|
 
 #### Coal
 
