@@ -24,7 +24,21 @@ INSERT INTO `time_periods` VALUES (1988,'e');
 
 INSERT INTO `time_periods` VALUES (1990,'e');
 INSERT INTO `time_periods` VALUES (2000,'e');
+
+-- Periods when solar and wind farms are built
+INSERT INTO `time_periods` VALUES (2007,'e');
+INSERT INTO `time_periods` VALUES (2008,'e');
+INSERT INTO `time_periods` VALUES (2009,'e');
 INSERT INTO `time_periods` VALUES (2010,'e');
+INSERT INTO `time_periods` VALUES (2011,'e');
+INSERT INTO `time_periods` VALUES (2012,'e');
+INSERT INTO `time_periods` VALUES (2013,'e');
+INSERT INTO `time_periods` VALUES (2014,'e');
+INSERT INTO `time_periods` VALUES (2015,'e');
+INSERT INTO `time_periods` VALUES (2016,'e');
+INSERT INTO `time_periods` VALUES (2017,'e');
+INSERT INTO `time_periods` VALUES (2018,'e');
+INSERT INTO `time_periods` VALUES (2019,'e');
 INSERT INTO `time_periods` VALUES (2020,'e');
 
 -- future periods
@@ -778,6 +792,7 @@ CREATE TABLE "ExistingCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","tech","vintage")
 );
+-- IL Nuclear Fleet
 INSERT INTO `ExistingCapacity` VALUES ('IL','BYRON_U1',1985,1215,'MW','MW electric');
 INSERT INTO `ExistingCapacity` VALUES ('IL','BYRON_U2',1987,1215,'MW','MW electric');
 INSERT INTO `ExistingCapacity` VALUES ('IL','BRAIDWOOD_U1',1987,1215,'MW','MW electric');
@@ -789,6 +804,22 @@ INSERT INTO `ExistingCapacity` VALUES ('IL','QUAD_CITIES_U2',1972,985,'MW','MW e
 INSERT INTO `ExistingCapacity` VALUES ('IL','DRESDEN_U2',1969,985,'MW','MW electric');
 INSERT INTO `ExistingCapacity` VALUES ('IL','DRESDEN_U3',1971,985,'MW','MW electric');
 INSERT INTO `ExistingCapacity` VALUES ('IL','CLINTON_U1',1987,1157,'MW','MW electric');
+
+-- IL Solar Capacity from SEIA
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2007, 0.2, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2008, 0.4, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2009, 1.7, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2010, 11.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2011, 0.7, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2012, 26.7, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2013, 0.5, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2014, 10.6, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2015, 11.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2016, 5.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2017, 11.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2018, 25.2, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2019, 105.3, 'MW', 'MW electric');
+INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2020, 253.9, 'MW', 'MW electric');
 
 
 CREATE TABLE "EmissionLimit" (
