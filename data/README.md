@@ -70,6 +70,44 @@ standards.
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
 | Coal Plant | 500 | 1997 | 2037 | 0.55 |0.40| [1] | pg. 1|
+Joppa Steam	| 183.3|	1953|	 | | | [8]|
+Joppa Steam	| 183.3|	1953|	 | | | [8]|
+Joppa Steam	| 183.3|	1954|	 | | | [8]|
+Joppa Steam	| 183.3|	1954|	 | | | [8]|
+Joppa Steam	| 183.3|	1955|	 | | | [8]|
+Joppa Steam	| 183.3|	1955|	 | | | [8]|
+Waukegan|	326.4|	1958| | | | [8]|
+Waukegan|	355.3|	1962| | | | [8]|
+Marion|	33.0|	1963| | | | [8]|
+Marion|	33.0|	1963| | | | [8]|
+Marion|	33.0|	1963| | | | [8]|
+Will County|	598.4 |	1963|| | | [8]|
+Kincaid Generation LLC|	659.5|	1967|| | | [8]|
+Kincaid Generation LLC|	659.5|	1968|| | | [8]|
+E D Edwards|	280.5|	1968|	| | | [8]|
+Baldwin Energy Complex|	625.1|	1970| | | | [8]|
+Powerton|	892.8|	1972|| | | [8]|
+E D Edwards|	363.8|	1972|| | | [8]|
+Baldwin Energy Complex|	634.5|	1973|| | | [8]|
+Powerton|	892.8|	1975|	| | | [8]|
+Baldwin Energy Complex|	634.5|	1975|| | | [8]|
+Newton|	617.4|	1977|| | | [8]|
+Marion|	173.0|	1978|| | | [8]|
+Dallman|	207.3|	1978|| | | [8]|
+Archer Daniels Midland Decatur|	31.0|	1987|	| | | [8]|
+Archer Daniels Midland Decatur|	31.0|	1987|	| | | [8]|
+Archer Daniels Midland Decatur|	31.0|	1987|	| | | [8]|
+Archer Daniels Midland Decatur|	31.0|	1987|	| | | [8]|
+Tate & Lyle Decatur Plant Cogen|	64.8|	1989| | | | [8]|
+Ingredion Incorporated|	22.5|	1991|| | | [8]|
+Ingredion Incorporated|	22.5|	1991|| | | [8]|
+Archer Daniels Midland Decatur|	31.0|	1994|| | | [8]|
+Archer Daniels Midland Decatur|	75.0|	1997|| | | [8]|
+SIUC|	3.5|	1998|| | | [8]|
+Archer Daniels Midland Decatur|	105.0|	2005|| | | [8]|
+Dallman|	230.1|	2009|	| | | [8]|
+Prairie State Generating Station|	883.0|	2012|| | | [8]|
+Prairie State Generating Station|	883.0|	2012|| | | [8]|
 
 #### Nuclear
 
@@ -141,11 +179,12 @@ require more employees during plant operation than a solar farm. Thus, "job-
 years."
 
 ### References
-[1] [Rockland Capital Generation](https://www.rocklandcapital.com/natural-gas-combined-cycle/)
-[2] [EIA, Illinois Profile Overview](https://www.eia.gov/state/?sid=IL)
-[3] [Nuclear Regulatory Commission](https://www.nrc.gov/info-finder/region-state/illinois.html)
-[4] [EIA, Non-fossil fuel Capacity Factors](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_6_07_b)
-[5] [Solar Energy Industries Association](https://www.seia.org/state-solar-policy/illinois-solar)
-[6] [Solar Power in Illinois -- Wikipedia, needs better source](https://en.wikipedia.org/wiki/Solar_power_in_Illinois)
-[7] [Wind Exchange -- DOE-EERE](https://windexchange.energy.gov/maps-data/321)
+[1] [Rockland Capital Generation](https://www.rocklandcapital.com/natural-gas-combined-cycle/)<br>
+[2] [EIA, Illinois Profile Overview](https://www.eia.gov/state/?sid=IL)<br>
+[3] [Nuclear Regulatory Commission](https://www.nrc.gov/info-finder/region-state/illinois.html)<br>
+[4] [EIA, Non-fossil fuel Capacity Factors](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_6_07_b)<br>
+[5] [Solar Energy Industries Association](https://www.seia.org/state-solar-policy/illinois-solar)<br>
+[6] [Solar Power in Illinois -- Wikipedia, needs better source](https://en.wikipedia.org/wiki/Solar_power_in_Illinois)<br>
+[7] [Wind Exchange -- DOE-EERE](https://windexchange.energy.gov/maps-data/321)<br>
+[8] [Electric Generator Inventory -- EIA](https://www.eia.gov/electricity/data/eia860M/)<br>
 [1] I made up some numbers -- don't do that.

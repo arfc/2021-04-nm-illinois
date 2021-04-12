@@ -12,6 +12,27 @@ CREATE TABLE "time_periods" (
 	FOREIGN KEY("flag") REFERENCES "time_period_labels"("t_period_labels"),
 	PRIMARY KEY("t_periods")
 );
+-- Periods when coal plants were built
+INSERT INTO `time_periods` VALUES (1953,'e');
+INSERT INTO `time_periods` VALUES (1954,'e');
+INSERT INTO `time_periods` VALUES (1955,'e');
+INSERT INTO `time_periods` VALUES (1958,'e');
+INSERT INTO `time_periods` VALUES (1962,'e');
+INSERT INTO `time_periods` VALUES (1963,'e');
+INSERT INTO `time_periods` VALUES (1967,'e');
+INSERT INTO `time_periods` VALUES (1968,'e');
+INSERT INTO `time_periods` VALUES (1970,'e');
+INSERT INTO `time_periods` VALUES (1973,'e');
+INSERT INTO `time_periods` VALUES (1975,'e');
+INSERT INTO `time_periods` VALUES (1977,'e');
+INSERT INTO `time_periods` VALUES (1978,'e');
+INSERT INTO `time_periods` VALUES (1989,'e');
+INSERT INTO `time_periods` VALUES (1991,'e');
+INSERT INTO `time_periods` VALUES (1994,'e');
+INSERT INTO `time_periods` VALUES (1997,'e');
+INSERT INTO `time_periods` VALUES (1998,'e');
+
+
 -- Periods when nuclear plants were built
 INSERT INTO `time_periods` VALUES (1969,'e');
 INSERT INTO `time_periods` VALUES (1971,'e');
@@ -127,8 +148,10 @@ INSERT INTO `technologies` VALUES ('DRESDEN_U3','p','electric','Dresden Unit 3',
 INSERT INTO `technologies` VALUES ('BRAIDWOOD_U1','p','electric','Braidwood Unit 1','uranium');
 INSERT INTO `technologies` VALUES ('BRAIDWOOD_U2','p','electric','Braidwood Unit 2','uranium');
 INSERT INTO `technologies` VALUES ('CLINTON_U1','p','electric','Clinton Unit 1','uranium');
-INSERT INTO `technologies` VALUES ('NATGAS_PLANT','p','electric','Natural Gas Plants','natural gas');
-INSERT INTO `technologies` VALUES ('COAL_PLANT','p','electric','Coal Power Plants','coal');
+INSERT INTO `technologies` VALUES ('NATGAS_PLANT_NEW','p','electric','Natural Gas Plants -- New','natural gas');
+INSERT INTO `technologies` VALUES ('NATGAS_PLANT_EXISTING','p','electric','Natural Gas Plants -- Existing','natural gas');
+INSERT INTO `technologies` VALUES ('COAL_PLANT_NEW','p','electric','Coal Power Plants -- New','coal');
+INSERT INTO `technologies` VALUES ('COAL_PLANT_EXISTING','p','electric','Coal Power Plants -- Existing','coal');
 INSERT INTO `technologies` VALUES ('WIND_FARM','p','electric','Wind Farm','wind power');
 INSERT INTO `technologies` VALUES ('SOLAR_FARM','p','electric','SOLAR_FARMar Farm','SOLAR_FARMar power');
 
@@ -433,10 +456,10 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2043,'BRAIDWOOD_U1',1215.0,'MWe','cannot 
 INSERT INTO `MaxCapacity` VALUES ('IL',2044,'BRAIDWOOD_U1',1215.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2045,'BRAIDWOOD_U1',1215.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2046,'BRAIDWOOD_U1',1215.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2047,'BRAIDWOOD_U1',1215.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'BRAIDWOOD_U1',1215.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'BRAIDWOOD_U1',1215.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'BRAIDWOOD_U1',1215.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'BRAIDWOOD_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'BRAIDWOOD_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'BRAIDWOOD_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'BRAIDWOOD_U1',0.0,'MWe','cannot be expanded');
 -- BRAIDWOOD UNIT 1
 INSERT INTO `MaxCapacity` VALUES ('IL',2021,'BRAIDWOOD_U2',1215.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2022,'BRAIDWOOD_U2',1215.0,'MWe','cannot be expanded');
@@ -465,9 +488,9 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2044,'BRAIDWOOD_U2',1215.0,'MWe','cannot 
 INSERT INTO `MaxCapacity` VALUES ('IL',2045,'BRAIDWOOD_U2',1215.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2046,'BRAIDWOOD_U2',1215.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2047,'BRAIDWOOD_U2',1215.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'BRAIDWOOD_U2',1215.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'BRAIDWOOD_U2',1215.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'BRAIDWOOD_U2',1215.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'BRAIDWOOD_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'BRAIDWOOD_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'BRAIDWOOD_U2',0.0,'MWe','cannot be expanded');
 -- LASALLE UNIT 1
 INSERT INTO `MaxCapacity` VALUES ('IL',2021,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2022,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
@@ -491,14 +514,14 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2039,'LASALLE_U1',1182.0,'MWe','cannot be
 INSERT INTO `MaxCapacity` VALUES ('IL',2040,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2041,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2042,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2043,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2044,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2045,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2046,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2047,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'LASALLE_U1',1182.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'LASALLE_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'LASALLE_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'LASALLE_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'LASALLE_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'LASALLE_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'LASALLE_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'LASALLE_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'LASALLE_U1',0.0,'MWe','cannot be expanded');
 -- LASALLE UNIT 2
 INSERT INTO `MaxCapacity` VALUES ('IL',2021,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2022,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
@@ -522,14 +545,14 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2039,'LASALLE_U2',1182.0,'MWe','cannot be
 INSERT INTO `MaxCapacity` VALUES ('IL',2040,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2041,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2042,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2043,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2044,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2045,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2046,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2047,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'LASALLE_U2',1182.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'LASALLE_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'LASALLE_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'LASALLE_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'LASALLE_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'LASALLE_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'LASALLE_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'LASALLE_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'LASALLE_U2',0.0,'MWe','cannot be expanded');
 -- QUAD CITIES UNIT 1
 INSERT INTO `MaxCapacity` VALUES ('IL',2021,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2022,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
@@ -542,25 +565,25 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2028,'QUAD_CITIES_U1',985.0,'MWe','cannot
 INSERT INTO `MaxCapacity` VALUES ('IL',2029,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2030,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2031,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2032,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2033,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2034,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2035,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2036,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2037,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2038,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2039,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2040,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2041,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2042,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2043,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2044,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2045,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2046,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2047,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'QUAD_CITIES_U1',985.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2032,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2033,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2034,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2035,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2036,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2037,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2038,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2039,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2040,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2041,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2042,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'QUAD_CITIES_U1',0.0,'MWe','cannot be expanded');
 -- QUAD CITIES UNIT 2
 INSERT INTO `MaxCapacity` VALUES ('IL',2021,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2022,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
@@ -573,25 +596,25 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2028,'QUAD_CITIES_U2',985.0,'MWe','cannot
 INSERT INTO `MaxCapacity` VALUES ('IL',2029,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2030,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2031,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2032,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2033,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2034,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2035,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2036,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2037,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2038,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2039,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2040,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2041,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2042,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2043,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2044,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2045,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2046,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2047,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'QUAD_CITIES_U2',985.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2032,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2033,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2034,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2035,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2036,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2037,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2038,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2039,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2040,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2041,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2042,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'QUAD_CITIES_U2',0.0,'MWe','cannot be expanded');
 -- DRESDEN UNIT 2
 INSERT INTO `MaxCapacity` VALUES ('IL',2021,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2022,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
@@ -601,28 +624,28 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2025,'DRESDEN_U2',985.0,'MWe','cannot be 
 INSERT INTO `MaxCapacity` VALUES ('IL',2026,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2027,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2028,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2029,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2030,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2031,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2032,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2033,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2034,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2035,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2036,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2037,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2038,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2039,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2040,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2041,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2042,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2043,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2044,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2045,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2046,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2047,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'DRESDEN_U2',985.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2029,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2030,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2031,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2032,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2033,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2034,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2035,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2036,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2037,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2038,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2039,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2040,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2041,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2042,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'DRESDEN_U2',0.0,'MWe','cannot be expanded');
 -- DRESDEN UNIT 3
 INSERT INTO `MaxCapacity` VALUES ('IL',2021,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2022,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
@@ -634,26 +657,26 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2027,'DRESDEN_U3',985.0,'MWe','cannot be 
 INSERT INTO `MaxCapacity` VALUES ('IL',2028,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2029,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2030,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2031,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2032,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2033,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2034,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2035,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2036,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2037,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2038,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2039,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2040,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2041,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2042,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2043,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2044,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2045,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2046,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2047,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'DRESDEN_U3',985.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2031,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2032,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2033,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2034,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2035,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2036,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2037,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2038,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2039,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2040,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2041,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2042,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'DRESDEN_U3',0.0,'MWe','cannot be expanded');
 -- CLINTON UNIT 1
 INSERT INTO `MaxCapacity` VALUES ('IL',2021,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2022,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
@@ -661,30 +684,62 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2023,'CLINTON_U1',1157.0,'MWe','cannot be
 INSERT INTO `MaxCapacity` VALUES ('IL',2024,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2025,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2026,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2027,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2028,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2029,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2030,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2031,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2032,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2033,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2034,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2035,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2036,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2037,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2038,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2039,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2040,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2041,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2042,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2043,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2044,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2045,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2046,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2047,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2048,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2049,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
-INSERT INTO `MaxCapacity` VALUES ('IL',2050,'CLINTON_U1',1157.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2027,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2028,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2029,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2030,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2031,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2032,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2033,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2034,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2035,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2036,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2037,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2038,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2039,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2040,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2041,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2042,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'CLINTON_U1',0.0,'MWe','cannot be expanded');
+
+-- COAL PLANTS
+INSERT INTO `MaxCapacity` VALUES ('IL',2021,'COAL_PLANT_EXISTING',10929.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2022,'COAL_PLANT_EXISTING',10929.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2023,'COAL_PLANT_EXISTING',10562.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2024,'COAL_PLANT_EXISTING',10196.3,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2025,'COAL_PLANT_EXISTING',9829.7,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2026,'COAL_PLANT_EXISTING',9829.7,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2027,'COAL_PLANT_EXISTING',9829.7,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2028,'COAL_PLANT_EXISTING',9503.3,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2029,'COAL_PLANT_EXISTING',9503.3,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2030,'COAL_PLANT_EXISTING',9503.3,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2031,'COAL_PLANT_EXISTING',9503.3,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2032,'COAL_PLANT_EXISTING',9148.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2033,'COAL_PLANT_EXISTING',8450.6,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2034,'COAL_PLANT_EXISTING',8450.6,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2035,'COAL_PLANT_EXISTING',8450.6,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2036,'COAL_PLANT_EXISTING',8450.6,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2037,'COAL_PLANT_EXISTING',7791.1,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2038,'COAL_PLANT_EXISTING',6851.1,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2039,'COAL_PLANT_EXISTING',6851.1,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2040,'COAL_PLANT_EXISTING',6226.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2041,'COAL_PLANT_EXISTING',6226.0,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2042,'COAL_PLANT_EXISTING',4969.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'COAL_PLANT_EXISTING',4334.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'COAL_PLANT_EXISTING',4334.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'COAL_PLANT_EXISTING',3442.1,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'COAL_PLANT_EXISTING',3442.1,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'COAL_PLANT_EXISTING',2824.7,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'COAL_PLANT_EXISTING',2544.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'COAL_PLANT_EXISTING',2544.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'COAL_PLANT_EXISTING',2544.4,'MWe','cannot be expanded');
 
 -- NON NUCLEAR CAPACITY
 -- TO DO : Add non-nuclear capacity
@@ -728,10 +783,12 @@ INSERT INTO `LifetimeTech` VALUES ('IL','DRESDEN_U2',60.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','DRESDEN_U3',60.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','CLINTON_U1',40.0,'');
 
-INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT',40.0,'');
-INSERT INTO `LifetimeTech` VALUES ('IL','COAL_PLANT',40.0,'');
-INSERT INTO `LifetimeTech` VALUES ('IL','WIND_FARM',40.0,'');
-INSERT INTO `LifetimeTech` VALUES ('IL','SOLAR_FARM',40.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT_EXISTING',40.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT_NEW',40.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','COAL_PLANT_EXISTING',70.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','COAL_PLANT_NEW',70.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','WIND_FARM',30.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','SOLAR_FARM',25.0,'');
 
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
@@ -763,6 +820,14 @@ INSERT INTO `LifetimeLoanTech` VALUES ('IL','QUAD_CITIES_U2', 40.0, 'initial lic
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','DRESDEN_U2', 40.0, 'initial license is 40 yrs');
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','DRESDEN_U3', 40.0, 'initial license is 40 yrs');
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','CLINTON_U1', 40.0, 'initial license is 40 yrs');
+
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','COAL_PLANT_NEW', 25.0, 'assume 25 year payoff period');
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','NATGAS_PLANT_NEW', 25.0, 'assume 25 year payoff period');
+
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','WIND_FARM', 10.0, 'assume 10 year payoff period');
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','SOLAR_FARM', 10.0, 'assume 10 year payoff period');
+
+
 
 CREATE TABLE "GrowthRateSeed" (
 	"regions"	text,
@@ -850,6 +915,31 @@ INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2018, 25.2, 'MW', 'MW 
 INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2019, 105.3, 'MW', 'MW electric');
 INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2020, 253.9, 'MW', 'MW electric');
 
+-- IL Coal Capacity from EIA
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1953, 366.6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1954, 366.6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1955, 366.6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1958, 326.4 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1962, 355.3 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1963, 697.4 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1967, 659.5 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1968, 940.0 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1970, 625.1 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1972, 1256.6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1973, 634.5 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1975, 892.8 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1977, 617.4 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1978, 280.3 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1987, 124.0 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1989, 64.8 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1991, 45.0 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1994, 355.3 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1997, 355.3 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1998, 3.5 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2005, 105.0 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2009, 230.1 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2012, 1766.0 'MW','MWe');
+
 
 CREATE TABLE "EmissionLimit" (
 	"regions"	text,
@@ -898,6 +988,8 @@ CREATE TABLE "Efficiency" (
 The efficiency for all technologies is unity until the fuel commodities are
 introduced.
 */
+
+-- EXISTING Nuclear Facilities
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'BYRON_U1', 1985, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'BYRON_U2', 1987, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'BRAIDWOOD_U1', 1987, 'ELC', 1.00, 'MWe to MWe');
@@ -910,25 +1002,52 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'DRESDEN_U2', 1969, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'DRESDEN_U3', 1971, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'CLINTON_U1', 1987, 'ELC', 1.00, 'MWe to MWe');
 
+
+-- EXISTING Coal facilities
+
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1953, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1954, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1955, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1958, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1962, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1963, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1967, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1968, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1970, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1972, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1973, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1975, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1977, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1978, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1987, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1989, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1991, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1994, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1997, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1998, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 2005, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 2009, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 2012, 'ELC', 1.00, 'MWe to MWe');
+
 -- 2020s
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2021, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2022, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2023, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2024, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2025, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2026, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2027, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2028, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2029, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2021, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2022, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2023, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2024, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2025, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2026, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2027, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2028, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2029, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2021, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2022, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2023, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2024, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2025, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2026, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2027, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2028, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2029, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2021, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2022, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2023, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2024, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2025, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2026, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2027, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2028, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2029, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2021, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2022, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2023, 'ELC', 1.00, 'MWe to MWe');
@@ -949,24 +1068,24 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2028, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2029, 'ELC', 1.00, 'MWe to MWe');
 
 -- 2030s
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2031, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2032, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2033, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2034, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2035, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2036, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2037, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2038, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2039, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2031, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2032, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2033, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2034, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2035, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2036, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2037, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2038, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2039, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2031, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2032, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2033, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2034, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2035, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2036, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2037, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2038, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2039, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2031, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2032, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2033, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2034, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2035, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2036, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2037, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2038, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2039, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2031, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2032, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2033, 'ELC', 1.00, 'MWe to MWe');
@@ -987,24 +1106,24 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2038, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2039, 'ELC', 1.00, 'MWe to MWe');
 
 -- 2040s
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2041, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2042, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2043, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2044, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2045, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2046, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2047, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2048, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2049, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2041, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2042, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2043, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2044, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2045, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2046, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2047, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2048, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2049, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2041, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2042, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2043, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2044, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2045, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2046, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2047, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2048, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2049, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2041, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2042, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2043, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2044, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2045, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2046, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2047, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2048, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2049, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2041, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2042, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2043, 'ELC', 1.00, 'MWe to MWe');
@@ -1023,9 +1142,9 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2046, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2047, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2048, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2049, 'ELC', 1.00, 'MWe to MWe');
-
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT', 2050, 'ELC', 1.00, 'MWe to MWe');
-INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT', 2050, 'ELC', 1.00, 'MWe to MWe');
+-- 2050
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_NEW', 2050, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'NATGAS_PLANT_NEW', 2050, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2050, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2050, 'ELC', 1.00, 'MWe to MWe');
 
@@ -1162,8 +1281,10 @@ INSERT INTO `CapacityToActivity` VALUES ('IL','QUAD_CITIES_U2',8.76,'MW capacity
 INSERT INTO `CapacityToActivity` VALUES ('IL','BRAIDWOOD_U1',8.76,'MW capacity to GWh');
 INSERT INTO `CapacityToActivity` VALUES ('IL','BRAIDWOOD_U2',8.76,'MW capacity to GWh');
 
-INSERT INTO `CapacityToActivity` VALUES ('IL','NATGAS_PLANT',8.76,'MW capacity to GWh');
-INSERT INTO `CapacityToActivity` VALUES ('IL','COAL_PLANT',8.76,'MW capacity to GWh');
+INSERT INTO `CapacityToActivity` VALUES ('IL','NATGAS_PLANT_EXISTING',8.76,'MW capacity to GWh');
+INSERT INTO `CapacityToActivity` VALUES ('IL','NATGAS_PLANT_NEW',8.76,'MW capacity to GWh');
+INSERT INTO `CapacityToActivity` VALUES ('IL','COAL_PLANT_EXISTING',8.76,'MW capacity to GWh');
+INSERT INTO `CapacityToActivity` VALUES ('IL','COAL_PLANT_NEW',8.76,'MW capacity to GWh');
 INSERT INTO `CapacityToActivity` VALUES ('IL','WIND_FARM',8.76,'MW capacity to GWh');
 INSERT INTO `CapacityToActivity` VALUES ('IL','SOLAR_FARM',8.76,'MW capacity to GWh');
 
@@ -1260,19 +1381,34 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','CLINTON_U1',0.92
 
 -- CAPACITY FACTORS FOR NON-NUCLEAR
 -- TO DO: Update the capacity factors for these technologies in winter.
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT',0.405,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT_EXISTING',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT_EXISTING',0.405,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT_NEW',0.405,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT_NEW',0.405,'');
+
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT_EXISTING',0.55,'');
+
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT_NEW',0.55,'');
+
 
 INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','WIND_FARM',0.33,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','WIND_FARM',0.33,'');
@@ -1282,11 +1418,11 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','WIND_FARM',0.33,''
 INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','WIND_FARM',0.33,'');
 
 INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','SOLAR_FARM',0.19,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','SOLAR_FARM',0.19,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','SOLAR_FARM',0.19,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_FARM',0.19,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','SOLAR_FARM',0.19,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_FARM',0.19,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_FARM',0.0,'');
 
 
 CREATE TABLE "CapacityFactorProcess" (
