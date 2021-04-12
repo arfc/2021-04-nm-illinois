@@ -138,7 +138,7 @@ provide a reference.
 |Generation|Fixed Cost [M$/MW-year]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
 |Natural Gas|0.012382|0.972256|0.0000018978||[11][12]|Table 2; Table 1, p.7
-|Solar Power||||N/A||
+|Solar Power|0.0154769|1.332539|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
 |Wind Power|0.02673197|1.640555<sup>a</sup>|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
 |Coal||||||
 |Nuclear - PWR|0.057347|4.313245|0.000028||[9][10][13]|p.2; Table 3, p.16;Table 3.4b, p.49
