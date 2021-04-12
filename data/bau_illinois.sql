@@ -12,6 +12,25 @@ CREATE TABLE "time_periods" (
 	FOREIGN KEY("flag") REFERENCES "time_period_labels"("t_period_labels"),
 	PRIMARY KEY("t_periods")
 );
+-- Periods when natural gas plants were built
+INSERT INTO `time_periods` VALUES (1940,'e');
+INSERT INTO `time_periods` VALUES (1948,'e');
+INSERT INTO `time_periods` VALUES (1951,'e');
+INSERT INTO `time_periods` VALUES (1959,'e');
+INSERT INTO `time_periods` VALUES (1960,'e');
+INSERT INTO `time_periods` VALUES (1965,'e');
+INSERT INTO `time_periods` VALUES (1966,'e');
+INSERT INTO `time_periods` VALUES (1974,'e');
+INSERT INTO `time_periods` VALUES (1990,'e');
+INSERT INTO `time_periods` VALUES (1993,'e');
+INSERT INTO `time_periods` VALUES (1995,'e');
+INSERT INTO `time_periods` VALUES (1996,'e');
+INSERT INTO `time_periods` VALUES (1999,'e');
+INSERT INTO `time_periods` VALUES (2000,'e');
+INSERT INTO `time_periods` VALUES (2001,'e');
+INSERT INTO `time_periods` VALUES (2002,'e');
+
+
 -- Periods when coal plants were built
 INSERT INTO `time_periods` VALUES (1953,'e');
 INSERT INTO `time_periods` VALUES (1954,'e');
@@ -43,8 +62,6 @@ INSERT INTO `time_periods` VALUES (1985,'e');
 INSERT INTO `time_periods` VALUES (1987,'e');
 INSERT INTO `time_periods` VALUES (1988,'e');
 
-INSERT INTO `time_periods` VALUES (1990,'e');
-INSERT INTO `time_periods` VALUES (2000,'e');
 
 
 -- Periods when wind farms were built
@@ -741,6 +758,39 @@ INSERT INTO `MaxCapacity` VALUES ('IL',2048,'COAL_PLANT_EXISTING',2544.4,'MWe','
 INSERT INTO `MaxCapacity` VALUES ('IL',2049,'COAL_PLANT_EXISTING',2544.4,'MWe','cannot be expanded');
 INSERT INTO `MaxCapacity` VALUES ('IL',2050,'COAL_PLANT_EXISTING',2544.4,'MWe','cannot be expanded');
 
+-- NATURAL GAS PLANTS
+INSERT INTO `MaxCapacity` VALUES ('IL',2021,'NATGAS_PLANT_EXISTING',18623.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2022,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2023,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2024,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2025,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2026,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2027,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2028,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2029,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2030,'NATGAS_PLANT_EXISTING',18617.5,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2031,'NATGAS_PLANT_EXISTING',18608.2,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2032,'NATGAS_PLANT_EXISTING',18608.2,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2033,'NATGAS_PLANT_EXISTING',18608.2,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2034,'NATGAS_PLANT_EXISTING',18524.3,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2035,'NATGAS_PLANT_EXISTING',18524.3,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2036,'NATGAS_PLANT_EXISTING',18514.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2037,'NATGAS_PLANT_EXISTING',18514.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2038,'NATGAS_PLANT_EXISTING',18514.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2039,'NATGAS_PLANT_EXISTING',18514.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2040,'NATGAS_PLANT_EXISTING',18514.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2041,'NATGAS_PLANT_EXISTING',18401.3,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2042,'NATGAS_PLANT_EXISTING',18033.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2043,'NATGAS_PLANT_EXISTING',18020.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2044,'NATGAS_PLANT_EXISTING',18020.9,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2045,'NATGAS_PLANT_EXISTING',18013.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2046,'NATGAS_PLANT_EXISTING',18013.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2047,'NATGAS_PLANT_EXISTING',18013.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2048,'NATGAS_PLANT_EXISTING',17353.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2049,'NATGAS_PLANT_EXISTING',16693.4,'MWe','cannot be expanded');
+INSERT INTO `MaxCapacity` VALUES ('IL',2050,'NATGAS_PLANT_EXISTING',16693.4,'MWe','cannot be expanded');
+
+
 -- NON NUCLEAR CAPACITY
 -- TO DO : Add non-nuclear capacity
 
@@ -783,8 +833,8 @@ INSERT INTO `LifetimeTech` VALUES ('IL','DRESDEN_U2',60.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','DRESDEN_U3',60.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','CLINTON_U1',40.0,'');
 
-INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT_EXISTING',40.0,'');
-INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT_NEW',40.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT_EXISTING',80.0,'');
+INSERT INTO `LifetimeTech` VALUES ('IL','NATGAS_PLANT_NEW',80.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','COAL_PLANT_EXISTING',70.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','COAL_PLANT_NEW',70.0,'');
 INSERT INTO `LifetimeTech` VALUES ('IL','WIND_FARM',30.0,'');
@@ -939,6 +989,41 @@ INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1998, 3.5 'M
 INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2005, 105.0 'MW','MWe');
 INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2009, 230.1 'MW','MWe');
 INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 2012, 1766.0 'MW','MWe');
+
+-- IL Natural Gas Capacity from EIA
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1940, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1948, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1951, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1953, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1958, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1959, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1960, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1962, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1965, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1966, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1970, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1974, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1985, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1987, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1988, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1990, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1991, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1993, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1995, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1996, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1997, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1998, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 1999, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2000, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2001, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2002, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2003, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2004, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2005, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2012, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2015, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2016, 6 'MW','MWe');
+INSERT INTO `ExistingCapacity` VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2019, 6 'MW','MWe');
 
 
 CREATE TABLE "EmissionLimit" (
