@@ -137,14 +137,14 @@ provide a reference.
 ### Energy Cost
 |Generation|Fixed Cost [M$/MW-year]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
-|Natural Gas|0.012382|0.972256|0.0000018978||[11][12]|Table 2; Table 1, p.7
+|Natural Gas|0.0123816|0.972256|0.0000018978||[11][12]|Table 2; Table 1, p.7
 |Solar Power|0.0154769|1.332539|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
-|Wind Power|0.02673197|1.640555<sup>a</sup>|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
-|Coal - Existing|N/A<sup>b</sup>|N/A|0.0000416||[14]| Website
-|Coal - New<sup>c</sup>|0.060426|5.9634421|0.0000111434||[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
-|Nuclear - PWR|0.057347|4.313245|0.000028||[9][10][13]|p.2; Table 3, p.16;Table 3.4b, p.49
-|Nuclear - SMR|0.096414|6.283130|0.000003||[11]|Table 2
-|Nuclear - Advanced|0.123450|6.130897|0.000002||[11][12]|Table 2; Table 1, p.7
+|Wind Power|0.0267320|1.640555<sup>a</sup>|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
+|Coal - Existing|N/A<sup>b</sup>|N/A|0.0000416101||[14]| Website
+|Coal - New<sup>c</sup>|0.060426|5.963442|0.0000111434||[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
+|Nuclear - PWR|0.057347|4.313245|0.0000280305||[9][10][13]|p.2; Table 3, p.16;Table 3.4b, p.49
+|Nuclear - SMR|0.096414|6.283130|0.0000030446||[11]|Table 2
+|Nuclear - Advanced|0.123450|6.130897|0.0000024053||[11][12]|Table 2; Table 1, p.7
 
 <sup>a</sup>The average value between S\&L and IEA since they are equally recent.<br>
 <sup>b</sup>Assumes fully depreciated coal plant.<br>
