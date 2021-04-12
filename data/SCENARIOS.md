@@ -7,7 +7,7 @@
 |SD2|Premature Shutdown|The case where Byron and Dresden nuclear plants are allowed to shutdown before their licenses expire.|
 |SD3|Renewable Only|The case where nuclear is phased out and Illinois achieves 100% renewable electricity by 2050|
 |SD4|Zero Emissions Credits|The case where Illinois expands zero emissions credits to the other four nuclear nuclear plants.|
-|SD5|Moratorium Lifted|The case where Illinois lifts the moratorium on construction of new nuclear plants.|
+|SD5|New Nuclear|The case where Illinois constructs nuclear plants.|
 
 
 ## High Demand
@@ -16,7 +16,7 @@
 |HD2|Premature Shutdown|The case where Byron and Dresden nuclear plants are allowed to shutdown before their licenses expire.|
 |HD3|Renewable Only|The case where nuclear is phased out and Illinois achieves 100% renewable electricity by 2050|
 |HD4|Zero Emissions Credits|The case where Illinois expands zero emissions credits to the other four nuclear nuclear plants.|
-|HD5|Moratorium Lifted|The case where Illinois lifts the moratorium on construction of new nuclear plants.|
+|HD5|New Nuclear|The case where Illinois constructs nuclear plants.|
 
 
 * HDx corresponds to a "high demand" growth where, for example, the Illinois

@@ -14,7 +14,10 @@ standards.
 
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency [units-fuel/MWh]|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
-| Natural Gas Plant | 800 | 1997 | 2037 | 0.55 || [1] | pg. 1|
+| Grand Tower Energy Center | 523 | | | 0.55 || [1][2] | Website|
+| Gibson City Energy Center | 228 | | | 0.55 || [1][2] | Website|
+| Lee County Generating Station | 640 | | | 0.55 || [1][2] | Website|
+| Shelby County Energy Center | 355 | | | 0.55 || [1][2] | Website|
 
 #### Solar Farms
 
@@ -37,9 +40,19 @@ standards.
 
 #### Nuclear
 
-|Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
+|Plant Name|Nominal Capacity [MWe]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
-| Nuclear Plant | 1000 | 1989 | 2029 | 0.92 |0.33| [1] | pg. 1|
+| Braidwood Unit 1| 1215 | 1987 | 2046 | 0.92 |0.33| [3][4] | Website |
+| Braidwood Unit 2| 1215 | 1988 | 2047 | 0.92 |0.33| [3][4] | Website |
+| Byron Unit 1| 1215 | 1985 | 2044 | 0.92 |0.33| [3][4] | Website |
+| Byron Unit 2| 1215 | 1987 | 2046 | 0.92 |0.33| [3][4] | Website |
+| Clinton Unit 1| 1157 | 1987 | 2027 | 0.92 |0.33| [3][4] | Website |
+| Dresden Unit 1| 985 | 1969 | 2029 | 0.92 |0.33| [3][4] | Website |
+| Dresden Unit 2| 985 | 1971 | 2031 | 0.92 |0.33| [3][4] | Website |
+| LaSalle Unit 1| 1182 | 1982 | 2042 | 0.92 |0.33| [3][4] | Website |
+| LaSalle Unit 2| 1182 | 1984 | 2043 | 0.92 |0.33| [3][4] | Website |
+| Quad Cities Unit 1| 985 | 1972 | 2032 | 0.92 |0.33| [3][4] | Website |
+| Quad Cities Unit 2| 985 | 1972 | 2032 | 0.92 |0.33| [3][4] | Website |
 
 \* If a retirement year is unavailable, this can be estimated using a typical
 lifespan for that technology. Indicate that this is the case and provide a
@@ -69,11 +82,11 @@ provide a reference.
 ### Waste and Consequences
 |Generation|Power Density [MW/km^2]|CO2eq*[tCO2eq/MWh]|CO2 [tCO2/MWh]|NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste [kg/MWh]|Source|Page Numbers|
 |:--------|----:|----:|----:|----:|----:|----:|----:|----:|----:|
-|Natural Gas|||||N/A|N/A|||
-|Solar|||N/A|N/A|N/A||||
-|Wind|||N/A|N/A|N/A||||
-|Coal|||||N/A|N/A|||
-|Nuclear|||N/A|N/A|N/A|N/A|||
+|Natural Gas||||||N/A|N/A||
+|Solar|||N/A|N/A|N/A|N/A|||
+|Wind|||N/A|N/A|N/A|N/A|||
+|Coal||||||N/A|N/A||
+|Nuclear|||N/A|N/A|N/A||N/A||
 
 
 \* CO2eq should be the "life cycle" emissions of each energy source.
@@ -95,4 +108,8 @@ require more employees during plant operation than a solar farm. Thus, "job-
 years."
 
 ### References
+[1] [Rockland Capital Generation](https://www.rocklandcapital.com/natural-gas-combined-cycle/)
+[2] [EIA, Illinois Profile Overview](https://www.eia.gov/state/?sid=IL)
+[3] [Nuclear Regulatory Commission](https://www.nrc.gov/info-finder/region-state/illinois.html)
+[4] [EIA, Non-fossil fuel Capacity Factors](https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_6_07_b)
 [1] I made up some numbers -- don't do that.
