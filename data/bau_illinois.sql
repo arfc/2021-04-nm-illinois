@@ -873,6 +873,7 @@ INSERT INTO `LifetimeLoanTech` VALUES ('IL','CLINTON_U1', 40.0, 'initial license
 
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','COAL_PLANT_NEW', 25.0, 'assume 25 year payoff period');
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','NATGAS_PLANT_NEW', 25.0, 'assume 25 year payoff period');
+INSERT INTO `LifetimeLoanTech` VALUES ('IL','NATGAS_PLANT_EXISTING', 25.0, 'assume 25 year payoff period');
 
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','WIND_FARM', 10.0, 'assume 10 year payoff period');
 INSERT INTO `LifetimeLoanTech` VALUES ('IL','SOLAR_FARM', 10.0, 'assume 10 year payoff period');
@@ -1087,6 +1088,41 @@ INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'DRESDEN_U2', 1969, 'ELC', 1.00,
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'DRESDEN_U3', 1971, 'ELC', 1.00, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'CLINTON_U1', 1987, 'ELC', 1.00, 'MWe to MWe');
 
+-- EXISTING SOLAR
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2007, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2008, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2009, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2010, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2011, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2012, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2013, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2014, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2015, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2016, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2017, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2018, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2019, 'ELC', 1.00, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'SOLAR_FARM', 2020, 'ELC', 1.00, 'MWe to MWe');
+
+-- EXISTING WIND
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2003, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2004, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2005, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2006, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2007, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2008, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2009, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2010, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2011, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2012, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2013, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2014, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2015, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2016, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2017, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2018, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2019, 'ELC', 1.00, 'MWe to MWE');
+INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'WIND_FARM', 2020, 'ELC', 1.00, 'MWe to MWE');
 
 -- EXISTING Coal facilities
 INSERT INTO "Efficiency" VALUES ('IL', 'ethos', 'COAL_PLANT_EXISTING', 1953, 'ELC', 1.00, 'MWe to MWe');
@@ -1342,46 +1378,6 @@ INSERT INTO `Demand` VALUES ('IL',2049,'ELC',141000,'GWh','');
 INSERT INTO `Demand` VALUES ('IL',2050,'ELC',141000,'GWh','');
 
 
-CREATE TABLE "CostVariable" (
-	"regions"	text NOT NULL,
-	"periods"	integer NOT NULL,
-	"tech"	text NOT NULL,
-	"vintage"	integer NOT NULL,
-	"cost_variable"	real,
-	"cost_variable_units"	text,
-	"cost_variable_notes"	text,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
-	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
-	PRIMARY KEY("regions","periods","tech","vintage")
-);
-
-CREATE TABLE "CostInvest" (
-	"regions"	text,
-	"tech"	text,
-	"vintage"	integer,
-	"cost_invest"	real,
-	"cost_invest_units"	text,
-	"cost_invest_notes"	text,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
-	PRIMARY KEY("regions","tech","vintage")
-);
-
-CREATE TABLE "CostFixed" (
-	"regions"	text NOT NULL,
-	"periods"	integer NOT NULL,
-	"tech"	text NOT NULL,
-	"vintage"	integer NOT NULL,
-	"cost_fixed"	real,
-	"cost_fixed_units"	text,
-	"cost_fixed_notes"	text,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
-	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
-	PRIMARY KEY("regions","periods","tech","vintage")
-);
-
 CREATE TABLE "CapacityToActivity" (
 	"regions"	text,
 	"tech"	text,
@@ -1579,7 +1575,303 @@ CREATE TABLE "MaxResource" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","tech")
 );
-#INSERT INTO `MaxResource` VALUES ('utopia','IMPGSL1',60,'','');
+INSERT INTO `MaxResource` VALUES ('utopia','IMPGSL1',60,'','');
+
+/*
+===============================================================================
+===============================================================================
+COST TABLES
+===============================================================================
+===============================================================================
+*/
+
+CREATE TABLE "CostVariable" (
+	"regions"	text NOT NULL,
+	"periods"	integer NOT NULL,
+	"tech"	text NOT NULL,
+	"vintage"	integer NOT NULL,
+	"cost_variable"	real,
+	"cost_variable_units"	text,
+	"cost_variable_notes"	text,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
+	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
+	PRIMARY KEY("regions","periods","tech","vintage")
+);
+
+
+-- EXISTING NATURAL GAS
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1940, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1948, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1951, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1953, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1958, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1959, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1960, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1962, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1965, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1966, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1970, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1974, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1985, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1987, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1988, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1990, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1991, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1993, 0.000028 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1995, 0.000028 'M$/MWh','fully depreciated');
+
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'BYRON_U1', 1985, 0.000028248, 'M$/MW', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'BYRON_U2', 1985, 0.000028248, 'M$/MW', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'BRAIDWOOD_U1', 1985, 0.000028248, 'M$/MW', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'BRAIDWOOD_U2', 1985, 0.000028248, 'M$/MW', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'QUAD_CITIES_U1', 1985, 0.000029802, 'M$/MW', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'QUAD_CITIES_U2', 1985, 0.000029802, 'M$/MW', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'LASALLE_U1', 1985, 0.000029802, 'M$/MW', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'LASALLE_U2', 1985, 0.000029802, 'M$/MW', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'DRESDEN_U2', 1985, 0.000029802, 'M$/MW', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'DRESDEN_U3', 1985, 0.000029802, 'M$/MW', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2021, 'CLINTON_U1', 1985, 0.000029802, 'M$/MW', 'BWR');
+
+
+-- SOLAR and WIND have NO variable costs
+
+CREATE TABLE "CostInvest" (
+	"regions"	text,
+	"tech"	text,
+	"vintage"	integer,
+	"cost_invest"	real,
+	"cost_invest_units"	text,
+	"cost_invest_notes"	text,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
+	PRIMARY KEY("regions","tech","vintage")
+);
+-- EXISTING NUCLEAR, we don't need investment cost for theses...
+-- INSERT INTO "CostInvest" VALUES('IL', 'BYRON_U1', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'BYRON_U2', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'BRAIDWOOD_U1', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'BRAIDWOOD_U2', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'QUAD_CITIES_U1', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'QUAD_CITIES_U2', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'LASALLE_U1', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'LASALLE_U2', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'DRESDEN_U2', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'DRESDEN_U3', 1985, , 'M$/MW', '');
+-- INSERT INTO "CostInvest" VALUES('IL', 'CLINTON_U1', 1985, , 'M$/MW', '');
+
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2021, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2022, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2023, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2024, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2025, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2026, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2027, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2028, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2029, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2030, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2031, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2032, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2033, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2034, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2035, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2036, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2037, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2038, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2039, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2040, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2041, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2042, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2043, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2044, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2045, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2046, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2047, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2048, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2049, 0.972256, 'M$/MW', 'combined cycle no CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'NATGAS_PLANT_NEW', 2050, 0.972256, 'M$/MW', 'combined cycle no CCS');
+
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2021, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2022, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2023, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2024, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2025, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2026, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2027, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2028, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2029, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2030, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2031, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2032, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2033, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2034, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2035, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2036, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2037, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2038, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2039, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2040, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2041, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2042, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2043, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2044, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2045, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2046, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2047, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2048, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2049, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+INSERT INTO "CostInvest" VALUES('IL', 'COAL_PLANT_NEW', 2050, 5.963442, 'M$/MW', 'UCS with 90% CCS');
+
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2021, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2022, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2023, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2024, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2025, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2026, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2027, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2028, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2029, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2030, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2031, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2032, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2033, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2034, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2035, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2036, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2037, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2038, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2039, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2040, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2041, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2042, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2043, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2044, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2045, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2046, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2047, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2048, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2049, 1.332539, 'M$/MW', 'single axis tracking');
+INSERT INTO "CostInvest" VALUES('IL', 'SOLAR_FARM', 2050, 1.332539, 'M$/MW', 'single axis tracking');
+
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2021, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2022, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2023, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2024, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2025, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2026, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2027, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2028, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2029, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2030, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2031, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2032, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2033, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2034, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2035, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2036, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2037, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2038, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2039, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2040, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2041, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2042, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2043, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2044, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2045, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2046, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2047, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2048, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2049, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES('IL', 'WIND_FARM', 2050, 1.640555, 'M$/MW', 'onshore, 33% capacity factor');
+
+-- TO DO: Add investment cost for new nuclear
+
+CREATE TABLE "CostFixed" (
+	"regions"	text NOT NULL,
+	"periods"	integer NOT NULL,
+	"tech"	text NOT NULL,
+	"vintage"	integer NOT NULL,
+	"cost_fixed"	real,
+	"cost_fixed_units"	text,
+	"cost_fixed_notes"	text,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
+	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
+	PRIMARY KEY("regions","periods","tech","vintage")
+);
+
+-- EXISTING NUCLEAR
+INSERT INTO "CostFixed" VALUES('IL', 2021,'BYRON_U1', 1985, 0.057347, 'M$/MW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'BYRON_U2', 1987, 0.057347, 'M$/MW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'BRAIDWOOD_U1', 1987, 0.057347, 'M$/MW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'BRAIDWOOD_U2', 1988, 0.057347, 'M$/MW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'QUAD_CITIES_U1', 1972, 0.057260, 'M$/MW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'QUAD_CITIES_U2', 1972, 0.057260, 'M$/MW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'LASALLE_U1', 1982, 0.057260, 'M$/MW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'LASALLE_U2', 1984, 0.057260, 'M$/MW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'DRESDEN_U2', 1969, 0.057260, 'M$/MW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'DRESDEN_U3', 1971, 0.057260, 'M$/MW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2021,'CLINTON_U1', 1987, 0.057260, 'M$/MW-year', 'BWR');
+
+-- EXISTING WIND
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2003, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2004, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2005, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2006, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2007, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2008, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2009, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2010, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2011, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2012, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2013, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2014, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2015, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2016, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2017, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2018, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2019, 0.026730, 'M$/MW-year', 'existing wind tech');
+INSERT INTO "CostFixed" VALUES ('IL',2021, 'WIND_FARM', 2020, 0.026730, 'M$/MW-year', 'existing wind tech');
+
+-- EXISTING GAS
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1996, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1997, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1998, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 1999, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2000, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2001, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2002, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2003, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2004, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2005, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2012, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2015, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2016, 0.0123816 'M$/MW-year','still paying loan');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'NATGAS_PLANT_EXISTING', 2019, 0.0123816 'M$/MW-year','still paying loan');
+
+-- EXISTING SOLAR
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2007, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2008, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2009, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2010, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2011, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2012, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2013, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2014, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2015, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2016, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2017, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2018, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2019, 0.0154769, 'M$/MW-year', '');
+INSERT INTO "CostFixed" VALUES ('IL', 2021, 'SOLAR_FARM', 2020, 0.0154769, 'M$/MW-year', '');
+
+
+-- NEW TECHNOLOGY
+INSERT INTO "CostFixed" VALUES('IL', 2021, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2021, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2021, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2021, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
 
 
 /*
