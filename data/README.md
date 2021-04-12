@@ -141,7 +141,9 @@ provide a reference.
 |Solar Power||||N/A||
 |Wind Power||||N/A||
 |Coal||||||
-|Nuclear - PWR|0.057347|4.544496|0.000028|[9][10]||
+|Nuclear - PWR|0.057347|4.313245|0.000028|[9][10][13]|p.2; Table 3, p.16;Table 3.4b, p.49|
+|Nuclear - SMR|0.096414|6.283130|0.000003|[11]|Table 2|
+|Nuclear - Advanced|0.123450|6.130897|0.000002|[11][12]|Table 2; Table 1, p.7|
 
 
 ### Electricity Demand in Illinois
@@ -188,6 +190,9 @@ years."
 [6] [Solar Power in Illinois -- Wikipedia, needs better source](https://en.wikipedia.org/wiki/Solar_power_in_Illinois)<br>
 [7] [Wind Exchange -- DOE-EERE](https://windexchange.energy.gov/maps-data/321)<br>
 [8] [Electric Generator Inventory -- EIA](https://www.eia.gov/electricity/data/eia860M/)<br>
-[9] "Nuclear Costs in Context" (NEI, 2018)
-[10] "Nuclear Power Economics and Project Structuring" (WNA, 2017)
+[9] "Nuclear Costs in Context" (NEI, 2018)<br>
+[10] "Nuclear Power Economics and Project Structuring" (WNA, 2017)<br>
+[11] "Capital Costs and Performance Characteristics for Utility Scale Power Generating Technologies" (Sargent and Lundy, 2020)<br>
+[12] "Capital Cost Estimates for Utility Scale Electricity Generating Plants" (EIA, 2016)<br>
+[13] "Projected Costs of Generating Electricity" (IEA, 2020)<br>
 [1] I made up some numbers -- don't do that.
