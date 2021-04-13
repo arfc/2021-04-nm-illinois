@@ -119,8 +119,8 @@ Prairie State Generating Station|	883.0|	2012|| | | [8]|
 | Byron Unit 1| 1215 | 1985 | 2044 | 0.92 |0.33| [3][4] | Website |
 | Byron Unit 2| 1215 | 1987 | 2046 | 0.92 |0.33| [3][4] | Website |
 | Clinton Unit 1| 1157 | 1987 | 2027 | 0.92 |0.33| [3][4] | Website |
-| Dresden Unit 1| 985 | 1969 | 2029 | 0.92 |0.33| [3][4] | Website |
-| Dresden Unit 2| 985 | 1971 | 2031 | 0.92 |0.33| [3][4] | Website |
+| Dresden Unit 2| 985 | 1969 | 2029 | 0.92 |0.33| [3][4] | Website |
+| Dresden Unit 3| 985 | 1971 | 2031 | 0.92 |0.33| [3][4] | Website |
 | LaSalle Unit 1| 1182 | 1982 | 2042 | 0.92 |0.33| [3][4] | Website |
 | LaSalle Unit 2| 1182 | 1984 | 2043 | 0.92 |0.33| [3][4] | Website |
 | Quad Cities Unit 1| 985 | 1972 | 2032 | 0.92 |0.33| [3][4] | Website |
