@@ -167,7 +167,7 @@ provide a reference.
 |Coal|126.6 ± 12.9|||||N/A|N/A|[15]|
 |Nuclear|288.9 ± 74.6||N/A|N/A|N/A||N/A|[15]|
 
-\* Reported values account for capacity factors and efficiencies (see [15])
+\* Reported values account for capacity factors and efficiencies (see [15])<br>
 \** CO2eq should be the "life cycle" emissions of each energy source.
 
 ### Jobs*
