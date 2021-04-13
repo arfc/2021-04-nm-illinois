@@ -172,7 +172,7 @@ provide a reference.
 <sup>b</sup>Assumes new coal plants would be supercritical with 90\% carbon capture.
 
 \* Reported values account for capacity factors and efficiencies (see [15])<br>
-\** CO2eq should be the "life cycle" emissions of each energy source.
+\** CO2eq should be the "life cycle" emissions of each energy source.<br>
 \*** See waste_calculator.ipynb
 
 ### Jobs*
