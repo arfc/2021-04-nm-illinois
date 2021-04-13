@@ -160,11 +160,11 @@ provide a reference.
 ### Waste and Consequences
 |Generation|Power Density* [MW/km^2]|CO2eq**[tCO2eq/MWh]|CO2 [tCO2/MWh]|NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste [kg/MWh]|Source|Page Numbers|
 |:--------|----:|----:|----:|----:|----:|----:|----:|----:|----:|
-|Natural Gas|1283.9 ± 702.0||0.18108|1.1608e-5|0|N/A|N/A|[15], [11]|
+|Natural Gas|1283.9 ± 702.0||0.181083|1.16079e-5|0|N/A|N/A|[15], [11]|
 |Solar (Utility)|5.8 ± 1.2||N/A|N/A|N/A|N/A||[15]|
 |Solar (Residential)|6.7 ± 0.9||N/A|N/A|N/A|N/A||[15]|
 |Wind|3.1 ± 0.7||N/A|N/A|N/A|N/A||[15]|
-|Coal|126.6 ± 12.9||0.03188|9.5340e-5|1.393e-4|N/A|N/A|[15], [11]|
+|Coal|126.6 ± 12.9||0.0318830|9.53396e-5|1.39295e-4|N/A|N/A|[15], [11]|
 |Nuclear|288.9 ± 74.6||N/A|N/A|N/A||N/A|[15]|
 
 \* Reported values account for capacity factors and efficiencies (see [15])<br>
