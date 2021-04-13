@@ -164,7 +164,7 @@ provide a reference.
 |Solar (Utility)|5.8 ± 1.2||N/A|N/A|N/A|N/A|2.05|[15]|
 |Solar (Residential)|6.7 ± 0.9||N/A|N/A|N/A|N/A|2.05|[15]|
 |Wind|3.1 ± 0.7||N/A|N/A|N/A|N/A|0.21|[15]|
-|Coal - Existing|N/A<sup>a</sup>|126.6 ± 12.9|||||N/A|166.47|[15]|
+|Coal - Existing|N/A<sup>a</sup>|126.6 ± 12.9||||N/A|166.47|[15]|
 |Coal with CCS<sup>b</sup>| ||0.0318830|9.53396e-5|1.39295e-4|N/A|N/A| [11]|
 |Nuclear|288.9 ± 74.6||N/A|N/A|N/A|0.0031-0.0037|N/A|[15]|
 
