@@ -691,21 +691,50 @@ CREATE TABLE "CostInvest" (
 	PRIMARY KEY("regions","tech","vintage")
 );
 
+-- TO DO : ADD Investment cost from license renewals for existing nuclear, coal, and natural gas!
 INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2025, 3.0, 'M$/MW', 'existing nuclear');
 INSERT INTO "CostInvest" VALUES ('IL', 'COAL_PLANT_EXISTING', 2025, 0.2, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'COAL_PLANT_NEW', 2025, 6.0, 'M$/MW', 'existing nuclear');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2025, 0.9, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2025, 1.4, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2025, 1.5, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2025, 1.7, 'M$/MW', 'existing nuclear');
+
+-- NEW COAL
+INSERT INTO "CostInvest" VALUES ('IL', 'COAL_PLANT_NEW', 2025, 5.963442, 'M$/MW', 'assume UCS/CCS');
+INSERT INTO "CostInvest" VALUES ('IL', 'COAL_PLANT_NEW', 2030, 5.963442, 'M$/MW', 'assume UCS/CCS');
+INSERT INTO "CostInvest" VALUES ('IL', 'COAL_PLANT_NEW', 2035, 5.963442, 'M$/MW', 'assume UCS/CCS');
+INSERT INTO "CostInvest" VALUES ('IL', 'COAL_PLANT_NEW', 2040, 5.963442, 'M$/MW', 'assume UCS/CCS');
+INSERT INTO "CostInvest" VALUES ('IL', 'COAL_PLANT_NEW', 2045, 5.963442, 'M$/MW', 'assume UCS/CCS');
+INSERT INTO "CostInvest" VALUES ('IL', 'COAL_PLANT_NEW', 2050, 5.963442, 'M$/MW', 'assume UCS/CCS');
+
+-- NEW NATURAL GAS
+INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2025, 0.972256, 'M$/MW', 'assume combined cycle');
+INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2030, 0.972256, 'M$/MW', 'assume combined cycle');
+INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2035, 0.972256, 'M$/MW', 'assume combined cycle');
+INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2040, 0.972256, 'M$/MW', 'assume combined cycle');
+INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2045, 0.972256, 'M$/MW', 'assume combined cycle');
+INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2050, 0.972256, 'M$/MW', 'assume combined cycle');
+
+-- SOLAR FARM
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2025, 1.332539, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2030, 1.332539, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2035, 1.332539, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2040, 1.332539, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2045, 1.332539, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2050, 1.332539, 'M$/MW', 'utility solar');
+
+-- SOLAR RESIDENTIAL
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2025, 1.7, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2030, 1.7, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2035, 1.7, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2040, 1.7, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2045, 1.7, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2050, 1.7, 'M$/MW', 'residential solar');
 
 --WIND
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2025, 1.640555, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2030, 1.640555, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2035, 1.640555, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 1.640555, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 1.640555, 'M$/MW', 'existing nuclear');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 1.640555, 'M$/MW', 'existing nuclear');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2025, 1.640555, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2030, 1.640555, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2035, 1.640555, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 1.640555, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 1.640555, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 1.640555, 'M$/MW', 'on shore wind, 33% capacity factor');
 
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
