@@ -323,7 +323,7 @@ CREATE TABLE "PlanningReserveMargin" (
 	PRIMARY KEY(regions),
 	FOREIGN KEY(`regions`) REFERENCES regions
 );
-INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
+-- INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
 
 
 CREATE TABLE "MyopicBaseyear" (
