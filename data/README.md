@@ -11,7 +11,8 @@ standards.
 ### Energy Generation
 
 #### Natural Gas
-
+** Please see the ``fossil_fuels_illinois.ipynb`` notebook for a complete set of natural gas generation data.** 
+There are over 200 grid connected natural gas generators. Too many for this document.
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency [units-fuel/MWh]|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
 | Grand Tower Energy Center | 523 | | | 0.55 || [1][2] | Website|
@@ -134,14 +135,20 @@ provide a reference.
 
 
 ### Energy Cost
-|Generation|Fixed Cost [M$/MW]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
+|Generation|Fixed Cost [M$/MW-year]|Investment Cost [M$/MW]|Variable Cost [M$/MWh]|Fuel Cost [M$/metric ton]|Source|Page Numbers|
 |:-----|-----:|-----:|-----:|------:|-----:|-----:|
-|Natural Gas||||||
-|Solar Power||||N/A||
-|Wind Power||||N/A||
-|Coal||||||
-|Nuclear||||||
+|Natural Gas|0.0123816|0.972256|0.0000018978||[11][12]|Table 2; Table 1, p.7
+|Solar Power|0.0154769|1.332539|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
+|Wind Power|0.0267320|<sup>a</sup>1.640555|N/A|N/A|[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
+|Coal - Existing|N/A<sup>b</sup>|N/A|0.0000416101||[14]| Website
+|Coal - New<sup>c</sup>|0.060426|5.963442|0.0000111434||[11][12][13]|Table 2;Table 1, p.7;Table 3.6a, p.51
+|Nuclear - PWR|0.057347|4.313245|0.0000280305||[9][10][13]|p.2; Table 3, p.16;Table 3.4b, p.49
+|Nuclear - SMR|0.096414|6.283130|0.0000030446||[11]|Table 2
+|Nuclear - Advanced|0.123450|6.130897|0.0000024053||[11][12]|Table 2; Table 1, p.7
 
+<sup>a</sup>The average value between S\&L and IEA since they are equally recent.<br>
+<sup>b</sup>Assumes fully depreciated coal plant.<br>
+<sup>c</sup>Assumes new coal plants would be supercritical with 90\% carbon capture.
 
 ### Electricity Demand in Illinois
 |Scenario|Average Demand in 2050 [TWh]|Source|Notes|
@@ -187,4 +194,10 @@ years."
 [6] [Solar Power in Illinois -- Wikipedia, needs better source](https://en.wikipedia.org/wiki/Solar_power_in_Illinois)<br>
 [7] [Wind Exchange -- DOE-EERE](https://windexchange.energy.gov/maps-data/321)<br>
 [8] [Electric Generator Inventory -- EIA](https://www.eia.gov/electricity/data/eia860M/)<br>
+[9] "Nuclear Costs in Context" (NEI, 2018)<br>
+[10] "Nuclear Power Economics and Project Structuring" (WNA, 2017)<br>
+[11] "Capital Costs and Performance Characteristics for Utility Scale Power Generating Technologies" (Sargent and Lundy, 2020)<br>
+[12] "Capital Cost Estimates for Utility Scale Electricity Generating Plants" (EIA, 2016)<br>
+[13] "Projected Costs of Generating Electricity" (IEA, 2020)<br>
+[14] "Lazard's LCOE Analysis, Version 14.0" (Lazard, 2020)<br>
 [1] I made up some numbers -- don't do that.
