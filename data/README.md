@@ -11,7 +11,7 @@ standards.
 ### Energy Generation
 
 #### Natural Gas
-** Please see the ``fossil_fuels_illinois.ipynb`` notebook for a complete set of natural gas generation data.** 
+** Please see the ``fossil_fuels_illinois.ipynb`` notebook for a complete set of natural gas generation data.**
 There are over 200 grid connected natural gas generators. Too many for this document.
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency [units-fuel/MWh]|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
@@ -158,16 +158,17 @@ provide a reference.
 
 
 ### Waste and Consequences
-|Generation|Power Density [MW/km^2]|CO2eq*[tCO2eq/MWh]|CO2 [tCO2/MWh]|NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste [kg/MWh]|Source|Page Numbers|
+|Generation|Power Density* [MW/km^2]|CO2eq**[tCO2eq/MWh]|CO2 [tCO2/MWh]|NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste [kg/MWh]|Source|Page Numbers|
 |:--------|----:|----:|----:|----:|----:|----:|----:|----:|----:|
-|Natural Gas||||||N/A|N/A||
-|Solar|||N/A|N/A|N/A|N/A|||
-|Wind|||N/A|N/A|N/A|N/A|||
-|Coal||||||N/A|N/A||
-|Nuclear|||N/A|N/A|N/A||N/A||
+|Natural Gas|1283.9 ± 702.0|||||N/A|N/A|[15]|
+|Solar (Utility)|5.8 ± 1.2||N/A|N/A|N/A|N/A||[15]|
+|Solar (Residential)|6.7 ± 0.9||N/A|N/A|N/A|N/A||[15]|
+|Wind|3.1 ± 0.7||N/A|N/A|N/A|N/A||[15]|
+|Coal|126.6 ± 12.9|||||N/A|N/A|[15]|
+|Nuclear|288.9 ± 74.6||N/A|N/A|N/A||N/A|[15]|
 
-
-\* CO2eq should be the "life cycle" emissions of each energy source.
+\* Reported values account for capacity factors and efficiencies (see [15])<br>
+\** CO2eq should be the "life cycle" emissions of each energy source.
 
 ### Jobs*
 
@@ -200,4 +201,5 @@ years."
 [12] "Capital Cost Estimates for Utility Scale Electricity Generating Plants" (EIA, 2016)<br>
 [13] "Projected Costs of Generating Electricity" (IEA, 2020)<br>
 [14] "Lazard's LCOE Analysis, Version 14.0" (Lazard, 2020)<br>
+[15] [The spatial extent of renewable and non-renewable power generation: A review and meta-analysis of power densities and their application in the U.S.](https://www.sciencedirect.com/science/article/pii/S0301421518305512)<br>
 [1] I made up some numbers -- don't do that.
