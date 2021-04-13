@@ -12,9 +12,14 @@ CREATE TABLE "time_periods" (
 	FOREIGN KEY("flag") REFERENCES "time_period_labels"("t_period_labels"),
 	PRIMARY KEY("t_periods")
 );
-INSERT INTO `time_periods` VALUES (1960,'e');
-INSERT INTO `time_periods` VALUES (1970,'e');
-INSERT INTO `time_periods` VALUES (1980,'e');
+INSERT INTO `time_periods` VALUES (1969,'e');
+INSERT INTO `time_periods` VALUES (1971,'e');
+INSERT INTO `time_periods` VALUES (1972,'e');
+INSERT INTO `time_periods` VALUES (1982,'e');
+INSERT INTO `time_periods` VALUES (1984,'e');
+INSERT INTO `time_periods` VALUES (1985,'e');
+INSERT INTO `time_periods` VALUES (1987,'e');
+INSERT INTO `time_periods` VALUES (1988,'e');
 
 -- FUTURE PERIODS
 INSERT INTO `time_periods` VALUES (2025,'f');
@@ -354,6 +359,21 @@ CREATE TABLE "ExistingCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","tech","vintage")
 );
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,1215,'MW','MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,3697,'MW','MW electric');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,1215,'MW','MW electric');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,1215,'MW','MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1988,1215,'MW','MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1982,1182,'MW','MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1984,1182,'MW','MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,1970,'MW','MW electric');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,985,'MW','MW electric');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,985,'MW','MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,985,'MW','MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,985,'MW','MW electric');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,1157,'MW','MW electric');
+
+
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','E01',1960,0.175,'','');
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','E01',1970,0.175,'','');
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','E01',1980,0.15,'','');
@@ -428,6 +448,16 @@ CREATE TABLE "Efficiency" (
 	FOREIGN KEY("output_comm") REFERENCES "commodities"("comm_name"),
 	PRIMARY KEY("regions","input_comm","tech","vintage","output_comm")
 );
+INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1969,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1971,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1972,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1982,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1984,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1985,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1987,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1988,'ELC',1.0,'MWe to MWe');
+
+-- NEW BUILDS
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2025,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2030,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2035,'ELC',1.0,'MWe to MWe');
