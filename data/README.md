@@ -160,7 +160,6 @@ provide a reference.
 ### Waste and Consequences
 |Generation|Power Density* [MW/km^2]|CO2eq**[tCO2eq/MWh]|CO2 [tCO2/MWh]|NOx [tNOx/MWh]| SOx [tSOx/MWh]| Spent Fuel [kg/MWh] | Other Solid Waste*** [kg/MWh]|Source|Page Numbers|
 |:--------|----:|----:|----:|----:|----:|----:|----:|----:|----:|
-<<<<<<< HEAD
 |Natural Gas|1283.9 ± 702.0||0.181083|1.16079e-5|0|N/A|N/A|[15], [11]|
 |Solar (Utility)|5.8 ± 1.2||N/A|N/A|N/A|N/A|2.05|[15]|
 |Solar (Residential)|6.7 ± 0.9||N/A|N/A|N/A|N/A|2.05|[15]|
