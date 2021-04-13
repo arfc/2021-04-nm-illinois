@@ -40,6 +40,26 @@ INSERT INTO `time_periods` VALUES (2018,'e');
 INSERT INTO `time_periods` VALUES (2019,'e');
 INSERT INTO `time_periods` VALUES (2020,'e');
 
+-- PERIODS WHEN COAL PLANTS WERE BUILT
+INSERT INTO `time_periods` VALUES (1953,'e');
+INSERT INTO `time_periods` VALUES (1954,'e');
+INSERT INTO `time_periods` VALUES (1955,'e');
+INSERT INTO `time_periods` VALUES (1958,'e');
+INSERT INTO `time_periods` VALUES (1962,'e');
+INSERT INTO `time_periods` VALUES (1963,'e');
+INSERT INTO `time_periods` VALUES (1967,'e');
+INSERT INTO `time_periods` VALUES (1968,'e');
+INSERT INTO `time_periods` VALUES (1970,'e');
+INSERT INTO `time_periods` VALUES (1973,'e');
+INSERT INTO `time_periods` VALUES (1975,'e');
+INSERT INTO `time_periods` VALUES (1977,'e');
+INSERT INTO `time_periods` VALUES (1978,'e');
+INSERT INTO `time_periods` VALUES (1989,'e');
+INSERT INTO `time_periods` VALUES (1991,'e');
+INSERT INTO `time_periods` VALUES (1994,'e');
+INSERT INTO `time_periods` VALUES (1997,'e');
+INSERT INTO `time_periods` VALUES (1998,'e');
+
 
 -- FUTURE PERIODS
 INSERT INTO `time_periods` VALUES (2025,'f');
@@ -418,6 +438,33 @@ INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2019, 489.0, 'MW', 'MW 
 INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2020, 1059.0, 'MW', 'MW electric');
 
 
+-- EXISTING WIND
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1953, 366.6, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1954, 366.6, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1955, 366.6, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1958, 326.4, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1962, 355.3, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1963, 697.4, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1967, 659.5, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1968, 940.0, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1970, 625.1, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1972, 1256.6, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1973, 634.5, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1975, 892.8, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1977, 617.4, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1978, 280.3, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1987, 124.0, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1989, 64.8, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1991, 45.0, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1994, 355.3, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1997, 355.3, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1998, 3.5, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 2005, 105.0, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 2009, 230.1, 'MW','MWe');
+INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 2012, 1766.0, 'MW','MWe');
+
+
+
 
 CREATE TABLE "EmissionLimit" (
 	"regions"	text,
@@ -502,6 +549,30 @@ INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2017, 'ELC', 1.0, 'MW
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2018, 'ELC', 1.0, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2019, 'ELC', 1.0, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2020, 'ELC', 1.0, 'MWe to MWe');
+
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1953,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1954,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1955,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1958,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1962,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1963,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1967,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1968,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1970,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1972,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1973,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1975,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1977,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1978,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1987,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1989,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1991,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1994,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1997,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1998,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',2005,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',2009,'ELC',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',2012,'ELC',1.0,'MWe to MWe');
 
 
 -- NEW BUILDS
@@ -677,6 +748,128 @@ INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 0.0000284
 
 
 -- NON NUCLEAR
+-- EXISTING COAL
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1953, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1954, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1955, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1958, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1962, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1963, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1967, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1968, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1970, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1972, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1973, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1975, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1977, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1978, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1987, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1989, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1991, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1994, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1997, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1998, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2005, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2009, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2012, 0.0000416101, 'M$/MWh','fully depreciated');
+
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1953, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1954, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1955, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1958, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1962, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1963, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1967, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1968, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1970, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1972, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1973, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1975, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1977, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1978, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1987, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1989, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1991, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1994, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1997, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1998, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2005, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2009, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2012, 0.0000416101, 'M$/MWh','fully depreciated');
+
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1958, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1962, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1963, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1967, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1968, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1970, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1972, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1973, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1975, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1977, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1978, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1987, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1989, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1991, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1994, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1997, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1998, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2005, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2009, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2012, 0.0000416101, 'M$/MWh','fully depreciated');
+
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1962, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1963, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1967, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1968, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1970, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1972, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1973, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1975, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1977, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1978, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1987, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1989, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1991, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1994, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1997, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1998, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2005, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2009, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2012, 0.0000416101, 'M$/MWh','fully depreciated');
+
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1967, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1968, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1970, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1972, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1973, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1975, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1977, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1978, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1987, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1989, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1991, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1994, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1997, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1998, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2005, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2009, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2012, 0.0000416101, 'M$/MWh','fully depreciated');
+
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1972, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1973, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1975, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1977, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1978, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1987, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1989, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1991, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1994, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1997, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1998, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2005, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2009, 0.0000416101, 'M$/MWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2012, 0.0000416101, 'M$/MWh','fully depreciated');
 
 
 CREATE TABLE "CostInvest" (
