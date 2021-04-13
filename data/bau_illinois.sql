@@ -5620,10 +5620,2056 @@ INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2020, 0.0154769, 'M$/M
 
 
 -- NEW TECHNOLOGY
+
 INSERT INTO "CostFixed" VALUES('IL', 2021, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2022, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2022, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'NATGAS_PLANT_NEW', 2043, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2043, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'NATGAS_PLANT_NEW', 2044, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2043, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2044, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'NATGAS_PLANT_NEW', 2045, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2043, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2044, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2045, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'NATGAS_PLANT_NEW', 2046, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2043, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2044, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2045, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2046, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'NATGAS_PLANT_NEW', 2047, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2043, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2044, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2045, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2046, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2047, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'NATGAS_PLANT_NEW', 2048, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2043, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2044, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2045, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2046, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2047, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2048, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'NATGAS_PLANT_NEW', 2049, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2021, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2022, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2023, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2024, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2025, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2026, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2027, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2028, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2029, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2030, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2031, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2032, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2033, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2034, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2035, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2036, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2037, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2038, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2039, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2040, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2041, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2042, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2043, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2044, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2045, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2046, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2047, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2048, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2049, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'NATGAS_PLANT_NEW', 2050, 0.0123816, 'M$/MW-year', 'combined cycle no CCS');
+
+
 INSERT INTO "CostFixed" VALUES('IL', 2021, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2022, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2022, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'COAL_PLANT_NEW', 2043, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2043, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'COAL_PLANT_NEW', 2044, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2043, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2044, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'COAL_PLANT_NEW', 2045, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2043, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2044, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2045, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'COAL_PLANT_NEW', 2046, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2043, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2044, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2045, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2046, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'COAL_PLANT_NEW', 2047, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2043, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2044, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2045, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2046, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2047, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'COAL_PLANT_NEW', 2048, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2043, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2044, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2045, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2046, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2047, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2048, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'COAL_PLANT_NEW', 2049, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2021, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2022, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2023, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2024, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2025, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2026, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2027, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2028, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2029, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2030, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2031, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2032, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2033, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2034, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2035, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2036, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2037, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2038, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2039, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2040, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2041, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2042, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2043, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2044, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2045, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2046, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2047, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2048, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2049, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'COAL_PLANT_NEW', 2050, 0.060426, 'M$/MW-year', 'UCS with 90% CCS');
+
+
 INSERT INTO "CostFixed" VALUES('IL', 2021, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2022, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2022, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2044, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2044, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'SOLAR_FARM', 2045, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2044, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2045, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'SOLAR_FARM', 2046, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2044, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2045, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2046, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'SOLAR_FARM', 2047, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2044, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2045, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2046, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2047, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'SOLAR_FARM', 2048, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2044, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2045, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2046, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2047, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2048, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'SOLAR_FARM', 2049, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2028, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2029, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2030, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2031, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2032, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2033, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2034, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2035, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2036, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2037, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2038, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2039, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2040, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2041, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2042, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2044, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2045, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2046, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2047, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2048, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2049, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'SOLAR_FARM', 2050, 0.0154769, 'M$/MW-year', 'single axis tracking');
+
+
 INSERT INTO "CostFixed" VALUES('IL', 2021, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2022, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2022, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2023, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2024, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2025, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2026, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2027, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2028, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2029, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2030, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2031, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2032, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2033, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2034, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2035, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2036, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2037, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2038, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2039, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2040, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2041, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2042, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2043, 'WIND_FARM', 2043, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2043, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'WIND_FARM', 2044, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2043, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2044, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2045, 'WIND_FARM', 2045, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2021, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2043, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2044, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2045, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2046, 'WIND_FARM', 2046, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2022, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2043, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2044, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2045, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2046, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2047, 'WIND_FARM', 2047, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2023, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2043, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2044, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2045, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2046, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2047, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2048, 'WIND_FARM', 2048, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2024, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2043, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2044, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2045, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2046, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2047, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2048, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2049, 'WIND_FARM', 2049, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2025, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2026, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2027, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2028, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2029, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2030, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2031, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2032, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2033, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2034, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2035, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2036, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2037, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2038, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2039, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2040, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2041, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2042, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2043, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2044, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2045, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2046, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2047, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2048, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2049, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES('IL', 2050, 'WIND_FARM', 2050, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
 
 
 
