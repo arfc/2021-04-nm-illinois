@@ -201,5 +201,5 @@ years."
 [12] "Capital Cost Estimates for Utility Scale Electricity Generating Plants" (EIA, 2016)<br>
 [13] "Projected Costs of Generating Electricity" (IEA, 2020)<br>
 [14] "Lazard's LCOE Analysis, Version 14.0" (Lazard, 2020)<br>
-[15] [The spatial extent of renewable and non-renewable power generation: A review and meta-analysis of power densities and their application in the U.S.](https://www.sciencedirect.com/science/article/pii/S0301421518305512)
+[15] [The spatial extent of renewable and non-renewable power generation: A review and meta-analysis of power densities and their application in the U.S.](https://www.sciencedirect.com/science/article/pii/S0301421518305512)<br>
 [1] I made up some numbers -- don't do that.
