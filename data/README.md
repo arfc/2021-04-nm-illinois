@@ -11,8 +11,8 @@ standards.
 ### Energy Generation
 
 #### Natural Gas
-** Please see the ``fossil_fuels_illinois.ipynb`` notebook for a complete set of natural gas generation data.** There are over 200 grid connected natural
-gas generators. Too many for this document.
+** Please see the ``fossil_fuels_illinois.ipynb`` notebook for a complete set of natural gas generation data.** 
+There are over 200 grid connected natural gas generators. Too many for this document.
 |Plant Name|Nominal Capacity [MW]|Installation Year|Est. Retirement Year*|Capacity Factor**|Efficiency [units-fuel/MWh]|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|------:|
 | Grand Tower Energy Center | 523 | | | 0.55 || [1][2] | Website|
