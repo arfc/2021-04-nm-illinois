@@ -930,41 +930,41 @@ INSERT INTO `ExistingCapacity` VALUES ('IL','CLINTON_U1',1987,1157,'MW','MW elec
 
 
 -- IL Wind Capacity from DOE-EERE: No new capacity in 2006, 2013, or 2014
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2003, 50.4, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2004, 0.66, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2005, 56.1, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2006, 0.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2007, 592.2, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2008, 215.7, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2009, 632.4, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2010, 497.09, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2011, 697.44, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2012, 826.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2013, 0.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2014, 0.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2015, 274.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2016, 184.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2017, 306.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2018, 529.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2019, 489.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','WIND_FARM', 2020, 1059.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2003, 50.4, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2004, 0.66, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2005, 56.1, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2006, 0.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2007, 592.2, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2008, 215.7, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2009, 632.4, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2010, 497.09, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2011, 697.44, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2012, 826.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2013, 0.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2014, 0.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2015, 274.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2016, 184.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2017, 306.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2018, 529.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2019, 489.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','WIND_FARM', 2020, 1059.0, 'MW', 'MW electric');
 
 
 -- IL Solar Capacity from SEIA
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2007, 0.2, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2008, 0.4, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2009, 1.7, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2010, 11.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2011, 0.7, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2012, 26.7, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2013, 0.5, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2014, 10.6, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2015, 11.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2016, 5.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2017, 11.0, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2018, 25.2, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2019, 105.3, 'MW', 'MW electric');
-INSERT INTO `ExistingCapactiy` VALUES ('IL','SOLAR_FARM', 2020, 253.9, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2007, 0.2, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2008, 0.4, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2009, 1.7, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2010, 11.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2011, 0.7, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2012, 26.7, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2013, 0.5, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2014, 10.6, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2015, 11.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2016, 5.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2017, 11.0, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2018, 25.2, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2019, 105.3, 'MW', 'MW electric');
+INSERT INTO `ExistingCapacity` VALUES ('IL','SOLAR_FARM', 2020, 253.9, 'MW', 'MW electric');
 
 -- IL Coal Capacity from EIA
 INSERT INTO `ExistingCapacity` VALUES ('IL', 'COAL_PLANT_EXISTING', 1953, 366.6 'MW','MWe');
