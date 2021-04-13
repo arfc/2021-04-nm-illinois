@@ -12,6 +12,8 @@ CREATE TABLE "time_periods" (
 	FOREIGN KEY("flag") REFERENCES "time_period_labels"("t_period_labels"),
 	PRIMARY KEY("t_periods")
 );
+
+-- PERIODS WHEN NUCLEAR PLANTS WERE BUILT
 INSERT INTO `time_periods` VALUES (1969,'e');
 INSERT INTO `time_periods` VALUES (1971,'e');
 INSERT INTO `time_periods` VALUES (1972,'e');
@@ -20,6 +22,24 @@ INSERT INTO `time_periods` VALUES (1984,'e');
 INSERT INTO `time_periods` VALUES (1985,'e');
 INSERT INTO `time_periods` VALUES (1987,'e');
 INSERT INTO `time_periods` VALUES (1988,'e');
+
+-- PERIODS WHEN WIND FARMS WERE BUILT
+INSERT INTO `time_periods` VALUES (2003,'e');
+INSERT INTO `time_periods` VALUES (2004,'e');
+INSERT INTO `time_periods` VALUES (2005,'e');
+INSERT INTO `time_periods` VALUES (2007,'e');
+INSERT INTO `time_periods` VALUES (2008,'e');
+INSERT INTO `time_periods` VALUES (2009,'e');
+INSERT INTO `time_periods` VALUES (2010,'e');
+INSERT INTO `time_periods` VALUES (2011,'e');
+INSERT INTO `time_periods` VALUES (2012,'e');
+INSERT INTO `time_periods` VALUES (2015,'e');
+INSERT INTO `time_periods` VALUES (2016,'e');
+INSERT INTO `time_periods` VALUES (2017,'e');
+INSERT INTO `time_periods` VALUES (2018,'e');
+INSERT INTO `time_periods` VALUES (2019,'e');
+INSERT INTO `time_periods` VALUES (2020,'e');
+
 
 -- FUTURE PERIODS
 INSERT INTO `time_periods` VALUES (2025,'f');
@@ -380,6 +400,25 @@ INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,985,'MW','MW
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,1157,'MW','MW electric');
 
 
+-- EXISTING WIND
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2003, 50.4, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2004, 0.66, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2005, 56.1, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2007, 592.2, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2008, 215.7, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2009, 632.4, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2010, 497.09, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2011, 697.44, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2012, 826.0, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2015, 274.0, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2016, 184.0, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2017, 306.0, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2018, 529.0, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2019, 489.0, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2020, 1059.0, 'MW', 'MW electric');
+
+
+
 CREATE TABLE "EmissionLimit" (
 	"regions"	text,
 	"periods"	integer,
@@ -438,6 +477,7 @@ CREATE TABLE "Efficiency" (
 	FOREIGN KEY("output_comm") REFERENCES "commodities"("comm_name"),
 	PRIMARY KEY("regions","input_comm","tech","vintage","output_comm")
 );
+-- EXISTING CAPACITY
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1969,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1971,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1972,'ELC',1.0,'MWe to MWe');
@@ -446,6 +486,23 @@ INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1984,'ELC',1.0,
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1985,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1987,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1988,'ELC',1.0,'MWe to MWe');
+
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2003, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2004, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2005, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2007, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2008, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2009, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2010, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2011, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2012, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2015, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2016, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2017, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2018, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2019, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2020, 'ELC', 1.0, 'MWe to MWe');
+
 
 -- NEW BUILDS
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2025,'ELC',1.0,'MWe to MWe');
