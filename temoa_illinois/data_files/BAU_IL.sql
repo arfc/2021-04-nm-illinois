@@ -263,6 +263,12 @@ CREATE TABLE "MaxCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
+INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
 CREATE TABLE "MaxActivity" (
 	"regions"	text,
@@ -373,22 +379,6 @@ INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,985,'MW','MW
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,985,'MW','MW electric');
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,1157,'MW','MW electric');
 
-
--- INSERT INTO "ExistingCapacity" VALUES ('IL','E01',1960,0.175,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','E01',1970,0.175,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','E01',1980,0.15,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','E31',1980,0.1,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','E51',1980,0.5,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','E70',1960,0.05,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','E70',1970,0.05,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','E70',1980,0.2,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','RHO',1970,12.5,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','RHO',1980,12.5,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','RL1',1980,5.6,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','TXD',1970,0.4,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','TXD',1980,0.2,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','TXG',1970,3.1,'','');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','TXG',1980,1.5,'','');
 
 CREATE TABLE "EmissionLimit" (
 	"regions"	text,
