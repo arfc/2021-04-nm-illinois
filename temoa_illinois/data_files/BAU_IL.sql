@@ -772,6 +772,50 @@ INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 0.057347, 'M
 -- INSERT INTO "CostFixed" VALUES('IL', 2050,'NUCLEAR_EXISTING', 1987, 0.057347, 'M$/MW-year', 'PWR');
 -- INSERT INTO "CostFixed" VALUES('IL', 2050,'NUCLEAR_EXISTING', 1988, 0.057347, 'M$/MW-year', 'PWR');
 
+-- FIXED COST FOR EXISTING WIND
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2003, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2004, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2005, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2007, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2008, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2009, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2010, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2011, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2012, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2015, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2016, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2017, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2018, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2019, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2020, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2007, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2008, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2009, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2010, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2011, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2012, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2015, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2016, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2017, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2018, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2019, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2020, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2011, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2012, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2015, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2016, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2017, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2018, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2019, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2020, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2016, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2017, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2018, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2019, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2020, 0.0267320, 'M$/MW-year', 'onshore, 33% capacity factor');
 
 
 /*
