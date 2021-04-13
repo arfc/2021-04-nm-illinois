@@ -1318,6 +1318,7 @@ CREATE TABLE "DiscountRate" (
 	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
 	PRIMARY KEY("regions","tech","vintage")
 );
+
 CREATE TABLE "DemandSpecificDistribution" (
 	"regions"	text,
 	"season_name"	text,
