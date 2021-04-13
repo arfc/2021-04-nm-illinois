@@ -6911,7 +6911,7 @@ INSERT INTO "CostFixed" VALUES('IL', 2043, 'SOLAR_FARM', 2043, 0.0154769, 'M$/MW
 INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2021, 0.0154769, 'M$/MW-year', 'single axis tracking');
 INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2022, 0.0154769, 'M$/MW-year', 'single axis tracking');
 INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2023, 0.0154769, 'M$/MW-year', 'single axis tracking');
-INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MW-year', 'single axis tracking');
+INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2024, 0.0154769, 'M$/MWSOLAR_RESIDENTIAL-year', 'single axis tracking');
 INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2025, 0.0154769, 'M$/MW-year', 'single axis tracking');
 INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2026, 0.0154769, 'M$/MW-year', 'single axis tracking');
 INSERT INTO "CostFixed" VALUES('IL', 2044, 'SOLAR_FARM', 2027, 0.0154769, 'M$/MW-year', 'single axis tracking');

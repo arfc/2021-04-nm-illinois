@@ -699,6 +699,14 @@ INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2025, 1.4, 'M$/MW', '
 INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2025, 1.5, 'M$/MW', 'existing nuclear');
 INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2025, 1.7, 'M$/MW', 'existing nuclear');
 
+--WIND
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2025, 1.640555, 'M$/MW', 'existing nuclear');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2030, 1.640555, 'M$/MW', 'existing nuclear');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2035, 1.640555, 'M$/MW', 'existing nuclear');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 1.640555, 'M$/MW', 'existing nuclear');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 1.640555, 'M$/MW', 'existing nuclear');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 1.640555, 'M$/MW', 'existing nuclear');
+
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
