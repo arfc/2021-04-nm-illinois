@@ -36,7 +36,19 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'COAL_PLANT_NEW',
                        'SOLAR_FARM',
                        'SOLAR_RESIDENTIAL',
-                       'WIND_FARM'],}
+                       'WIND_FARM'],
+             'CO2': ['NATGAS_PLANT_EXISTING',
+                     'NATGAS_PLANT_NEW',
+                     'COAL_PLANT_EXISTING',
+                     'COAL_PLANT_NEW'],
+             'NOx': ['NATGAS_PLANT_EXISTING',
+                     'NATGAS_PLANT_NEW',
+                     'COAL_PLANT_EXISTING',
+                     'COAL_PLANT_NEW'],
+             'SO2': ['NATGAS_PLANT_EXISTING',
+                     'NATGAS_PLANT_NEW',
+                     'COAL_PLANT_EXISTING',
+                     'COAL_PLANT_NEW',],}
              # 'ewaste': ['SOLAR_FARM',
              #            'SOLAR_RESIDENIAL',
              #            'WIND_FARM'],
@@ -400,7 +412,7 @@ def get_icap_goals(year_start=2021, year_end=2050):
     return icap_df[mask]
 
 
-def emissions_plot(dataframe, variable, scenario, sector, save=True):
+def emissions_plot(dataframe, variable, scenario, emission, sector, save=True):
     """
     This function s an emissions plot for
     a given dataframe and returns nothing.
@@ -415,6 +427,8 @@ def emissions_plot(dataframe, variable, scenario, sector, save=True):
         Accepts "Generation", "Capacity", "Emissions".
     scenario : string
         The name of model run you are conducting.
+    emission : string
+        The name of the emission being tracked
     sector : string
         The sector you are plotting.
         "ind" = Industrial/steam
@@ -429,7 +443,7 @@ def emissions_plot(dataframe, variable, scenario, sector, save=True):
     if not os.path.isdir(target_folder):
         os.mkdir(target_folder)
 
-    units = {'emissions': '[megatons CO2 equivalent]'}
+    units = {'emissions': f'[megatons {emission}]'}
 
     # goals = get_icap_goals()
 
@@ -447,12 +461,12 @@ def emissions_plot(dataframe, variable, scenario, sector, save=True):
             marker='o',
             markersize=10,
             color='tab:purple',
-            label='CO$_2$ Emissions')
+            label=f'{emission} Emissions')
 
-    plt.suptitle(f"{scenario.upper()}: Total Annual {variable}",
+    plt.suptitle(f"{scenario.upper()}: Total Annual {emission} {variable.capitalize()}",
                  fontsize=36)
     plt.title(f"Sector: {sector.upper()}", fontsize=24)
-    plt.ylabel(f"{variable} {units[variable.lower()]}", fontsize=24)
+    plt.ylabel(f"{emission} {units[variable.lower()]}", fontsize=24)
     plt.xlabel("Year", fontsize=24)
     ax.legend(loc=(1.02, 0.5), fancybox=True,
               shadow=True, fontsize=12, prop={'size': 24})
@@ -468,7 +482,7 @@ def emissions_plot(dataframe, variable, scenario, sector, save=True):
 
     if save is True:
         plt.savefig(
-            f"{target_folder}{scenario}_{sector}_{variable.lower()}_co2eq.png")
+            f"{target_folder}{scenario}_{sector}_{variable.lower()}_{emission}.png")
         plt.close()
     else:
         plt.show()
@@ -634,6 +648,8 @@ def make_emissions_plots(data_paths, to_save=True):
                   'generation': bar_plot,
                   'capacity': bar_plot}
 
+    ghg_list = ['CO2eq', 'CO2', 'NOx', 'SO2']
+
     # for each outputfile
     for file in data_paths:
         # get the name of the scenario run
@@ -646,7 +662,7 @@ def make_emissions_plots(data_paths, to_save=True):
                                       var,
                                       sector='all',
                                       emission=byproduct)
-            if byproduct != 'CO2eq':
+            if byproduct not in ghg_list:
                 bar_plot(dataframe=df_all,
                          variable=var,
                          scenario=scenario,
@@ -658,6 +674,7 @@ def make_emissions_plots(data_paths, to_save=True):
                                variable=var,
                                scenario=scenario,
                                sector='all',
+                               emission=byproduct,
                                save=to_save)
 
     return
