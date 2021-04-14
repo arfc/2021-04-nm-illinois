@@ -343,11 +343,11 @@ CREATE TABLE "MaxCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
-INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 6875.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 4905.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 4905.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2541.0, 'MWe', 'cannot build more than existing capacity');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
 -- Existing Coal
@@ -455,13 +455,13 @@ CREATE TABLE "ExistingCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","tech","vintage")
 );
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,985,'MWe','Dresden Unit 2');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,985,'MWe','Dresden Unit 3');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,0.01,'MWe','Dresden Unit 2');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,0.01,'MWe','Dresden Unit 3');
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,1970,'MWe','Quad Cities Unit 1+2');
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1982,1182,'MWe','LaSalle Unit 1');
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1984,1182,'MWe','LaSalle Unit 2');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,1215,'MWe','Byron Unit 1');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,3697,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,0.01,'MWe','Byron Unit 1');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,2482,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1988,1215,'MWe','Braidwood Unit 2');
 
 
