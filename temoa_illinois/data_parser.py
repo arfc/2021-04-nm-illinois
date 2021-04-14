@@ -29,18 +29,18 @@ elc_techs = ['NUCLEAR_EXISTING',
              'SOLAR_RESIDENTIAL',
              'WIND_FARM']
 
-emissions = {'co2eq': ['NUCLEAR_EXISTING',
+emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'NATGAS_PLANT_EXISTING',
                        'NATGAS_PLANT_NEW',
                        'COAL_PLANT_EXISTING',
                        'COAL_PLANT_NEW',
                        'SOLAR_FARM',
                        'SOLAR_RESIDENTIAL',
-                       'WIND_FARM'],
-             'ewaste': ['SOLAR_FARM',
-                        'SOLAR_RESIDENIAL',
-                        'WIND_FARM'],
-             'spent-fuel': ['NUCLEAR_EXISTING']}
+                       'WIND_FARM'],}
+             # 'ewaste': ['SOLAR_FARM',
+             #            'SOLAR_RESIDENIAL',
+             #            'WIND_FARM'],
+             # 'spent-fuel': ['NUCLEAR_EXISTING']}
 
 
 def data_by_year(datalines, year):
@@ -429,17 +429,17 @@ def emissions_plot(dataframe, variable, scenario, sector, save=True):
     if not os.path.isdir(target_folder):
         os.mkdir(target_folder)
 
-    units = {'emissions': '[tons CO2 equivalent]'}
+    units = {'emissions': '[megatons CO2 equivalent]'}
 
-    goals = get_icap_goals()
+    # goals = get_icap_goals()
 
     fig, ax = plt.subplots()
 
-    ax.scatter(goals['year'],
-               goals['goal'],
-               label='iCAP Target',
-               marker='*',
-               s=500, color='tab:red')
+    # ax.scatter(goals['year'],
+    #            goals['goal'],
+    #            label='iCAP Target',
+    #            marker='*',
+    #            s=500, color='tab:red')
 
     ax.plot(dataframe.index,
             dataframe.total,
@@ -646,7 +646,7 @@ def make_emissions_plots(data_paths, to_save=True):
                                       var,
                                       sector='all',
                                       emission=byproduct)
-            if byproduct != 'co2eq':
+            if byproduct != 'CO2eq':
                 bar_plot(dataframe=df_all,
                          variable=var,
                          scenario=scenario,
