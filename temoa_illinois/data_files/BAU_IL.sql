@@ -309,6 +309,12 @@ CREATE TABLE "MinActivity" (
 	PRIMARY KEY("regions","periods","tech")
 );
 
+-- INSERT INTO "MinActivity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 98006.004, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinActivity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 90240.264, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinActivity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 66943.044, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinActivity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 66943.044, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinActivity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 38726.208, 'MWe', 'cannot build more than existing capacity');
+
 CREATE TABLE "MaxCapacity" (
 	"regions"	text,
 	"periods"	integer,
