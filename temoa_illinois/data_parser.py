@@ -22,13 +22,13 @@ time_horizon = np.arange(2025, 2051, 5)
 
 elc_techs = ['NUCLEAR_EXISTING',
              'NATGAS_PLANT_EXISTING',
-             'NATGAS_PLANT_NEW',
              'COAL_PLANT_EXISTING',
-             'COAL_PLANT_NEW',
              'SOLAR_FARM',
-             'SOLAR_RESIDENTIAL',
              'WIND_FARM',
-             'LI_BATTERY']
+             'LI_BATTERY',
+             'SOLAR_RESIDENTIAL',
+             'NATGAS_PLANT_NEW',
+             'COAL_PLANT_NEW']
 
 emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'NATGAS_PLANT_EXISTING',
