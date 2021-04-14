@@ -326,7 +326,7 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
     if (variable.lower() == 'emissions') and (emission != 'co2eq'):
         ax = dataframe.loc[1:, dataframe.columns != 'total'].plot.bar()
         plt.suptitle(
-            (f"{scenario.upper()}: Total Annual {emission.upper()} in"
+            (f"{scenario.upper()}: Total Annual {emission.upper()} in "
              f" {units[variable.lower()]}"),
             fontsize=36)
         plt.ylabel(f"{emission} {units[variable.lower()]}", fontsize=24)
@@ -339,16 +339,16 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
         bars = ax.patches
         if sector == 'vcl':
             plt.suptitle(
-                (f"{scenario.upper()}: Total Annual {variable} in"
+                (f"{scenario.upper()}: Total Annual {variable.capitalize()} in "
                  f"{units['transportation']}"),
                 fontsize=36)
-            plt.ylabel(f"{variable} {units['transportation']}", fontsize=24)
+            plt.ylabel(f"{variable.capitalize()} {units['transportation']}", fontsize=24)
         else:
             plt.suptitle(
-                (f"{scenario.upper()}: Total Annual {variable} in"
+                (f"{scenario.upper()}: Total Annual {variable.capitalize()} in "
                  f"{units[variable.lower()]}"),
                 fontsize=36)
-            plt.ylabel(f"{variable} {units[variable.lower()]}", fontsize=24)
+            plt.ylabel(f"{variable.capitalize()} {units[variable.lower()]}", fontsize=24)
         for bar, hatch in zip(bars, hatches):
             bar.set_hatch(hatch)
 

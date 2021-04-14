@@ -40,6 +40,9 @@ INSERT INTO `time_periods` VALUES (2018,'e');
 INSERT INTO `time_periods` VALUES (2019,'e');
 INSERT INTO `time_periods` VALUES (2020,'e');
 
+-- PERIODS WHEN UTILITY SOLAR WAS BUILT
+INSERT INTO `time_periods` VALUES (2014,'e');
+
 -- PERIODS WHEN COAL PLANTS WERE BUILT
 INSERT INTO `time_periods` VALUES (1953,'e');
 INSERT INTO `time_periods` VALUES (1954,'e');
@@ -475,8 +478,16 @@ INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2018, 529.0, 'MW', 'MW 
 INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2019, 489.0, 'MW', 'MW electric');
 INSERT INTO "ExistingCapacity" VALUES ('IL','WIND_FARM', 2020, 1059.0, 'MW', 'MW electric');
 
+-- EXISTING UTILITY SOLAR
+INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2009, 9.0, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2012, 22.6, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2015, 5.9, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2016, 1.0, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2017, 2.1, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2019, 3.5, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2020, 71.9, 'MW', 'MW electric');
 
--- EXISTING WIND
+-- EXISTING COAL
 INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1953, 366.6, 'MW','MWe');
 INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1954, 366.6, 'MW','MWe');
 INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1955, 366.6, 'MW','MWe');
@@ -1065,6 +1076,14 @@ INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2017, 'ELC', 1.0, 'MW
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2018, 'ELC', 1.0, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2019, 'ELC', 1.0, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2020, 'ELC', 1.0, 'MWe to MWe');
+
+INSERT INTO "Efficiency" VALUES ('IL','ethos','SOLAR_FARM', 2009, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','SOLAR_FARM', 2012, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','SOLAR_FARM', 2015, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','SOLAR_FARM', 2016, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','SOLAR_FARM', 2017, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','SOLAR_FARM', 2019, 'ELC', 1.0, 'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ethos','SOLAR_FARM', 2020, 'ELC', 1.0, 'MWe to MWe');
 
 INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1953,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','COAL_PLANT_EXISTING',1954,'ELC',1.0,'MWe to MWe');
@@ -1872,6 +1891,38 @@ INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 0.057347, 'M
 -- INSERT INTO "CostFixed" VALUES('IL', 2050,'NUCLEAR_EXISTING', 1985, 0.057347, 'M$/MW-year', 'PWR');
 -- INSERT INTO "CostFixed" VALUES('IL', 2050,'NUCLEAR_EXISTING', 1987, 0.057347, 'M$/MW-year', 'PWR');
 -- INSERT INTO "CostFixed" VALUES('IL', 2050,'NUCLEAR_EXISTING', 1988, 0.057347, 'M$/MW-year', 'PWR');
+
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2009, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2009, 0.0193341, 'M$/MW-year', 'MW electric');
+
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2012, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2012, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2012, 0.0193341, 'M$/MW-year', 'MW electric');
+
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2015, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2015, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2015, 0.0193341, 'M$/MW-year', 'MW electric');
+
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2016, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2016, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2016, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2016, 0.0193341, 'M$/MW-year', 'MW electric');
+
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2017, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2017, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2017, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2017, 0.0193341, 'M$/MW-year', 'MW electric');
+
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2019, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2019, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2019, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2019, 0.0193341, 'M$/MW-year', 'MW electric');
+
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2020, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2020, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2020, 0.0193341, 'M$/MW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2020, 0.0193341, 'M$/MW-year', 'MW electric');
+
 
 -- FIXED COST FOR EXISTING WIND
 INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2003,0.0437560, 'M$/MW-year', 'onshore, 33% capacity factor');
