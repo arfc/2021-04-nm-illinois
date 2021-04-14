@@ -145,6 +145,8 @@ CREATE TABLE "tech_reserve" (
 	"notes"	text,
 	PRIMARY KEY("tech")
 );
+INSERT INTO "tech_reserve" VALUES ('LI_BATTERY', 'battery reserve');
+
 CREATE TABLE "tech_exchange" (
 	"tech"	text,
 	"notes"	text,
