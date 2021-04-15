@@ -256,6 +256,8 @@ INSERT INTO "commodities" VALUES ('CO2','e','MT/MWh, generation emissions');
 INSERT INTO "commodities" VALUES ('SO2','e','MT/MWh, generation emissions');
 INSERT INTO "commodities" VALUES ('NOx','e','MT/MWh, generation emissions');
 INSERT INTO "commodities" VALUES ('Hg','e','MT/MWh, generation emissions');
+INSERT INTO "commodities" VALUES ('e-waste','e','kg/MWh, generation emissions');
+INSERT INTO "commodities" VALUES ('spent-fuel','e','kg/MWh, generation emissions');
 
 
 CREATE TABLE "TechOutputSplit" (
@@ -713,6 +715,7 @@ CREATE TABLE "EmissionLimit" (
 	PRIMARY KEY("regions","periods","emis_comm")
 );
 
+INSERT INTO "EmissionLimit" VALUES ('IL', 2025, 'CO2', 0.01, 'MT', 'zero emissions allowed');
 INSERT INTO "EmissionLimit" VALUES ('IL', 2030, 'CO2', 0.00, 'MT', 'zero emissions allowed');
 INSERT INTO "EmissionLimit" VALUES ('IL', 2035, 'CO2', 0.00, 'MT', 'zero emissions allowed');
 INSERT INTO "EmissionLimit" VALUES ('IL', 2040, 'CO2', 0.00, 'MT', 'zero emissions allowed');
@@ -1142,58 +1145,56 @@ INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',205
 /*
 NON GHG EMISSIONS
 */
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',1969,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',1971,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',1972,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',1982,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',1984,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',1985,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',1987,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',1988,'ELC',1.0,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',1969,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',1971,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',1972,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',1982,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',1984,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',1985,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',1987,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',1988,'ELC',0.0037224,'MT/MWh','NULL');
+
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2003, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2004, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2005, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2007, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2008, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2009, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2010, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2011, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2012, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2015, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2016, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2017, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2018, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2019, 'ELC', 0.168297, 'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM', 2020, 'ELC', 0.168297, 'MT/MWh','NULL');
 --
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',2025,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',2030,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',2035,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',2040,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',2045,'ELC',0.0037224,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','spent-fuel','ethos','NUCLEAR_EXISTING',2050,'ELC',0.0037224,'MT/MWh','NULL');
 --
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2003, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2004, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2005, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2007, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2008, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2009, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2010, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2011, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2012, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2015, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2016, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2017, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2018, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2019, 'ELC', 1.0, 'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM', 2020, 'ELC', 1.0, 'MT/MWh','NULL');
---
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',2025,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',2030,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',2035,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',2040,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',2045,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','NUCLEAR_EXISTING',2050,'ELC',1.0,'MT/MWh','NULL');
---
---
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_RESIDENTIAL',2025,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_RESIDENTIAL',2030,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_RESIDENTIAL',2035,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_RESIDENTIAL',2040,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_RESIDENTIAL',2045,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_RESIDENTIAL',2050,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_FARM',2025,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_FARM',2030,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_FARM',2035,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_FARM',2040,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_FARM',2045,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','SOLAR_FARM',2050,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM',2025,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM',2030,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM',2035,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM',2040,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM',2045,'ELC',1.0,'MT/MWh','NULL');
--- INSERT INTO "EmissionActivity" VALUES ('IL','ethos','WIND_FARM',2050,'ELC',1.0,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_RESIDENTIAL',2025,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_RESIDENTIAL',2030,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_RESIDENTIAL',2035,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_RESIDENTIAL',2040,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_RESIDENTIAL',2045,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_RESIDENTIAL',2050,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_FARM',2025,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_FARM',2030,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_FARM',2035,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_FARM',2040,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_FARM',2045,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','SOLAR_FARM',2050,'ELC',2.455418,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2025,'ELC',0.168297,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2030,'ELC',0.168297,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2035,'ELC',0.168297,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2040,'ELC',0.168297,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2045,'ELC',0.168297,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2050,'ELC',0.168297,'MT/MWh','NULL');
 
 
 CREATE TABLE "Efficiency" (

@@ -49,11 +49,11 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
              'SO2': ['NATGAS_PLANT_EXISTING',
                      'NATGAS_PLANT_NEW',
                      'COAL_PLANT_EXISTING',
-                     'COAL_PLANT_NEW',],}
-             # 'ewaste': ['SOLAR_FARM',
-             #            'SOLAR_RESIDENIAL',
-             #            'WIND_FARM'],
-             # 'spent-fuel': ['NUCLEAR_EXISTING']}
+                     'COAL_PLANT_NEW',],
+             'e-waste': ['SOLAR_FARM',
+                        'SOLAR_RESIDENIAL',
+                        'WIND_FARM'],
+             'spent-fuel': ['NUCLEAR_EXISTING']}
 
 
 def data_by_year(datalines, year):
