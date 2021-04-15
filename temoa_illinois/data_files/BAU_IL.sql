@@ -3,9 +3,15 @@ CREATE TABLE "time_season" (
 	"t_season"	text,
 	PRIMARY KEY("t_season")
 );
-INSERT INTO `time_season` VALUES ('inter');
-INSERT INTO `time_season` VALUES ('summer');
-INSERT INTO `time_season` VALUES ('winter');
+-- INSERT INTO `time_season` VALUES ('inter');
+-- INSERT INTO `time_season` VALUES ('summer');
+-- INSERT INTO `time_season` VALUES ('winter');
+
+INSERT INTO "time_season" VALUES('S1');
+INSERT INTO "time_season" VALUES('S2');
+INSERT INTO "time_season" VALUES('S3');
+INSERT INTO "time_season" VALUES('S4');
+
 CREATE TABLE "time_periods" (
 	"t_periods"	integer,
 	"flag"	text,
@@ -42,6 +48,10 @@ INSERT INTO `time_periods` VALUES (2020,'e');
 
 -- PERIODS WHEN UTILITY SOLAR WAS BUILT
 INSERT INTO `time_periods` VALUES (2014,'e');
+
+-- PERIODS WHEN BATTERIES WERE BUILT
+INSERT INTO `time_periods` VALUES (2013,'e');
+
 
 -- PERIODS WHEN COAL PLANTS WERE BUILT
 INSERT INTO `time_periods` VALUES (1953,'e');
@@ -102,8 +112,33 @@ CREATE TABLE "time_of_day" (
 	"t_day"	text,
 	PRIMARY KEY("t_day")
 );
-INSERT INTO `time_of_day` VALUES ('day');
-INSERT INTO `time_of_day` VALUES ('night');
+-- INSERT INTO `time_of_day` VALUES ('day');
+-- INSERT INTO `time_of_day` VALUES ('night');
+
+INSERT INTO "time_of_day" VALUES('H1');
+INSERT INTO "time_of_day" VALUES('H2');
+INSERT INTO "time_of_day" VALUES('H3');
+INSERT INTO "time_of_day" VALUES('H4');
+INSERT INTO "time_of_day" VALUES('H5');
+INSERT INTO "time_of_day" VALUES('H6');
+INSERT INTO "time_of_day" VALUES('H7');
+INSERT INTO "time_of_day" VALUES('H8');
+INSERT INTO "time_of_day" VALUES('H9');
+INSERT INTO "time_of_day" VALUES('H10');
+INSERT INTO "time_of_day" VALUES('H11');
+INSERT INTO "time_of_day" VALUES('H12');
+INSERT INTO "time_of_day" VALUES('H13');
+INSERT INTO "time_of_day" VALUES('H14');
+INSERT INTO "time_of_day" VALUES('H15');
+INSERT INTO "time_of_day" VALUES('H16');
+INSERT INTO "time_of_day" VALUES('H17');
+INSERT INTO "time_of_day" VALUES('H18');
+INSERT INTO "time_of_day" VALUES('H19');
+INSERT INTO "time_of_day" VALUES('H20');
+INSERT INTO "time_of_day" VALUES('H21');
+INSERT INTO "time_of_day" VALUES('H22');
+INSERT INTO "time_of_day" VALUES('H23');
+INSERT INTO "time_of_day" VALUES('H24');
 
 CREATE TABLE "technology_labels" (
 	"tech_labels"	text,
@@ -125,21 +160,24 @@ CREATE TABLE "technologies" (
 	FOREIGN KEY("flag") REFERENCES "technology_labels"("tech_labels"),
 	PRIMARY KEY("tech")
 );
-INSERT INTO "technologies" VALUES ('NUCLEAR_EXISTING','p','electric', 'current nuclear technology','uranium');
-INSERT INTO "technologies" VALUES ('COAL_PLANT_EXISTING','p','electric', 'current coal technology','coal');
-INSERT INTO "technologies" VALUES ('COAL_PLANT_NEW','p','electric', 'new coal technology','coal');
+INSERT INTO "technologies" VALUES ('NUCLEAR_EXISTING','pb','electric', 'current nuclear technology','uranium');
+INSERT INTO "technologies" VALUES ('COAL_PLANT_EXISTING','pb','electric', 'current coal technology','coal');
+INSERT INTO "technologies" VALUES ('COAL_PLANT_NEW','pb','electric', 'new coal technology','coal');
 INSERT INTO "technologies" VALUES ('NATGAS_PLANT_EXISTING','p','electric', 'current natgas technology','natural gas');
 INSERT INTO "technologies" VALUES ('NATGAS_PLANT_NEW','p','electric', 'new natgas technology','natural gas');
 INSERT INTO "technologies" VALUES ('SOLAR_FARM','p','electric', 'utility solar','solar energy');
 INSERT INTO "technologies" VALUES ('SOLAR_RESIDENTIAL','p','electric', 'residential solar','solar energy');
 INSERT INTO "technologies" VALUES ('WIND_FARM','p','electric', 'utility wind','wind energy');
 INSERT INTO "technologies" VALUES ('TRANSMISSION','r','transmission', 'connects generation to end-use','NULL');
+INSERT INTO "technologies" VALUES ('LI_BATTERY','ps','electric', 'connects generation to end-use','NULL');
 
 CREATE TABLE "tech_reserve" (
 	"tech"	text,
 	"notes"	text,
 	PRIMARY KEY("tech")
 );
+INSERT INTO "tech_reserve" VALUES ('LI_BATTERY', 'battery reserve');
+
 CREATE TABLE "tech_exchange" (
 	"tech"	text,
 	"notes"	text,
@@ -151,6 +189,10 @@ CREATE TABLE "tech_curtailment" (
 	PRIMARY KEY("tech"),
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
+INSERT INTO "tech_curtailment" VALUES ('SOLAR_FARM', '');
+INSERT INTO "tech_curtailment" VALUES ('SOLAR_RESIDENTIAL', '');
+INSERT INTO "tech_curtailment" VALUES ('WIND_FARM', '');
+
 CREATE TABLE "tech_flex" (
 	"tech"	text,
 	"notes"	TEXT,
@@ -249,6 +291,7 @@ CREATE TABLE "StorageDuration" (
 	"duration_notes"	text,
 	PRIMARY KEY("regions","tech")
 );
+INSERT INTO "StorageDuration" VALUES ('IL', 'LI_BATTERY', 2.0, '2 hour storage');
 
 CREATE TABLE "SegFrac" (
 	"season_name"	text,
@@ -259,12 +302,244 @@ CREATE TABLE "SegFrac" (
 	FOREIGN KEY("time_of_day_name") REFERENCES "time_of_day"("t_day"),
 	PRIMARY KEY("season_name","time_of_day_name")
 );
-INSERT INTO `SegFrac` VALUES ('inter','day',0.1667,'# I-D');
-INSERT INTO `SegFrac` VALUES ('inter','night',0.0833,'# I-N');
-INSERT INTO `SegFrac` VALUES ('summer','day',0.1667,'# S-D');
-INSERT INTO `SegFrac` VALUES ('summer','night',0.0833,'# S-N');
-INSERT INTO `SegFrac` VALUES ('winter','day',0.3333,'# W-D');
-INSERT INTO `SegFrac` VALUES ('winter','night',0.1667,'# W-N');
+-- INSERT INTO `SegFrac` VALUES ('inter','day',0.1667,'# I-D');
+-- INSERT INTO `SegFrac` VALUES ('inter','night',0.0833,'# I-N');
+-- INSERT INTO `SegFrac` VALUES ('summer','day',0.1667,'# S-D');
+-- INSERT INTO `SegFrac` VALUES ('summer','night',0.0833,'# S-N');
+-- INSERT INTO `SegFrac` VALUES ('winter','day',0.3333,'# W-D');
+-- INSERT INTO `SegFrac` VALUES ('winter','night',0.1667,'# W-N');
+
+INSERT INTO "SegFrac" VALUES('S1','H1',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H2',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H3',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H4',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H5',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H6',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H7',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H8',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H9',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H10',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H11',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H12',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H13',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H14',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H15',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H16',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H17',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H18',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H19',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H20',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H21',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H22',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H23',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S1','H24',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H1',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H2',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H3',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H4',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H5',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H6',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H7',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H8',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H9',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H10',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H11',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H12',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H13',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H14',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H15',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H16',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H17',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H18',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H19',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H20',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H21',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H22',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H23',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S2','H24',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H1',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H2',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H3',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H4',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H5',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H6',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H7',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H8',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H9',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H10',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H11',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H12',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H13',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H14',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H15',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H16',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H17',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H18',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H19',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H20',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H21',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H22',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H23',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S3','H24',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H1',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H2',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H3',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H4',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H5',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H6',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H7',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H8',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H9',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H10',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H11',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H12',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H13',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H14',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H15',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H16',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H17',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H18',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H19',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H20',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H21',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H22',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H23',1.04166666666666660884e-02,'from Power Genome: p6');
+INSERT INTO "SegFrac" VALUES('S4','H24',1.04166666666666660884e-02,'from Power Genome: p6');
+
+CREATE TABLE "DemandSpecificDistribution" (
+	"regions"	text,
+	"season_name"	text,
+	"time_of_day_name"	text,
+	"demand_name"	text,
+	"dds"	real CHECK("dds" >= 0 AND "dds" <= 1),
+	"dds_notes"	text,
+	FOREIGN KEY("demand_name") REFERENCES "commodities"("comm_name"),
+	FOREIGN KEY("time_of_day_name") REFERENCES "time_of_day"("t_day"),
+	FOREIGN KEY("season_name") REFERENCES "time_season"("t_season"),
+	PRIMARY KEY("regions","season_name","time_of_day_name","demand_name")
+);
+-- INSERT INTO "DemandSpecificDistribution" VALUES ('IL','inter','day','IL_DEMAND',0.15,'');
+-- INSERT INTO "DemandSpecificDistribution" VALUES ('IL','inter','night','IL_DEMAND',0.05,'');
+-- INSERT INTO "DemandSpecificDistribution" VALUES ('IL','summer','day','IL_DEMAND',0.15,'');
+-- INSERT INTO "DemandSpecificDistribution" VALUES ('IL','summer','night','IL_DEMAND',0.05,'');
+-- INSERT INTO "DemandSpecificDistribution" VALUES ('IL','winter','day','IL_DEMAND',0.5,'');
+-- INSERT INTO "DemandSpecificDistribution" VALUES ('IL','winter','night','IL_DEMAND',0.1,'');
+
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H1','IL_DEMAND',8.4185287899607615103e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H2','IL_DEMAND',0.00802069409308967,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H3','IL_DEMAND',7.73885017715577553515e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H4','IL_DEMAND',7.55779510494581328872e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H5','IL_DEMAND',7.45350981566282946855e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H6','IL_DEMAND',7.49531514299930229361e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H7','IL_DEMAND',7.59762418044456280807e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H8','IL_DEMAND',7.78916858933167543382e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H9','IL_DEMAND',8.19034771238968603568e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H10','IL_DEMAND',8.72165541799322513449e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H11','IL_DEMAND',9.31893953110232708958e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H12','IL_DEMAND',9.8012969988791609488e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H13','IL_DEMAND',1.02071887224732815724e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H14','IL_DEMAND',1.04992179363400644359e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H15','IL_DEMAND',1.06554938508924071371e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H16','IL_DEMAND',1.08122258235611480581e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H17','IL_DEMAND',1.09177272678211926409e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H18','IL_DEMAND',1.09066298536555118803e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H19','IL_DEMAND',1.06738881949204559435e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H20','IL_DEMAND',1.03301723945285802569e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H21','IL_DEMAND',1.01045756462837567346e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H22','IL_DEMAND',9.74793819926060740865e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H23','IL_DEMAND',9.25524341417875533177e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H24','IL_DEMAND',8.64047707327440100977e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H1','IL_DEMAND',8.02115015120606796028e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H2','IL_DEMAND',7.64627037952700372436e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H3','IL_DEMAND',7.40273534537053135018e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H4','IL_DEMAND',7.19264457308323688911e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H5','IL_DEMAND',7.09063957438224243268e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H6','IL_DEMAND',7.11192228648081098407e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H7','IL_DEMAND',7.21757575011298859596e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H8','IL_DEMAND',7.37324358717680091585e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H9','IL_DEMAND',7.80254629407934729296e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H10','IL_DEMAND',8.3846284699751853775e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H11','IL_DEMAND',8.99255393913357160828e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H12','IL_DEMAND',0.00948494468547116,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H13','IL_DEMAND',1.00411835681044510348e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H14','IL_DEMAND',1.04946573551760839737e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H15','IL_DEMAND',1.08468862404073867339e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H16','IL_DEMAND',1.1088140983981871479e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H17','IL_DEMAND',1.12948873300822462406e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H18','IL_DEMAND',1.14082937816931892505e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H19','IL_DEMAND',1.12736046179836794239e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H20','IL_DEMAND',0.010973670396766,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H21','IL_DEMAND',1.07751330967607861222e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H22','IL_DEMAND',1.03543434746976668187e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H23','IL_DEMAND',9.65368618853837748283e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H24','IL_DEMAND',8.87473892573078376733e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H1','IL_DEMAND',1.07327196919357829157e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H2','IL_DEMAND',1.00743237912293646246e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H3','IL_DEMAND',9.62069798478559778942e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H4','IL_DEMAND',9.30236941953987116205e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H5','IL_DEMAND',9.16539996524837197178e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H6','IL_DEMAND',9.22362338477516856272e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H7','IL_DEMAND',9.40437441824086561847e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H8','IL_DEMAND',9.87882687866680278543e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H9','IL_DEMAND',1.0642116146144735278e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H10','IL_DEMAND',1.15268688919566396344e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H11','IL_DEMAND',1.24342725242163054666e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H12','IL_DEMAND',1.31803836026432516503e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H13','IL_DEMAND',1.38457723944677719291e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H14','IL_DEMAND',1.42867805930245294482e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H15','IL_DEMAND',1.45360923633220430473e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H16','IL_DEMAND',1.45820022137060963801e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H17','IL_DEMAND',1.45461256418827969416e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H18','IL_DEMAND',1.43679589377433553076e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H19','IL_DEMAND',1.40595116316862486782e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H20','IL_DEMAND',1.35946363917046671859e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H21','IL_DEMAND',1.31667018591513154679e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H22','IL_DEMAND',1.26962019024008266471e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H23','IL_DEMAND',1.21282575281133220973e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H24','IL_DEMAND',1.1353566807725442786e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H1','IL_DEMAND',1.06168809303707183805e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H2','IL_DEMAND',1.00045468994204873186e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H3','IL_DEMAND',0.00954970493799966,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H4','IL_DEMAND',0.00925144292987544,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H5','IL_DEMAND',9.03876782826189099917e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H6','IL_DEMAND',8.95424505735614890966e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H7','IL_DEMAND',8.94573197251672183605e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H8','IL_DEMAND',9.14138090445141583695e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H9','IL_DEMAND',9.76085984589188104809e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H10','IL_DEMAND',1.05575933752389931885e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H11','IL_DEMAND',1.13479420909565354574e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H12','IL_DEMAND',1.20390221566714691187e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H13','IL_DEMAND',1.26369143472691014551e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H14','IL_DEMAND',1.30806588945242465577e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H15','IL_DEMAND',1.33054955459084058022e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H16','IL_DEMAND',1.34210302687292042794e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H17','IL_DEMAND',1.34318236441506207168e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H18','IL_DEMAND',1.33618947329696112491e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H19','IL_DEMAND',1.30779225458258589742e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H20','IL_DEMAND',1.25987574848638109181e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H21','IL_DEMAND',1.21899773931991705494e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H22','IL_DEMAND',1.18046082848429541994e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H23','IL_DEMAND',1.1286374245242819167e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H24','IL_DEMAND',1.0592253792085233599e-02,'from Power Genome: p6');
+
+CREATE TABLE "Demand" (
+	"regions"	text,
+	"periods"	integer,
+	"demand_comm"	text,
+	"demand"	real,
+	"demand_units"	text,
+	"demand_notes"	text,
+	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
+	FOREIGN KEY("demand_comm") REFERENCES "commodities"("comm_name"),
+	PRIMARY KEY("regions","periods","demand_comm")
+);
+INSERT INTO "Demand" VALUES ('IL',2025,'IL_DEMAND',141000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2030,'IL_DEMAND',141000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2035,'IL_DEMAND',141000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2040,'IL_DEMAND',141000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2045,'IL_DEMAND',141000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2050,'IL_DEMAND',141000,'GWh','based on annual retail sales');
+
 
 CREATE TABLE "PlanningReserveMargin" (
 	`regions`	text,
@@ -272,6 +547,7 @@ CREATE TABLE "PlanningReserveMargin" (
 	PRIMARY KEY(regions),
 	FOREIGN KEY(`regions`) REFERENCES regions
 );
+INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
 
 CREATE TABLE "MyopicBaseyear" (
 	"year"	real
@@ -344,11 +620,18 @@ CREATE TABLE "MaxCapacity" (
 	PRIMARY KEY("regions","periods","tech")
 );
 INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 6875.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 4905.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 4905.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2541.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
 -- Existing Coal
 -- INSERT INTO `MaxCapacity` VALUES ('IL',2025,'COAL_PLANT_EXISTING',9829.7,'MWe','cannot be expanded');
@@ -388,6 +671,7 @@ INSERT INTO "LifetimeTech" VALUES ('IL','COAL_PLANT_NEW',40.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','WIND_FARM',25.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','SOLAR_FARM',25.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','SOLAR_RESIDENTIAL',25.0,'');
+INSERT INTO "LifetimeTech" VALUES ('IL','LI_BATTERY',12.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','TRANSMISSION',1000.0,'');
 
 CREATE TABLE "LifetimeProcess" (
@@ -417,6 +701,7 @@ INSERT INTO "LifetimeLoanTech" VALUES ('IL','COAL_PLANT_NEW',25.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','WIND_FARM',10.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','SOLAR_FARM',10.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','SOLAR_RESIDENTIAL',10.0,'');
+INSERT INTO "LifetimeLoanTech" VALUES ('IL','LI_BATTERY',5.0,'');
 -- INSERT INTO "LifetimeLoanTech" VALUES ('IL','TRANSMISSION',1025.0,'');
 
 
@@ -491,6 +776,12 @@ INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2017, 2.1, 'MW', 'MW e
 INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2019, 3.5, 'MW', 'MW electric');
 INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2020, 71.9, 'MW', 'MW electric');
 
+-- EXISTING BATTERY STORAGE
+INSERT INTO "ExistingCapacity" VALUES ('IL','LI_BATTERY', 2015, 71.1, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','LI_BATTERY', 2016, 19.8, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','LI_BATTERY', 2017, 0.3, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','LI_BATTERY', 2018, 20.0, 'MW', 'MW electric');
+
 -- EXISTING COAL
 INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1953, 366.6, 'MW','MWe');
 INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1954, 366.6, 'MW','MWe');
@@ -563,6 +854,13 @@ CREATE TABLE "EmissionLimit" (
 	FOREIGN KEY("emis_comm") REFERENCES "commodities"("comm_name"),
 	PRIMARY KEY("regions","periods","emis_comm")
 );
+
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2025, 'CO2', 0.01, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2030, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2035, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2040, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2045, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2050, 'CO2', 0.00, 'MT', 'zero emissions allowed');
 
 CREATE TABLE "EmissionActivity" (
 	"regions"	text,
@@ -1065,6 +1363,11 @@ INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1985,'ELC',1.0,
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1987,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1988,'ELC',1.0,'MWe to MWe');
 
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY', 2015, 'ELC', 0.85, 'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY', 2016, 'ELC', 0.85, 'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY', 2017, 'ELC', 0.85, 'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY', 2018, 'ELC', 0.85, 'round trip efficiency');
+
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2003, 'ELC', 1.0, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2004, 'ELC', 1.0, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2005, 'ELC', 1.0, 'MWe to MWe');
@@ -1149,6 +1452,12 @@ INSERT INTO "Efficiency" VALUES ('IL','ethos','NATGAS_PLANT_EXISTING',2019,'ELC'
 
 
 -- NEW BUILDS
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2025,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2030,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2035,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2040,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2045,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2050,'ELC',0.85,'round trip efficiency');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2025,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2030,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2035,'ELC',1.0,'MWe to MWe');
@@ -1214,42 +1523,6 @@ CREATE TABLE "DiscountRate" (
 	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
 	PRIMARY KEY("regions","tech","vintage")
 );
-CREATE TABLE "DemandSpecificDistribution" (
-	"regions"	text,
-	"season_name"	text,
-	"time_of_day_name"	text,
-	"demand_name"	text,
-	"dds"	real CHECK("dds" >= 0 AND "dds" <= 1),
-	"dds_notes"	text,
-	FOREIGN KEY("demand_name") REFERENCES "commodities"("comm_name"),
-	FOREIGN KEY("time_of_day_name") REFERENCES "time_of_day"("t_day"),
-	FOREIGN KEY("season_name") REFERENCES "time_season"("t_season"),
-	PRIMARY KEY("regions","season_name","time_of_day_name","demand_name")
-);
-INSERT INTO "DemandSpecificDistribution" VALUES ('IL','inter','day','IL_DEMAND',0.15,'');
-INSERT INTO "DemandSpecificDistribution" VALUES ('IL','inter','night','IL_DEMAND',0.05,'');
-INSERT INTO "DemandSpecificDistribution" VALUES ('IL','summer','day','IL_DEMAND',0.15,'');
-INSERT INTO "DemandSpecificDistribution" VALUES ('IL','summer','night','IL_DEMAND',0.05,'');
-INSERT INTO "DemandSpecificDistribution" VALUES ('IL','winter','day','IL_DEMAND',0.5,'');
-INSERT INTO "DemandSpecificDistribution" VALUES ('IL','winter','night','IL_DEMAND',0.1,'');
-
-CREATE TABLE "Demand" (
-	"regions"	text,
-	"periods"	integer,
-	"demand_comm"	text,
-	"demand"	real,
-	"demand_units"	text,
-	"demand_notes"	text,
-	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
-	FOREIGN KEY("demand_comm") REFERENCES "commodities"("comm_name"),
-	PRIMARY KEY("regions","periods","demand_comm")
-);
-INSERT INTO "Demand" VALUES ('IL',2025,'IL_DEMAND',141000,'GWh','based on annual retail sales');
-INSERT INTO "Demand" VALUES ('IL',2030,'IL_DEMAND',141000,'GWh','based on annual retail sales');
-INSERT INTO "Demand" VALUES ('IL',2035,'IL_DEMAND',141000,'GWh','based on annual retail sales');
-INSERT INTO "Demand" VALUES ('IL',2040,'IL_DEMAND',141000,'GWh','based on annual retail sales');
-INSERT INTO "Demand" VALUES ('IL',2045,'IL_DEMAND',141000,'GWh','based on annual retail sales');
-INSERT INTO "Demand" VALUES ('IL',2050,'IL_DEMAND',141000,'GWh','based on annual retail sales');
 
 CREATE TABLE "CostVariable" (
 	"regions"	text NOT NULL,
@@ -1823,6 +2096,15 @@ INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 1.8784558, 'M$/MW', 'o
 INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
 INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
 
+-- BATTERY
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2025, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2030, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2035, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2040, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2045, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2050, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+
+
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
@@ -2186,7 +2468,10 @@ INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2005, 0.04070
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2009, 0.0407033, 'M$/MWh','source: NREL ATB');
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2012, 0.0407033, 'M$/MWh','source: NREL ATB');
 
-
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2015,0.013127, ' M$/MW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2016,0.013127, ' M$/MW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2017,0.013127, ' M$/MW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2018,0.013127, ' M$/MW-year','based on 2-hour storage at 50 MW');
 /*
 FUTURE CAPACITY
 */
@@ -2405,6 +2690,28 @@ INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2045, 0.04375601, 'M$/M
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2050, 0.04375601, 'M$/MW-year', 'source: NREL ATB');
 
 
+-- BATTERY STORAGE
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2025,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2025,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2025,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2030,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2030,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2030,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2035,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2035,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2035,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2040,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2040,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2040,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2045,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2045,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2050,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
 
 CREATE TABLE "CapacityToActivity" (
 	"regions"	text,
@@ -2437,63 +2744,944 @@ CREATE TABLE "CapacityFactorTech" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","season_name","time_of_day_name","tech")
 );
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NUCLEAR_EXISTING',0.925,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NUCLEAR_EXISTING',0.925,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NUCLEAR_EXISTING',0.925,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NUCLEAR_EXISTING',0.925,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NUCLEAR_EXISTING',0.925,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NUCLEAR_EXISTING',0.925,'');
 
--- CAPACITY FACTORS FOR NON-NUCLEAR
 -- TO DO: Update the capacity factors for these technologies in winter.
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT_EXISTING',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT_EXISTING',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT_EXISTING',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT_EXISTING',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT_EXISTING',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT_EXISTING',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NUCLEAR_EXISTING',0.925,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NUCLEAR_EXISTING',0.925,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NUCLEAR_EXISTING',0.925,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NUCLEAR_EXISTING',0.925,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NUCLEAR_EXISTING',0.925,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NUCLEAR_EXISTING',0.925,'');
+--
+--
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT_EXISTING',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT_EXISTING',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT_EXISTING',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT_EXISTING',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT_EXISTING',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT_EXISTING',0.54,'');
+--
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT_NEW',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT_NEW',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT_NEW',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT_NEW',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT_NEW',0.54,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT_NEW',0.54,'');
+--
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT_EXISTING',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT_EXISTING',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT_EXISTING',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT_EXISTING',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT_EXISTING',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT_EXISTING',0.55,'');
+--
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT_NEW',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT_NEW',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT_NEW',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT_NEW',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT_NEW',0.55,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT_NEW',0.55,'');
+--
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','WIND_FARM',0.33,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','WIND_FARM',0.33,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','WIND_FARM',0.33,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','WIND_FARM',0.33,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','WIND_FARM',0.33,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','WIND_FARM',0.33,'');
+--
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','SOLAR_FARM',0.25,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','SOLAR_FARM',0.0,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','SOLAR_FARM',0.25,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_FARM',0.0,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','SOLAR_FARM',0.25,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_FARM',0.0,'');
+--
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','SOLAR_RESIDENTIAL',0.15,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','SOLAR_RESIDENTIAL',0.0,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','SOLAR_RESIDENTIAL',0.15,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_RESIDENTIAL',0.0,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','SOLAR_RESIDENTIAL',0.15,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_RESIDENTIAL',0.0,'');
+--
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','LI_BATTERY',0.083,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','LI_BATTERY',0.083,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','LI_BATTERY',0.083,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','LI_BATTERY',0.083,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','LI_BATTERY',0.083,'');
+-- INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','LI_BATTERY',0.083,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','COAL_PLANT_NEW',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','COAL_PLANT_NEW',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','COAL_PLANT_NEW',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','COAL_PLANT_NEW',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','COAL_PLANT_NEW',0.54,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','NUCLEAR_EXISTING',0.925,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','NUCLEAR_EXISTING',0.925,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT_EXISTING',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT_EXISTING',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT_EXISTING',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT_EXISTING',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT_EXISTING',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','COAL_PLANT_EXISTING',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','COAL_PLANT_EXISTING',0.54,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','NATGAS_PLANT_NEW',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','NATGAS_PLANT_NEW',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','NATGAS_PLANT_NEW',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','NATGAS_PLANT_NEW',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','NATGAS_PLANT_NEW',0.55,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','COAL_PLANT_NEW',0.54,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','COAL_PLANT_NEW',0.54,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','NATGAS_PLANT_EXISTING',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','NATGAS_PLANT_EXISTING',0.55,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','NATGAS_PLANT_NEW',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','NATGAS_PLANT_NEW',0.55,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','WIND_FARM',0.33,'');
+
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','SOLAR_FARM',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','SOLAR_FARM',0.0,'');
+
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','SOLAR_RESIDENTIAL',0.0,'');
+
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','LI_BATTERY',0.083,'');
 
 CREATE TABLE "CapacityFactorProcess" (
 	"regions"	text,
