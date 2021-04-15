@@ -189,9 +189,9 @@ CREATE TABLE "tech_curtailment" (
 	PRIMARY KEY("tech"),
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
-INSERT INTO "tech_curtailment" VALUES ('SOLAR_FARM', '');
-INSERT INTO "tech_curtailment" VALUES ('SOLAR_RESIDENTIAL', '');
-INSERT INTO "tech_curtailment" VALUES ('WIND_FARM', '');
+-- INSERT INTO "tech_curtailment" VALUES ('SOLAR_FARM', '');
+-- INSERT INTO "tech_curtailment" VALUES ('SOLAR_RESIDENTIAL', '');
+-- INSERT INTO "tech_curtailment" VALUES ('WIND_FARM', '');
 
 CREATE TABLE "tech_flex" (
 	"tech"	text,
