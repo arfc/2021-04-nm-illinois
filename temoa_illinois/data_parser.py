@@ -81,11 +81,12 @@ def data_by_year(datalines, year):
     """
     datayear = []
 
-    for line in datalines:
-        line_year = re.findall(r"[-+]?\d*\.\d+|\d+", line)[1]
-
-        if int(line_year) == year:
-            datayear.append(line)
+    for i,line in enumerate(datalines):
+        line_year = re.findall(r"[-+]?\d*\.\d+|\d+", line)
+        if len(line_year) > 1:
+            line_year = line_year[1].strip("\'")
+            if int(line_year) == year:
+                datayear.append(line)
 
     return datayear
 
