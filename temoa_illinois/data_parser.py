@@ -212,9 +212,11 @@ def create_column(lines, years, tech):
 def create_dataframe(
         lines,
         variable,
+        name,
         sector='elc',
         emission=None,
-        years=time_horizon):
+        years=time_horizon,
+        save=False):
     """
     This function creates a pandas dataframe for
     a particular variable.
@@ -276,6 +278,13 @@ def create_dataframe(
         dataframe['total'] = dataframe.sum(axis=1)
         if emission != 'co2eq':
             dataframe['cumulative'] = dataframe['total'].cumsum()
+
+    if save:
+        if emission is not None:
+            dataframe.to_csv(f'{name}_{sector}_{variable}_{emission}.csv')
+        else:
+            dataframe.to_csv(f'{name}_{sector}_{variable}.csv')
+
 
     return dataframe
 
@@ -581,6 +590,7 @@ def make_plots(data_paths, to_save=True):
                 for byproduct in emissions:
                     df_all = create_dataframe(datalines,
                                               var,
+                                              scenario,
                                               sector='all',
                                               emission=byproduct)
                     if byproduct != 'co2eq':
@@ -597,11 +607,11 @@ def make_plots(data_paths, to_save=True):
                                        sector='all',
                                        save=to_save)
             else:
-                df_elc = create_dataframe(datalines, var, sector='elc')
-                df_ind = create_dataframe(datalines, var, sector='ind')
-                df_vcl = create_dataframe(datalines, var, sector='vcl')
-                df_chw = create_dataframe(datalines, var, sector='chw')
-                df_all = create_dataframe(datalines, var, sector='all')
+                df_elc = create_dataframe(datalines, var, scenario, sector='elc')
+                df_ind = create_dataframe(datalines, var, scenario, sector='ind')
+                df_vcl = create_dataframe(datalines, var, scenario, sector='vcl')
+                df_chw = create_dataframe(datalines, var, scenario, sector='chw')
+                df_all = create_dataframe(datalines, var, scenario, sector='all')
                 plot = plots_dict[var]
                 plot(dataframe=df_elc,
                      variable=var,
@@ -632,7 +642,7 @@ def make_plots(data_paths, to_save=True):
     return
 
 
-def make_emissions_plots(data_paths, to_save=True):
+def make_emissions_plots(data_paths, to_save=True, df_save=True):
     """
     This function produces all plots and puts them in a folder
     called 'figure.'
@@ -662,8 +672,10 @@ def make_emissions_plots(data_paths, to_save=True):
         for byproduct in emissions:
             df_all = create_dataframe(datalines,
                                       var,
+                                      scenario,
                                       sector='all',
-                                      emission=byproduct)
+                                      emission=byproduct,
+                                      save=df_save)
             if byproduct not in ghg_list:
                 bar_plot(dataframe=df_all,
                          variable=var,
@@ -682,7 +694,7 @@ def make_emissions_plots(data_paths, to_save=True):
     return
 
 
-def make_capacity_plots(data_paths, to_save=True):
+def make_capacity_plots(data_paths, to_save=True, df_save=True):
     """
     This function produces all plots and puts them in a folder
     called 'figure.'
@@ -706,14 +718,20 @@ def make_capacity_plots(data_paths, to_save=True):
         scenario = get_scenario_name(file)
         datalines = parse_datalines(file)
         # for each variable of interest
+        dfs = []
         for var in variables:
             if var == 'emissions':
                 continue
             # create dataframes
-            df_elc = create_dataframe(datalines, var, sector='elc')
+            df_elc = create_dataframe(datalines,
+                                      var,
+                                      sector='elc',
+                                      name=scenario,
+                                      save=df_save)
             # df_ind = create_dataframe(datalines, var, sector='ind')
             # df_vcl = create_dataframe(datalines, var, sector='vcl')
             # df_chw = create_dataframe(datalines, var, sector='chw')
+            dfs.append(df_elc)
             plot = plots_dict[var]
             plot(dataframe=df_elc,
                  variable=var,
@@ -735,7 +753,7 @@ def make_capacity_plots(data_paths, to_save=True):
             #      scenario=scenario,
             #      sector='chw',
             #      save=to_save)
-    return
+    return dfs
 
 
 def make_reactor_plots(data_paths, to_save=True):
