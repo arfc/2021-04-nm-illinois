@@ -327,7 +327,7 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
 
     units = {'generation': '[GWh]',
              'capacity': '[MW]',
-             'emissions': '[kg]',
+             'emissions': '[metric tons]',
              'transportation': '[kGGE]',
              'distribution': r'[\%]'}
 
@@ -454,7 +454,7 @@ def emissions_plot(dataframe, variable, scenario, emission, sector, save=True):
     if not os.path.isdir(target_folder):
         os.mkdir(target_folder)
 
-    units = {'emissions': f'[megatons {emission}]'}
+    units = {'emissions': f'[million metric tons {emission}]'}
 
     # goals = get_icap_goals()
 
