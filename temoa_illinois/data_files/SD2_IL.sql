@@ -715,12 +715,11 @@ CREATE TABLE "EmissionLimit" (
 	PRIMARY KEY("regions","periods","emis_comm")
 );
 
-INSERT INTO "EmissionLimit" VALUES ('IL', 2025, 'CO2', 35.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2030, 'CO2', 0.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2035, 'CO2', 0.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2040, 'CO2', 0.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2045, 'CO2', 0.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2050, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2030, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2035, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2040, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2045, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2050, 'CO2', 0.00, 'MT', 'zero emissions allowed');
 
 CREATE TABLE "EmissionActivity" (
 	"regions"	text,
@@ -2019,6 +2018,8 @@ INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2045, 0.00915
 INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2045, 0.009158, 'M$/MW-year', 'source: NREL ATB');
 
 INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2050, 0.009158, 'M$/MW-year', 'source: NREL ATB');
+
+
 
 
 CREATE TABLE "CostInvest" (
