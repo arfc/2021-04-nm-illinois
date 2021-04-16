@@ -169,6 +169,7 @@ INSERT INTO "technologies" VALUES ('SOLAR_FARM','p','electric', 'utility solar',
 INSERT INTO "technologies" VALUES ('SOLAR_RESIDENTIAL','p','electric', 'residential solar','solar energy');
 INSERT INTO "technologies" VALUES ('WIND_FARM','p','electric', 'utility wind','wind energy');
 INSERT INTO "technologies" VALUES ('TRANSMISSION','r','transmission', 'connects generation to end-use','NULL');
+INSERT INTO "technologies" VALUES ('INTERCONNECT','r','transmission', 'connects generation to end-use','NULL');
 INSERT INTO "technologies" VALUES ('LI_BATTERY','ps','electric', 'connects generation to end-use','NULL');
 
 CREATE TABLE "tech_reserve" (
@@ -249,6 +250,7 @@ CREATE TABLE "commodities" (
 INSERT INTO "commodities" VALUES ('ethos','p','# dummy commodity to supply inputs (makes graph easier to read)');
 INSERT INTO "commodities" VALUES ('ELC','p','# electricity');
 INSERT INTO "commodities" VALUES ('IL_DEMAND','d','# electricity');
+INSERT INTO "commodities" VALUES ('EX_DEMAND','d','# electricity');
 
 -- TO DO: add emissions commodities
 INSERT INTO "commodities" VALUES ('CO2eq','e','MT/MWh, lifecycle emissions');
@@ -524,6 +526,103 @@ INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H22','IL_DEMAND',1.18
 INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H23','IL_DEMAND',1.1286374245242819167e-02,'from Power Genome: p6');
 INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H24','IL_DEMAND',1.0592253792085233599e-02,'from Power Genome: p6');
 
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H1','EX_DEMAND',8.4185287899607615103e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H2','EX_DEMAND',0.00802069409308967,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H3','EX_DEMAND',7.73885017715577553515e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H4','EX_DEMAND',7.55779510494581328872e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H5','EX_DEMAND',7.45350981566282946855e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H6','EX_DEMAND',7.49531514299930229361e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H7','EX_DEMAND',7.59762418044456280807e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H8','EX_DEMAND',7.78916858933167543382e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H9','EX_DEMAND',8.19034771238968603568e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H10','EX_DEMAND',8.72165541799322513449e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H11','EX_DEMAND',9.31893953110232708958e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H12','EX_DEMAND',9.8012969988791609488e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H13','EX_DEMAND',1.02071887224732815724e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H14','EX_DEMAND',1.04992179363400644359e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H15','EX_DEMAND',1.06554938508924071371e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H16','EX_DEMAND',1.08122258235611480581e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H17','EX_DEMAND',1.09177272678211926409e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H18','EX_DEMAND',1.09066298536555118803e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H19','EX_DEMAND',1.06738881949204559435e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H20','EX_DEMAND',1.03301723945285802569e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H21','EX_DEMAND',1.01045756462837567346e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H22','EX_DEMAND',9.74793819926060740865e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H23','EX_DEMAND',9.25524341417875533177e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S1','H24','EX_DEMAND',8.64047707327440100977e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H1','EX_DEMAND',8.02115015120606796028e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H2','EX_DEMAND',7.64627037952700372436e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H3','EX_DEMAND',7.40273534537053135018e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H4','EX_DEMAND',7.19264457308323688911e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H5','EX_DEMAND',7.09063957438224243268e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H6','EX_DEMAND',7.11192228648081098407e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H7','EX_DEMAND',7.21757575011298859596e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H8','EX_DEMAND',7.37324358717680091585e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H9','EX_DEMAND',7.80254629407934729296e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H10','EX_DEMAND',8.3846284699751853775e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H11','EX_DEMAND',8.99255393913357160828e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H12','EX_DEMAND',0.00948494468547116,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H13','EX_DEMAND',1.00411835681044510348e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H14','EX_DEMAND',1.04946573551760839737e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H15','EX_DEMAND',1.08468862404073867339e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H16','EX_DEMAND',1.1088140983981871479e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H17','EX_DEMAND',1.12948873300822462406e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H18','EX_DEMAND',1.14082937816931892505e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H19','EX_DEMAND',1.12736046179836794239e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H20','EX_DEMAND',0.010973670396766,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H21','EX_DEMAND',1.07751330967607861222e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H22','EX_DEMAND',1.03543434746976668187e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H23','EX_DEMAND',9.65368618853837748283e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S2','H24','EX_DEMAND',8.87473892573078376733e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H1','EX_DEMAND',1.07327196919357829157e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H2','EX_DEMAND',1.00743237912293646246e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H3','EX_DEMAND',9.62069798478559778942e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H4','EX_DEMAND',9.30236941953987116205e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H5','EX_DEMAND',9.16539996524837197178e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H6','EX_DEMAND',9.22362338477516856272e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H7','EX_DEMAND',9.40437441824086561847e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H8','EX_DEMAND',9.87882687866680278543e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H9','EX_DEMAND',1.0642116146144735278e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H10','EX_DEMAND',1.15268688919566396344e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H11','EX_DEMAND',1.24342725242163054666e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H12','EX_DEMAND',1.31803836026432516503e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H13','EX_DEMAND',1.38457723944677719291e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H14','EX_DEMAND',1.42867805930245294482e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H15','EX_DEMAND',1.45360923633220430473e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H16','EX_DEMAND',1.45820022137060963801e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H17','EX_DEMAND',1.45461256418827969416e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H18','EX_DEMAND',1.43679589377433553076e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H19','EX_DEMAND',1.40595116316862486782e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H20','EX_DEMAND',1.35946363917046671859e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H21','EX_DEMAND',1.31667018591513154679e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H22','EX_DEMAND',1.26962019024008266471e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H23','EX_DEMAND',1.21282575281133220973e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S3','H24','EX_DEMAND',1.1353566807725442786e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H1','EX_DEMAND',1.06168809303707183805e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H2','EX_DEMAND',1.00045468994204873186e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H3','EX_DEMAND',0.00954970493799966,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H4','EX_DEMAND',0.00925144292987544,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H5','EX_DEMAND',9.03876782826189099917e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H6','EX_DEMAND',8.95424505735614890966e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H7','EX_DEMAND',8.94573197251672183605e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H8','EX_DEMAND',9.14138090445141583695e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H9','EX_DEMAND',9.76085984589188104809e-03,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H10','EX_DEMAND',1.05575933752389931885e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H11','EX_DEMAND',1.13479420909565354574e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H12','EX_DEMAND',1.20390221566714691187e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H13','EX_DEMAND',1.26369143472691014551e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H14','EX_DEMAND',1.30806588945242465577e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H15','EX_DEMAND',1.33054955459084058022e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H16','EX_DEMAND',1.34210302687292042794e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H17','EX_DEMAND',1.34318236441506207168e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H18','EX_DEMAND',1.33618947329696112491e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H19','EX_DEMAND',1.30779225458258589742e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H20','EX_DEMAND',1.25987574848638109181e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H21','EX_DEMAND',1.21899773931991705494e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H22','EX_DEMAND',1.18046082848429541994e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H23','EX_DEMAND',1.1286374245242819167e-02,'from Power Genome: p6');
+INSERT INTO "DemandSpecificDistribution" VALUES('IL','S4','H24','EX_DEMAND',1.0592253792085233599e-02,'from Power Genome: p6');
+
 CREATE TABLE "Demand" (
 	"regions"	text,
 	"periods"	integer,
@@ -541,6 +640,13 @@ INSERT INTO "Demand" VALUES ('IL',2035,'IL_DEMAND',141000,'GWh','based on annual
 INSERT INTO "Demand" VALUES ('IL',2040,'IL_DEMAND',141000,'GWh','based on annual retail sales');
 INSERT INTO "Demand" VALUES ('IL',2045,'IL_DEMAND',141000,'GWh','based on annual retail sales');
 INSERT INTO "Demand" VALUES ('IL',2050,'IL_DEMAND',141000,'GWh','based on annual retail sales');
+
+INSERT INTO "Demand" VALUES ('IL',2025,'EX_DEMAND',46000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2030,'EX_DEMAND',46000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2035,'EX_DEMAND',46000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2040,'EX_DEMAND',46000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2045,'EX_DEMAND',46000,'GWh','based on annual retail sales');
+INSERT INTO "Demand" VALUES ('IL',2050,'EX_DEMAND',46000,'GWh','based on annual retail sales');
 
 
 CREATE TABLE "PlanningReserveMargin" (
@@ -685,6 +791,7 @@ INSERT INTO "LifetimeTech" VALUES ('IL','SOLAR_FARM',25.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','SOLAR_RESIDENTIAL',25.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','LI_BATTERY',12.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','TRANSMISSION',1000.0,'');
+INSERT INTO "LifetimeTech" VALUES ('IL','INTERCONNECT',1000.0,'');
 
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
@@ -715,6 +822,7 @@ INSERT INTO "LifetimeLoanTech" VALUES ('IL','SOLAR_FARM',10.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','SOLAR_RESIDENTIAL',10.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','LI_BATTERY',5.0,'');
 -- INSERT INTO "LifetimeLoanTech" VALUES ('IL','TRANSMISSION',1025.0,'');
+-- INSERT INTO "LifetimeLoanTech" VALUES ('IL','INTERCONNECT',1025.0,'');
 
 
 CREATE TABLE "GrowthRateSeed" (
@@ -1522,6 +1630,12 @@ INSERT INTO "Efficiency" VALUES ('IL','ELC','TRANSMISSION',2035,'IL_DEMAND',1.0,
 INSERT INTO "Efficiency" VALUES ('IL','ELC','TRANSMISSION',2040,'IL_DEMAND',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ELC','TRANSMISSION',2045,'IL_DEMAND',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ELC','TRANSMISSION',2050,'IL_DEMAND',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','INTERCONNECT',2025,'EX_DEMAND',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','INTERCONNECT',2030,'EX_DEMAND',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','INTERCONNECT',2035,'EX_DEMAND',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','INTERCONNECT',2040,'EX_DEMAND',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','INTERCONNECT',2045,'EX_DEMAND',1.0,'MWe to MWe');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','INTERCONNECT',2050,'EX_DEMAND',1.0,'MWe to MWe');
 
 CREATE TABLE "DiscountRate" (
 	"regions"	text,
@@ -2714,6 +2828,7 @@ INSERT INTO "CapacityToActivity" VALUES ('IL','SOLAR_FARM',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','SOLAR_RESIDENTIAL',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','WIND_FARM',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','TRANSMISSION', 1.00, '');
+INSERT INTO "CapacityToActivity" VALUES ('IL','INTERCONNECT', 1.00, '');
 
 
 CREATE TABLE "CapacityFactorTech" (
