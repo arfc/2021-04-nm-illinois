@@ -728,6 +728,8 @@ CREATE TABLE "MaxCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
+
+-- All Plants Could Be Kept Open
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
@@ -750,15 +752,6 @@ INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'c
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 4905.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2541.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
-
--- Existing Coal
--- INSERT INTO `MaxCapacity` VALUES ('IL',2025,'COAL_PLANT_EXISTING',9829.7,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2030,'COAL_PLANT_EXISTING',9503.3,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2035,'COAL_PLANT_EXISTING',8450.6,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2040,'COAL_PLANT_EXISTING',6226.0,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2045,'COAL_PLANT_EXISTING',3442.1,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2050,'COAL_PLANT_EXISTING',2544.4,'MWe','cannot be expanded');
-
 
 
 CREATE TABLE "MaxActivity" (
@@ -1672,37 +1665,40 @@ CREATE TABLE "CostVariable" (
 	PRIMARY KEY("regions","periods","tech","vintage")
 );
 -- EXISTING NUCLEAR
--- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 0.029802, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 0.028428, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 0.028428, 'M$/GW-year', 'PWR');
+/*
+NUCLEAR ONLY HAS A VARIABLE COST IN THE STANDARD BAU
+*/
+-- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 --
--- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 0.029802, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 0.028428, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 0.028428, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 --
--- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 0.029802, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 0.028428, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 0.028428, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 --
--- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 0.029802, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 0.029802, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 0.028428, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 0.028428, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 0.005811, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 --
--- INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 0.028428, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 0.028428, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 
 
 
@@ -2006,32 +2002,32 @@ INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2019, 0.
 FUTURE CAPACITY
 */
 
--- INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 0.02988, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 --
--- INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 0.02988, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 --
--- INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 0.02988, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 --
--- INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 0.02988, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 --
--- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 0.02988, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 0.02988, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 --
--- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 0.02988, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 
 INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2025, 0.021369, 'M$/GW-year', 'source: NREL ATB');
 INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2025, 0.021369, 'M$/GW-year', 'source: NREL ATB');
@@ -2156,12 +2152,12 @@ CREATE TABLE "CostInvest" (
 );
 
 -- TO DO : ADD Investment cost from license renewals for existing nuclear, coal, and natural gas!
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2025, 0.3910000, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2030, 0.3910000, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2035, 0.3910000, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2040, 0.3910000, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2045, 0.3910000, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2050, 0.3910000, 'M$/MW', 'existing nuclear, source: IEA 2020');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2025, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2030, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2035, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2040, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2045, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2050, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2025, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2030, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2035, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
@@ -2186,36 +2182,36 @@ INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2045, 2.7128728, 'M$/
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2050, 2.7128728, 'M$/MW', 'assume combined cycle with CCs, SOURCE: NREL ATB');
 
 -- SOLAR FARM
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2025, 1.5935292, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2030, 1.5935292, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2035, 1.5935292, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2040, 1.5935292, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2045, 1.5935292, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2050, 1.5935292, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2025, 3.201533, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2030, 3.201533, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2035, 3.201533, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2040, 3.201533, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2045, 3.201533, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2050, 3.201533, 'M$/MW', 'utility solar');
 
 -- SOLAR RESIDENTIAL
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2025, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2030, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2035, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2040, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2045, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2050, 3.107694, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2025, 4.715694, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2030, 4.715694, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2035, 4.715694, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2040, 4.715694, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2045, 4.715694, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2050, 4.715694, 'M$/MW', 'residential solar');
 
 --WIND
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2025, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2030, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2035, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2025, 3.486456, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2030, 3.486456, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2035, 3.486456, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 3.486456, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 3.486456, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 3.486456, 'M$/MW', 'on shore wind, 33% capacity factor');
 
 -- BATTERY
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2025, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2030, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2035, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2040, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2045, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2050, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2025, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2030, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2035, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2040, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2045, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2050, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
 
 
 CREATE TABLE "CostFixed" (
@@ -2237,33 +2233,96 @@ COMMENT ABOUT NUCLEAR FIXED COSTS: Existing nuclear capacity will age out by 205
 if their licenses are not extended.
 */
 -- FIXED COST FOR EXISTING NUCLEAR
-INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 181.4002, 'M$/GW-year', 'BWR');
-INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 181.4002, 'M$/GW-year', 'PWR');
-INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 181.4002, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 224.82238, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
+
+
+/*
+UNCOMMENT the following lines for Business-As-Usual
+*/
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 177.73741, 'M$/GW-year', 'BWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 177.73741, 'M$/GW-year', 'PWR');
+-- INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 177.73741, 'M$/GW-year', 'PWR');
+
+/*
+UNCOMMENT the following lines for Business-As-Usual 2 (No variable cost)
+*/
+INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 181.40022, 'M$/GW-year', 'BWR');
+INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
 
 INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2009, 19.3341, 'M$/GW-year', 'MW electric');
 INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2009, 19.3341, 'M$/GW-year', 'MW electric');
@@ -2560,32 +2619,95 @@ INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2018, 13.127, ' M$/GW-yea
 /*
 FUTURE CAPACITY
 */
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 181.4002, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 181.4002, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 181.4002, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 181.4002, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 181.4002, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 181.4002, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 224.82238, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 181.4002, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+
+/*
+UNCOMMENT the following lines for Business-As-Usual
+Fixed Cost without Fuel and Variable OM
+*/
+
+-- INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+
+/*
+UNCOMMENT the following lines for Business-As-Usual 2
+No Variable Cost for Nuclear
+*/
+-- INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 181.40022, 'M$/GW-year', 'source: NREL ATB');
 
 INSERT INTO "CostFixed" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2025, 40.7033, 'M$/GW-year', 'source: NREL ATB');
 INSERT INTO "CostFixed" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2025, 40.7033, 'M$/GW-year', 'source: NREL ATB');
@@ -2695,106 +2817,106 @@ INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2045, 27.4747, '
 
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2050, 27.4747, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'SOLAR_FARM', 2025, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_FARM', 2025, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2025, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2025, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2025, 19.3340, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'SOLAR_FARM', 2025, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_FARM', 2025, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2025, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2025, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2025, 53.444052, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_FARM', 2030, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2030, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2030, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2030, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2030, 19.3340, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_FARM', 2030, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2030, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2030, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2030, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2030, 53.444052, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2035, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2035, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2035, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2035, 19.3340, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2035, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2035, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2035, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2035, 53.444052, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2040, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2040, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2040, 19.3340, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2040, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2040, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2040, 53.444052, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2045, 19.3340, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2045, 19.3340, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2045, 53.444052, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2045, 53.444052, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2050, 19.3340, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2050, 53.444052, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'SOLAR_RESIDENTIAL', 2025, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 2025, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2025, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2025, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2025, 22.3868, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'SOLAR_RESIDENTIAL', 2025, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 2025, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2025, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2025, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2025, 56.496797, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 2030, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2030, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2030, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2030, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2030, 22.3868, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 2030, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2030, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2030, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2030, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2030, 56.496797, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2035, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2035, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2035, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2035, 22.3868, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2035, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2035, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2035, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2035, 56.496797, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2040, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2040, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2040, 22.3868, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2040, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2040, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2040, 56.496797, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2045, 22.3868, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2045, 22.3868, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2045, 56.496797, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2045, 56.496797, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2050, 22.3868, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2050, 56.496797, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2025, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2025, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2025, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2025, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2025, 43.75601, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2025, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2025, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2025, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2025, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2025, 77.866013, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2030, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2030, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2030, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2030, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2030, 43.75601, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2030, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2030, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2030, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2030, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2030, 77.866013, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2035, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2035, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2035, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2035, 43.75601, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2035, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2035, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2035, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2035, 77.866013, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2040, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2040, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2040, 43.75601, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2040, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2040, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2040, 77.866013, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2045, 43.75601, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2045, 43.75601, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2045, 77.866013, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2045, 77.866013, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2050, 43.75601, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2050, 77.866013, 'M$/GW-year', 'source: NREL ATB');
 
 
 -- BATTERY STORAGE
-INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2025,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2025,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2025,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2025,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2025,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2025,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2030,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2030,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2030,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2030,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2030,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2030,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2035,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2035,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2035,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2035,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2035,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2035,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2040,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2040,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2040,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2040,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2040,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2040,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2045,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2045,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2045,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2045,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2050,13.127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2050,34.11,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
 
 CREATE TABLE "CapacityToActivity" (
@@ -2813,6 +2935,7 @@ INSERT INTO "CapacityToActivity" VALUES ('IL','NATGAS_PLANT_NEW',8.76, '');;
 INSERT INTO "CapacityToActivity" VALUES ('IL','SOLAR_FARM',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','SOLAR_RESIDENTIAL',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','WIND_FARM',8.76, '');
+INSERT INTO "CapacityToActivity" VALUES ('IL','LI_BATTERY',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','TRANSMISSION', 1.00, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','INTERCONNECT', 1.00, '');
 
@@ -3380,124 +3503,124 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','NATGAS_PLANT_NEW',0.55
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','NATGAS_PLANT_NEW',0.55,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','NATGAS_PLANT_NEW',0.55,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','WIND_FARM',0.38,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','WIND_FARM',0.36,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','WIND_FARM',0.35,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','WIND_FARM',0.34,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','WIND_FARM',0.30,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','WIND_FARM',0.32,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','WIND_FARM',0.32,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','WIND_FARM',0.33,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','WIND_FARM',0.35,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','WIND_FARM',0.38,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','WIND_FARM',0.38,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','WIND_FARM',0.36,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','WIND_FARM',0.35,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','WIND_FARM',0.34,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','WIND_FARM',0.30,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','WIND_FARM',0.32,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','WIND_FARM',0.32,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','WIND_FARM',0.33,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','WIND_FARM',0.35,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','WIND_FARM',0.38,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','WIND_FARM',0.38,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','WIND_FARM',0.36,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','WIND_FARM',0.35,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','WIND_FARM',0.34,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','WIND_FARM',0.30,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','WIND_FARM',0.32,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','WIND_FARM',0.32,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','WIND_FARM',0.33,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','WIND_FARM',0.35,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','WIND_FARM',0.38,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','WIND_FARM',0.38,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','WIND_FARM',0.36,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','WIND_FARM',0.35,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','WIND_FARM',0.34,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','WIND_FARM',0.29,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','WIND_FARM',0.30,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','WIND_FARM',0.31,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','WIND_FARM',0.32,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','WIND_FARM',0.32,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','WIND_FARM',0.33,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','WIND_FARM',0.33,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','WIND_FARM',0.33,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','WIND_FARM',0.34,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','WIND_FARM',0.35,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','WIND_FARM',0.37,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','WIND_FARM',0.38,'');
 
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','SOLAR_FARM',0.004,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','SOLAR_FARM',0.022,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','SOLAR_FARM',0.104,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','SOLAR_FARM',0.265,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','SOLAR_FARM',0.413,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','SOLAR_FARM',0.521,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','SOLAR_FARM',0.577,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','SOLAR_FARM',0.588,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','SOLAR_FARM',0.561,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','SOLAR_FARM',0.508,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','SOLAR_FARM',0.409,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','SOLAR_FARM',0.274,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','SOLAR_FARM',0.148,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','SOLAR_FARM',0.053,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','SOLAR_FARM',0.009,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','SOLAR_FARM',0.00,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','SOLAR_FARM',0.0,'');
@@ -3506,22 +3629,22 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','SOLAR_FARM',0.004,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','SOLAR_FARM',0.022,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','SOLAR_FARM',0.104,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','SOLAR_FARM',0.265,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','SOLAR_FARM',0.413,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','SOLAR_FARM',0.521,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','SOLAR_FARM',0.577,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','SOLAR_FARM',0.588,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','SOLAR_FARM',0.561,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','SOLAR_FARM',0.508,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','SOLAR_FARM',0.409,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','SOLAR_FARM',0.274,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','SOLAR_FARM',0.148,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','SOLAR_FARM',0.053,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','SOLAR_FARM',0.009,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','SOLAR_FARM',0.00,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','SOLAR_FARM',0.0,'');
@@ -3530,22 +3653,22 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','SOLAR_FARM',0.004,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','SOLAR_FARM',0.022,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','SOLAR_FARM',0.104,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','SOLAR_FARM',0.265,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','SOLAR_FARM',0.413,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','SOLAR_FARM',0.521,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','SOLAR_FARM',0.577,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','SOLAR_FARM',0.588,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','SOLAR_FARM',0.561,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','SOLAR_FARM',0.508,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','SOLAR_FARM',0.409,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','SOLAR_FARM',0.274,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','SOLAR_FARM',0.148,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','SOLAR_FARM',0.053,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','SOLAR_FARM',0.009,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','SOLAR_FARM',0.00,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','SOLAR_FARM',0.0,'');
@@ -3554,119 +3677,119 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','SOLAR_FARM',0.25,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','SOLAR_FARM',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','SOLAR_FARM',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','SOLAR_FARM',0.004,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','SOLAR_FARM',0.022,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','SOLAR_FARM',0.104,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','SOLAR_FARM',0.265,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','SOLAR_FARM',0.413,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','SOLAR_FARM',0.521,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','SOLAR_FARM',0.577,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','SOLAR_FARM',0.588,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','SOLAR_FARM',0.561,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','SOLAR_FARM',0.508,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','SOLAR_FARM',0.409,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','SOLAR_FARM',0.274,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','SOLAR_FARM',0.148,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','SOLAR_FARM',0.053,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','SOLAR_FARM',0.009,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','SOLAR_FARM',0.00,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','SOLAR_FARM',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','SOLAR_FARM',0.0,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H1','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H2','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H3','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H4','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H5','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H6','SOLAR_RESIDENTIAL',0.002,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H7','SOLAR_RESIDENTIAL',0.019,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H8','SOLAR_RESIDENTIAL',0.09,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H9','SOLAR_RESIDENTIAL',0.24,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H10','SOLAR_RESIDENTIAL',0.39,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H11','SOLAR_RESIDENTIAL',0.521,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H12','SOLAR_RESIDENTIAL',0.582,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H13','SOLAR_RESIDENTIAL',0.588,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H14','SOLAR_RESIDENTIAL',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H15','SOLAR_RESIDENTIAL',0.48,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H16','SOLAR_RESIDENTIAL',0.41,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H17','SOLAR_RESIDENTIAL',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H18','SOLAR_RESIDENTIAL',0.13,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H19','SOLAR_RESIDENTIAL',0.05,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H20','SOLAR_RESIDENTIAL',0.008,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H21','SOLAR_RESIDENTIAL',0.00,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H22','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H23','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S1','H24','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H1','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H2','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H3','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H4','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H5','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H6','SOLAR_RESIDENTIAL',0.002,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H7','SOLAR_RESIDENTIAL',0.019,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H8','SOLAR_RESIDENTIAL',0.09,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H9','SOLAR_RESIDENTIAL',0.24,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H10','SOLAR_RESIDENTIAL',0.39,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H11','SOLAR_RESIDENTIAL',0.521,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H12','SOLAR_RESIDENTIAL',0.582,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H13','SOLAR_RESIDENTIAL',0.588,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H14','SOLAR_RESIDENTIAL',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H15','SOLAR_RESIDENTIAL',0.48,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H16','SOLAR_RESIDENTIAL',0.41,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H17','SOLAR_RESIDENTIAL',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H18','SOLAR_RESIDENTIAL',0.13,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H19','SOLAR_RESIDENTIAL',0.05,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H20','SOLAR_RESIDENTIAL',0.008,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H21','SOLAR_RESIDENTIAL',0.00,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H22','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H23','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S2','H24','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','SOLAR_RESIDENTIAL',0.15,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','SOLAR_RESIDENTIAL',0.15,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H1','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H2','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H3','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H4','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H5','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H6','SOLAR_RESIDENTIAL',0.002,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H7','SOLAR_RESIDENTIAL',0.019,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H8','SOLAR_RESIDENTIAL',0.09,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H9','SOLAR_RESIDENTIAL',0.24,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H10','SOLAR_RESIDENTIAL',0.39,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H11','SOLAR_RESIDENTIAL',0.521,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H12','SOLAR_RESIDENTIAL',0.582,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H13','SOLAR_RESIDENTIAL',0.588,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H14','SOLAR_RESIDENTIAL',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H15','SOLAR_RESIDENTIAL',0.48,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H16','SOLAR_RESIDENTIAL',0.41,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H17','SOLAR_RESIDENTIAL',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H18','SOLAR_RESIDENTIAL',0.13,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H19','SOLAR_RESIDENTIAL',0.05,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H20','SOLAR_RESIDENTIAL',0.008,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H21','SOLAR_RESIDENTIAL',0.00,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H22','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H23','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S3','H24','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H1','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H2','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H3','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H4','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H5','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','SOLAR_RESIDENTIAL',0.0,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','SOLAR_RESIDENTIAL',0.0,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H6','SOLAR_RESIDENTIAL',0.002,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H7','SOLAR_RESIDENTIAL',0.019,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H8','SOLAR_RESIDENTIAL',0.09,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H9','SOLAR_RESIDENTIAL',0.24,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H10','SOLAR_RESIDENTIAL',0.39,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H11','SOLAR_RESIDENTIAL',0.521,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H12','SOLAR_RESIDENTIAL',0.582,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H13','SOLAR_RESIDENTIAL',0.588,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H14','SOLAR_RESIDENTIAL',0.55,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H15','SOLAR_RESIDENTIAL',0.48,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H16','SOLAR_RESIDENTIAL',0.41,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H17','SOLAR_RESIDENTIAL',0.25,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H18','SOLAR_RESIDENTIAL',0.13,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H19','SOLAR_RESIDENTIAL',0.05,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H20','SOLAR_RESIDENTIAL',0.008,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H21','SOLAR_RESIDENTIAL',0.00,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H22','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H23','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','S4','H24','SOLAR_RESIDENTIAL',0.0,'');
