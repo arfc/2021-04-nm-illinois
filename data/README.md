@@ -179,11 +179,12 @@ provide a reference.
 
 |Generation|Manufacturing|Installation|Operation|End-of-life|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|
-|Natural Gas|||||||
-|Solar|||||||
-|Wind|||||||
-|Coal|||||||
-|Nuclear|||||||
+||Job-years/MW|Job-years/MW|Jobs/MW|Job-years/MW|||
+|Natural Gas|0.93|1.3|0.14||[16]|Table 1 p.5|
+|Solar|10.3|11.2|0.5||[16] [18] [19]|Table 1 p.5; Table 1; Table 1 |
+|Wind|4.7|2.5|0.3||[16] [19]|Table 1 p.5; Table 1|
+|Coal|5.4|11.2|0.17||[16] [17]|Table 1 p.5; Table 9.5 p.181|
+|Nuclear|3.6|9.1|0.6|7.3|[16] [17]|Table 1 p.5; Table 9.2 p.176; Table 9.5 p.181; p.174|
 
 \*"Jobs" are measured in labour-years per MWh. Also "job-years" per MWh. This
 unit is superior to simply counting the number of employed individuals because
