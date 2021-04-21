@@ -291,6 +291,14 @@ CREATE TABLE "TechInputSplit" (
 CREATE TABLE RampDown(
 	"regions" text,
 	"tech" text,
+	"ramp_down" real,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY ("regions", "tech")
+);
+
+CREATE TABLE RampUp(
+	"regions" text,
+	"tech" text,
 	"ramp_up" real,
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY ("regions", "tech")
