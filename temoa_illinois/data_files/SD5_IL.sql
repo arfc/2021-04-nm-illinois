@@ -288,6 +288,15 @@ CREATE TABLE "TechInputSplit" (
 	PRIMARY KEY("regions","periods","input_comm","tech")
 );
 
+CREATE TABLE RampDown(
+	"regions" text,
+	"tech" text,
+	"ramp_up" real,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY ("regions", "tech")
+);
+
+
 CREATE TABLE "StorageDuration" (
 	"regions"	text,
 	"tech"	text,
