@@ -675,6 +675,18 @@ CREATE TABLE "PlanningReserveMargin" (
 );
 INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
 
+CREATE TABLE "tech_reserve" (
+	"tech"	text,
+	"notes"	text,
+	PRIMARY KEY("tech")
+);
+
+CREATE TABLE tech_ramping (
+	"tech" text,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY("tech")
+);
+
 CREATE TABLE "MyopicBaseyear" (
 	"year"	real
 	"notes"	text
