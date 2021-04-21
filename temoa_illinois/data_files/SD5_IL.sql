@@ -295,7 +295,7 @@ CREATE TABLE "StorageDuration" (
 	"duration_notes"	text,
 	PRIMARY KEY("regions","tech")
 );
-INSERT INTO "StorageDuration" VALUES ('IL', 'LI_BATTERY', 2.0, '2 hour storage');
+INSERT INTO "StorageDuration" VALUES ('IL', 'LI_BATTERY', 4.87, '4.87 hour storage');
 
 CREATE TABLE "SegFrac" (
 	"season_name"	text,
