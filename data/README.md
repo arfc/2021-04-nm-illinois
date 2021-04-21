@@ -177,21 +177,22 @@ provide a reference.
 
 ### Jobs*
 
-|Generation|Manufacturing|Installation|Operation|End-of-life|Source|Page Numbers|
+|Generation|Manufacturing (Job-years/MW)|Installation (Job-years/MW)|Operation (Jobs/MW)|End-of-life (Job-years/MW)|Source|Page Numbers|
 |:------|------:|------:|------:|------:|------:|------:|
-||Job-years/MW|Job-years/MW|Jobs/MW|Job-years/MW|||
-|Natural Gas|0.93|1.3|0.14||[16]|Table 1 p.5|
-|Solar|10.3|11.2|0.5||[16] [18] [19]|Table 1 p.5; Table 1; Table 1 |
-|Wind|4.7|2.5|0.3||[16] [19]|Table 1 p.5; Table 1|
-|Coal|5.4|11.2|0.17||[16] [17]|Table 1 p.5; Table 9.5 p.181|
+|Natural Gas|0.93|1.3|0.14|N/A|[16]|Table 1 p.5|
+|Solar|10.3|11.2|0.5|N/A|[16] [18] [19]|Table 1 p.5; Table 1; Table 1 |
+|Wind|4.7|2.5|0.3|N/A|[16] [19]|Table 1 p.5; Table 1|
+|Coal|5.4|11.2|0.17|N/A|[16] [17]|Table 1 p.5; Table 9.5 p.181|
 |Nuclear|3.6|9.1|0.6|7.3|[16] [17]|Table 1 p.5; Table 9.2 p.176; Table 9.5 p.181; p.174|
 
-\*"Jobs" are measured in labour-years per MW. Operation jobs are recorded
+\*"Jobs" are measured in job-years per MW. Operation jobs are recorded
 in Jobs/MW because it is assumed that those jobs are fairly constant over the
 life of the plant. Values in this table come from across 4 sources and are
 sometimes the median from the values in these sources. Look at the jobs_data
 jupyter notebook for a better idea of how these exact values were arrived upon
-from the original values in the sources. "
+from the original values in the sources. All jobs figures are from direct jobs
+only. End-of-life data for nuclear is from decommissioning only and not
+including long-term waste management."
 
 ### References
 [1] [Rockland Capital Generation](https://www.rocklandcapital.com/natural-gas-combined-cycle/)<br>
