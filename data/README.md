@@ -186,11 +186,12 @@ provide a reference.
 |Coal|5.4|11.2|0.17||[16] [17]|Table 1 p.5; Table 9.5 p.181|
 |Nuclear|3.6|9.1|0.6|7.3|[16] [17]|Table 1 p.5; Table 9.2 p.176; Table 9.5 p.181; p.174|
 
-\*"Jobs" are measured in labour-years per MWh. Also "job-years" per MWh. This
-unit is superior to simply counting the number of employed individuals because
-it accounts for differences in career span. For example, nuclear power plants
-require more employees during plant operation than a solar farm. Thus, "job-
-years."
+\*"Jobs" are measured in labour-years per MW. Operation jobs are recorded
+in Jobs/MW because it is assumed that those jobs are fairly constant over the
+life of the plant. Values in this table come from across 4 sources and are
+sometimes the median from the values in these sources. Look at the jobs_data
+jupyter notebook for a better idea of how these exact values were arrived upon
+from the original values in the sources. "
 
 ### References
 [1] [Rockland Capital Generation](https://www.rocklandcapital.com/natural-gas-combined-cycle/)<br>
@@ -208,4 +209,8 @@ years."
 [13] "Projected Costs of Generating Electricity" (IEA, 2020)<br>
 [14] "Lazard's LCOE Analysis, Version 14.0" (Lazard, 2020)<br>
 [15] [The spatial extent of renewable and non-renewable power generation: A review and meta-analysis of power densities and their application in the U.S.](https://www.sciencedirect.com/science/article/pii/S0301421518305512)<br>
+[16] [Calculating Global Energy Sector Jobs](https://opus.lib.uts.edu.au/handle/10453/43718)<br>
+[17] [The Full Costs of Electricity Provision](https://www.oecd-nea.org/jcms/pl_14998/the-full-costs-of-electricity-provision?details=true)<br>
+[18] [Employment factors for wind and solar energy technologies: A literature review](https://www.sciencedirect.com/science/article/abs/pii/S1364032115000118)<br>
+[19] [Employment effects of renewable electricity deployment: A novel methodology](https://www.sciencedirect.com/science/article/abs/pii/S0360544215011378)<br>
 [1] I made up some numbers -- don't do that.
