@@ -178,6 +178,7 @@ CREATE TABLE "tech_reserve" (
 	PRIMARY KEY("tech")
 );
 INSERT INTO "tech_reserve" VALUES ('LI_BATTERY', 'battery reserve');
+-- INSERT INTO "tech_reserve" VALUES ('NUCLEAR_EXISTING', 'nuclear reserve');
 
 CREATE TABLE "tech_exchange" (
 	"tech"	text,
@@ -287,23 +288,6 @@ CREATE TABLE "TechInputSplit" (
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
 	PRIMARY KEY("regions","periods","input_comm","tech")
 );
-
-CREATE TABLE RampDown(
-	"regions" text,
-	"tech" text,
-	"ramp_down" real,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	PRIMARY KEY ("regions", "tech")
-);
-
-CREATE TABLE RampUp(
-	"regions" text,
-	"tech" text,
-	"ramp_up" real,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	PRIMARY KEY ("regions", "tech")
-);
-
 
 CREATE TABLE "StorageDuration" (
 	"regions"	text,
@@ -675,11 +659,30 @@ CREATE TABLE "PlanningReserveMargin" (
 );
 INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
 
+CREATE TABLE RampDown(
+	"regions" text,
+	"tech" text,
+	"ramp_down" real,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY ("regions", "tech")
+);
+INSERT INTO "RampDown" VALUES ('IL', 'NUCLEAR_EXISTING', 0.1);
+
+CREATE TABLE RampUp(
+	"regions" text,
+	"tech" text,
+	"ramp_up" real,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY ("regions", "tech")
+);
+INSERT INTO "RampUp" VALUES ('IL', 'NUCLEAR_EXISTING', 0.1);
+
 CREATE TABLE tech_ramping (
 	"tech" text,
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("tech")
 );
+INSERT INTO "tech_ramping" VALUES ('NUCLEAR_EXISTING');
 
 CREATE TABLE "MyopicBaseyear" (
 	"year"	real
@@ -712,6 +715,13 @@ CREATE TABLE "MinCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+
 
 CREATE TABLE "MinActivity" (
 	"regions"	text,
@@ -724,21 +734,6 @@ CREATE TABLE "MinActivity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
-
--- INSERT INTO "MinActivity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 92000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 74000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 55000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 50000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 55000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 66943.044, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 38726.208, 'MWe', 'cannot build more than existing capacity');
-
-INSERT INTO "MinActivity" VALUES ('IL', 2025, 'SOLAR_FARM', 219.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MinActivity" VALUES ('IL', 2030, 'SOLAR_FARM', 200.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MinActivity" VALUES ('IL', 2035, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MinActivity" VALUES ('IL', 2040, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MinActivity" VALUES ('IL', 2045, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
-
 
 CREATE TABLE "MaxCapacity" (
 	"regions"	text,
@@ -753,20 +748,20 @@ CREATE TABLE "MaxCapacity" (
 );
 
 -- All Plants Could Be Kept Open
-INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
 -- Shutdown at the end of their current licenses.
--- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
 -- Shutdown prematurely
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');

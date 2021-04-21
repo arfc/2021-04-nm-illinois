@@ -178,6 +178,7 @@ CREATE TABLE "tech_reserve" (
 	PRIMARY KEY("tech")
 );
 INSERT INTO "tech_reserve" VALUES ('LI_BATTERY', 'battery reserve');
+-- INSERT INTO "tech_reserve" VALUES ('NUCLEAR_EXISTING', 'nuclear reserve');
 
 CREATE TABLE "tech_exchange" (
 	"tech"	text,
@@ -287,23 +288,6 @@ CREATE TABLE "TechInputSplit" (
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
 	PRIMARY KEY("regions","periods","input_comm","tech")
 );
-
-CREATE TABLE RampDown(
-	"regions" text,
-	"tech" text,
-	"ramp_down" real,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	PRIMARY KEY ("regions", "tech")
-);
-
-CREATE TABLE RampUp(
-	"regions" text,
-	"tech" text,
-	"ramp_up" real,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	PRIMARY KEY ("regions", "tech")
-);
-
 
 CREATE TABLE "StorageDuration" (
 	"regions"	text,
@@ -675,17 +659,30 @@ CREATE TABLE "PlanningReserveMargin" (
 );
 INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
 
-CREATE TABLE "tech_reserve" (
-	"tech"	text,
-	"notes"	text,
-	PRIMARY KEY("tech")
+CREATE TABLE RampDown(
+	"regions" text,
+	"tech" text,
+	"ramp_down" real,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY ("regions", "tech")
 );
+INSERT INTO "RampDown" VALUES ('IL', 'NUCLEAR_EXISTING', 0.1);
+
+CREATE TABLE RampUp(
+	"regions" text,
+	"tech" text,
+	"ramp_up" real,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY ("regions", "tech")
+);
+INSERT INTO "RampUp" VALUES ('IL', 'NUCLEAR_EXISTING', 0.1);
 
 CREATE TABLE tech_ramping (
 	"tech" text,
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("tech")
 );
+INSERT INTO "tech_ramping" VALUES ('NUCLEAR_EXISTING');
 
 CREATE TABLE "MyopicBaseyear" (
 	"year"	real
@@ -718,6 +715,13 @@ CREATE TABLE "MinCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+
 
 CREATE TABLE "MinActivity" (
 	"regions"	text,
@@ -730,21 +734,6 @@ CREATE TABLE "MinActivity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
-
--- INSERT INTO "MinActivity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 92000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 74000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 55000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 50000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 55000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 66943.044, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 38726.208, 'MWe', 'cannot build more than existing capacity');
-
-INSERT INTO "MinActivity" VALUES ('IL', 2025, 'SOLAR_FARM', 219.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MinActivity" VALUES ('IL', 2030, 'SOLAR_FARM', 200.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MinActivity" VALUES ('IL', 2035, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MinActivity" VALUES ('IL', 2040, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MinActivity" VALUES ('IL', 2045, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
-
 
 CREATE TABLE "MaxCapacity" (
 	"regions"	text,
@@ -767,12 +756,12 @@ CREATE TABLE "MaxCapacity" (
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
 -- Shutdown at the end of their current licenses.
-INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
 -- Shutdown prematurely
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
@@ -780,17 +769,7 @@ INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'c
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 4905.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 4905.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2541.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
-
--- Existing Coal
--- INSERT INTO `MaxCapacity` VALUES ('IL',2025,'COAL_PLANT_EXISTING',9829.7,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2030,'COAL_PLANT_EXISTING',9503.3,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2035,'COAL_PLANT_EXISTING',8450.6,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2040,'COAL_PLANT_EXISTING',6226.0,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2045,'COAL_PLANT_EXISTING',3442.1,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2050,'COAL_PLANT_EXISTING',2544.4,'MWe','cannot be expanded');
-
-
+INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
 CREATE TABLE "MaxActivity" (
 	"regions"	text,
@@ -891,24 +870,24 @@ CREATE TABLE "ExistingCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","tech","vintage")
 );
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,985,'MWe','Dresden Unit 2');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,985,'MWe','Dresden Unit 3');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,1970,'MWe','Quad Cities Unit 1+2');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1982,1182,'MWe','LaSalle Unit 1');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1984,1182,'MWe','LaSalle Unit 2');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,1215,'MWe','Byron Unit 1');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,3697,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1988,1215,'MWe','Braidwood Unit 2');
-
--- Premature Closure
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,0.01,'MWe','Dresden Unit 2');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,0.01,'MWe','Dresden Unit 3');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,985,'MWe','Dresden Unit 2');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,985,'MWe','Dresden Unit 3');
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,1970,'MWe','Quad Cities Unit 1+2');
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1982,1182,'MWe','LaSalle Unit 1');
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1984,1182,'MWe','LaSalle Unit 2');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,0.01,'MWe','Byron Unit 1');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,2482,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,1215,'MWe','Byron Unit 1');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,3697,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
 -- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1988,1215,'MWe','Braidwood Unit 2');
+
+-- Premature Closure
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,0.01,'MWe','Dresden Unit 2');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,0.01,'MWe','Dresden Unit 3');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,1970,'MWe','Quad Cities Unit 1+2');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1982,1182,'MWe','LaSalle Unit 1');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1984,1182,'MWe','LaSalle Unit 2');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,0.01,'MWe','Byron Unit 1');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,2482,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1988,1215,'MWe','Braidwood Unit 2');
 
 
 -- EXISTING WIND
@@ -1016,12 +995,12 @@ CREATE TABLE "EmissionLimit" (
 	PRIMARY KEY("regions","periods","emis_comm")
 );
 
-INSERT INTO "EmissionLimit" VALUES ('IL', 2025, 'CO2', 35.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2030, 'CO2', 0.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2035, 'CO2', 0.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2040, 'CO2', 0.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2045, 'CO2', 0.00, 'MT', 'zero emissions allowed');
-INSERT INTO "EmissionLimit" VALUES ('IL', 2050, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2025, 'CO2', 35.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2030, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2035, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2040, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2045, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+-- INSERT INTO "EmissionLimit" VALUES ('IL', 2050, 'CO2', 0.00, 'MT', 'zero emissions allowed');
 
 CREATE TABLE "EmissionActivity" (
 	"regions"	text,
@@ -1041,407 +1020,416 @@ CREATE TABLE "EmissionActivity" (
 	PRIMARY KEY("regions","emis_comm","input_comm","tech","vintage","output_comm")
 );
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1953,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1954,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1955,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1958,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1962,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1963,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1967,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1968,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1970,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1972,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1973,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1975,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1977,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1978,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1987,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1989,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1991,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1994,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1997,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1998,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2005,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2009,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2012,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1953,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1954,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1955,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1958,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1962,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1963,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1967,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1968,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1970,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1972,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1973,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1975,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1977,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1978,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1987,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1989,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1991,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1994,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1997,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',1998,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2005,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2009,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2012,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1948,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1951,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1953,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1958,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1959,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1960,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1962,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1965,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1966,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1970,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1974,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1985,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1987,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1988,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1990,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1991,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1993,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1995,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1996,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1997,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1998,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1999,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2000,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2001,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2002,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2003,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2004,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2005,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2012,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2015,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2016,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2019,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1948,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1951,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1953,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1958,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1959,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1960,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1962,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1965,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1966,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1970,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1974,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1985,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1987,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1988,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1990,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1991,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1993,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1995,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1996,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1997,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1998,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',1999,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2000,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2001,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2002,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2003,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2004,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2005,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2012,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2015,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2016,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2019,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2025,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2030,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2035,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2040,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2045,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2050,'ELC',4.9e-4,'MT/MWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2025,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2030,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2035,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2040,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2045,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_EXISTING',2050,'ELC',4.9e-4,'MT/GWh','source: IPCC 5th');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2025,'ELC',1.7e-4,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2030,'ELC',1.7e-4,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2035,'ELC',1.7e-4,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2040,'ELC',1.7e-4,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2045,'ELC',1.7e-4,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2050,'ELC',1.7e-4,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2025,'ELC',1.7e-4,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2030,'ELC',1.7e-4,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2035,'ELC',1.7e-4,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2040,'ELC',1.7e-4,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2045,'ELC',1.7e-4,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NATGAS_PLANT_NEW',2050,'ELC',1.7e-4,'MT/GWh','NULL');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2025,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2030,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2035,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2040,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2045,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2050,'ELC',8.2e-4,'MT/MWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2025,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2030,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2035,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2040,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2045,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_EXISTING',2050,'ELC',8.2e-4,'MT/GWh','source: IPCC 5th');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2025,'ELC',2.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2030,'ELC',2.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2035,'ELC',2.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2040,'ELC',2.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2045,'ELC',2.2e-4,'MT/MWh','source: IPCC 5th');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2050,'ELC',2.2e-4,'MT/MWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2025,'ELC',2.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2030,'ELC',2.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2035,'ELC',2.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2040,'ELC',2.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2045,'ELC',2.2e-4,'MT/GWh','source: IPCC 5th');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','COAL_PLANT_NEW',2050,'ELC',2.2e-4,'MT/GWh','source: IPCC 5th');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1969,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1971,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1972,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1982,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1984,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1985,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1987,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1988,'ELC',1.2e-5,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1969,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1971,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1972,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1982,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1984,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1985,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1987,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',1988,'ELC',1.2e-5,'MT/GWh','NULL');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2003,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2004,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2005,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2007,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2008,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2009,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2010,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2011,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2012,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2015,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2016,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2017,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2018,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2019,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2020,'ELC',1.1e-5,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2003,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2004,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2005,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2007,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2008,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2009,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2010,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2011,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2012,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2015,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2016,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2017,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2018,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2019,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2020,'ELC',1.1e-5,'MT/GWh','NULL');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2025,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2030,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2035,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2040,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2045,'ELC',1.2e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2050,'ELC',1.2e-5,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2025,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2030,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2035,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2040,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2045,'ELC',1.2e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','NUCLEAR_EXISTING',2050,'ELC',1.2e-5,'MT/GWh','NULL');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2025,'ELC',4.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2030,'ELC',4.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2035,'ELC',4.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2040,'ELC',4.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2045,'ELC',4.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2050,'ELC',4.1e-5,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2025,'ELC',4.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2030,'ELC',4.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2035,'ELC',4.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2040,'ELC',4.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2045,'ELC',4.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_RESIDENTIAL',2050,'ELC',4.1e-5,'MT/GWh','NULL');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2025,'ELC',4.8e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2030,'ELC',4.8e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2035,'ELC',4.8e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2040,'ELC',4.8e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2045,'ELC',4.8e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2050,'ELC',4.8e-5,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2025,'ELC',4.8e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2030,'ELC',4.8e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2035,'ELC',4.8e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2040,'ELC',4.8e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2045,'ELC',4.8e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','SOLAR_FARM',2050,'ELC',4.8e-5,'MT/GWh','NULL');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2025,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2030,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2035,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2040,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2045,'ELC',1.1e-5,'MT/MWh','NULL');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2050,'ELC',1.1e-5,'MT/MWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2025,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2030,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2035,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2040,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2045,'ELC',1.1e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ethos','WIND_FARM',2050,'ELC',1.1e-5,'MT/GWh','NULL');
+
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ELC','LI_BATTERY',2025,'ELC',2.32e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ELC','LI_BATTERY',2030,'ELC',2.32e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ELC','LI_BATTERY',2035,'ELC',2.32e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ELC','LI_BATTERY',2040,'ELC',2.32e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ELC','LI_BATTERY',2045,'ELC',2.32e-5,'MT/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2eq','ELC','LI_BATTERY',2050,'ELC',2.32e-5,'MT/GWh','NULL');
+
+
 
 /*
 CO2 - produced from generation
 */
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1953,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1954,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1955,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1958,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1962,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1963,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1967,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1968,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1970,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1972,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1973,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1975,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1977,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1978,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1987,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1989,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1991,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1994,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1997,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1998,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2005,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2009,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2012,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1953,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1954,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1955,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1958,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1962,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1963,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1967,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1968,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1970,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1972,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1973,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1975,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1977,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1978,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1987,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1989,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1991,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1994,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1997,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',1998,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2005,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2009,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2012,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2025,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2030,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2035,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2040,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2045,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2050,'ELC',3.25949832e-4,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2025,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2030,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2035,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2040,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2045,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_EXISTING',2050,'ELC',3.25949832e-4,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2025,'ELC',3.265689e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2030,'ELC',3.265689e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2035,'ELC',3.265689e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2040,'ELC',3.265689e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2045,'ELC',3.265689e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2050,'ELC',3.265689e-5,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2025,'ELC',3.265689e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2030,'ELC',3.265689e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2035,'ELC',3.265689e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2040,'ELC',3.265689e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2045,'ELC',3.265689e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','COAL_PLANT_NEW',2050,'ELC',3.265689e-5,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1948,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1951,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1953,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1958,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1959,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1960,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1962,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1965,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1966,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1970,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1974,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1985,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1987,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1988,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1990,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1991,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1993,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1995,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1996,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1997,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1998,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1999,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2000,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2001,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2002,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2003,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2004,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2005,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2012,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2015,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2016,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2019,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1948,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1951,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1953,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1958,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1959,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1960,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1962,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1965,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1966,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1970,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1974,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1985,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1987,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1988,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1990,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1991,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1993,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1995,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1996,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1997,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1998,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',1999,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2000,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2001,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2002,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2003,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2004,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2005,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2012,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2015,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2016,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2019,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2025,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2030,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2035,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2040,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2045,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2050,'ELC',1.8108324e-4,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2025,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2030,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2035,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2040,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2045,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_EXISTING',2050,'ELC',1.8108324e-4,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2025,'ELC',1.810832e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2030,'ELC',1.810832e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2035,'ELC',1.810832e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2040,'ELC',1.810832e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2045,'ELC',1.810832e-5,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2050,'ELC',1.810832e-5,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2025,'ELC',1.810832e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2030,'ELC',1.810832e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2035,'ELC',1.810832e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2040,'ELC',1.810832e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2045,'ELC',1.810832e-5,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','CO2','ethos','NATGAS_PLANT_NEW',2050,'ELC',1.810832e-5,'MT/GWh','source: NREL ATB');
 
 /*
 NOx - produced from generation
 */
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1953,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1954,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1955,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1958,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1962,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1963,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1967,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1968,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1970,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1972,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1973,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1975,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1977,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1978,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1987,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1989,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1991,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1994,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1997,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1998,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2005,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2009,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2012,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1953,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1954,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1955,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1958,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1962,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1963,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1967,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1968,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1970,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1972,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1973,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1975,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1977,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1978,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1987,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1989,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1991,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1994,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1997,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',1998,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2005,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2009,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2012,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2025,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2030,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2035,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2040,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2045,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2050,'ELC',1.238176e-7,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2025,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2030,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2035,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2040,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2045,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_EXISTING',2050,'ELC',1.238176e-7,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2025,'ELC',1.315562e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2030,'ELC',1.315562e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2035,'ELC',1.315562e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2040,'ELC',1.315562e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2045,'ELC',1.315562e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2050,'ELC',1.315562e-7,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2025,'ELC',1.315562e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2030,'ELC',1.315562e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2035,'ELC',1.315562e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2040,'ELC',1.315562e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2045,'ELC',1.315562e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','COAL_PLANT_NEW',2050,'ELC',1.315562e-7,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1948,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1951,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1953,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1958,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1959,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1960,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1962,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1965,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1966,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1970,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1974,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1985,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1987,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1988,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1990,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1991,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1993,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1995,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1996,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1997,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1998,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1999,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2000,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2001,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2002,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2003,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2004,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2005,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2012,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2015,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2016,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2019,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1948,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1951,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1953,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1958,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1959,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1960,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1962,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1965,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1966,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1970,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1974,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1985,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1987,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1988,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1990,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1991,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1993,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1995,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1996,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1997,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1998,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',1999,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2000,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2001,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2002,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2003,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2004,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2005,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2012,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2015,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2016,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2019,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2025,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2030,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2035,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2040,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2045,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2050,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2025,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2030,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2035,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2040,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2045,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_EXISTING',2050,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2025,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2030,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2035,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2040,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2045,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2050,'ELC',3.09544e-8,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2025,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2030,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2035,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2040,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2045,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','NOx','ethos','NATGAS_PLANT_NEW',2050,'ELC',3.09544e-8,'MT/GWh','source: NREL ATB');
 
 /*
 SO2 - produced from generation
 */
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1953,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1954,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1955,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1958,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1962,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1963,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1967,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1968,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1970,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1972,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1973,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1975,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1977,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1978,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1987,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1989,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1991,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1994,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1997,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1998,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2005,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2009,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2012,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1953,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1954,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1955,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1958,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1962,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1963,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1967,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1968,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1970,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1972,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1973,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1975,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1977,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1978,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1987,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1989,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1991,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1994,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1997,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',1998,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2005,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2009,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2012,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2025,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2030,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2035,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2040,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2045,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2050,'ELC',1.54772e-7,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2025,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2030,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2035,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2040,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2045,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_EXISTING',2050,'ELC',1.54772e-7,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2025,'ELC',8.589846e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2030,'ELC',8.589846e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2035,'ELC',8.589846e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2040,'ELC',8.589846e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2045,'ELC',8.589846e-8,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2050,'ELC',8.589846e-8,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2025,'ELC',8.589846e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2030,'ELC',8.589846e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2035,'ELC',8.589846e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2040,'ELC',8.589846e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2045,'ELC',8.589846e-8,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','COAL_PLANT_NEW',2050,'ELC',8.589846e-8,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1948,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1951,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1953,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1958,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1959,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1960,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1962,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1965,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1966,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1970,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1974,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1985,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1987,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1988,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1990,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1991,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1993,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1995,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1996,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1997,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1998,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1999,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2000,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2001,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2002,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2003,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2004,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2005,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2012,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2015,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2016,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2019,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1948,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1951,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1953,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1958,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1959,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1960,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1962,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1965,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1966,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1970,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1974,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1985,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1987,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1988,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1990,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1991,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1993,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1995,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1996,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1997,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1998,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',1999,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2000,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2001,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2002,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2003,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2004,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2005,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2012,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2015,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2016,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2019,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2025,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2030,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2035,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2040,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2045,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2050,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2025,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2030,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2035,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2040,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2045,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_EXISTING',2050,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
 
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2025,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2030,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2035,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2040,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2045,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
-INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2050,'ELC',5.1075e-9,'MT/MWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2025,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2030,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2035,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2040,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2045,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
+INSERT INTO "EmissionActivity" VALUES ('IL','SO2','ethos','NATGAS_PLANT_NEW',2050,'ELC',5.1075e-9,'MT/GWh','source: NREL ATB');
 
 /*
 NON GHG EMISSIONS
@@ -2190,12 +2178,12 @@ CREATE TABLE "CostInvest" (
 );
 
 -- TO DO : ADD Investment cost from license renewals for existing nuclear, coal, and natural gas!
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2025, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2030, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2035, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2040, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2045, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2050, 0.397874, 'M$/MW', 'existing nuclear, source: IEA 2020');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2025, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2030, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2035, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2040, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2045, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2050, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2025, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2030, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2035, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
@@ -2657,64 +2645,64 @@ INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2018, 13.127, ' M$/GW-yea
 /*
 FUTURE CAPACITY
 */
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 224.82238, 'M$/GW-year', 'source: NREL ATB');
+--
+-- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 224.82238, 'M$/GW-year', 'source: NREL ATB');
 
 /*
 UNCOMMENT the following lines for Business-As-Usual
 Fixed Cost without Fuel and Variable OM
 */
 
--- INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 177.73741, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 177.73741, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 177.73741, 'M$/GW-year', 'source: NREL ATB');
+
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 177.73741, 'M$/GW-year', 'source: NREL ATB');
 
 /*
 UNCOMMENT the following lines for Business-As-Usual 2
@@ -3832,102 +3820,102 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H22','SOLAR_RESIDENTIAL'
 INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H23','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H24','SOLAR_RESIDENTIAL',0.0,'');
 
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H1','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H2','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H3','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H4','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H5','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H6','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H7','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H8','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H9','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H10','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H11','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H12','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H13','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H14','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H15','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H16','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H17','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H18','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H19','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H20','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H21','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H22','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H23','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H24','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H1','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H2','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H3','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H4','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H5','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H6','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H7','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H8','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H9','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H10','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H11','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H12','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H13','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H14','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H15','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H16','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H17','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H18','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H19','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H20','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H21','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H22','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H23','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H24','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H1','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H2','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H3','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H4','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H5','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H6','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H7','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H8','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H9','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H10','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H11','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H12','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H13','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H14','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H15','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H16','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H17','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H18','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H19','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H20','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H21','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H22','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H23','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H24','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H1','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H2','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H3','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H4','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H5','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H6','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H7','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H8','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H9','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H10','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H11','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H12','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H13','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H14','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H15','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H16','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H17','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H18','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H19','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H20','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H21','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H22','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H23','LI_BATTERY',0.083,'');
-INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H24','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H1','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H2','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H3','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H4','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H5','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H6','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H7','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H8','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H9','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H10','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H11','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H12','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H13','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H14','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H15','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H16','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H17','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H18','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H19','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H20','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H21','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H22','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H23','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H24','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H1','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H2','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H3','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H4','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H5','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H6','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H7','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H8','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H9','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H10','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H11','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H12','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H13','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H14','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H15','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H16','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H17','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H18','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H19','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H20','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H21','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H22','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H23','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','fall','H24','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H1','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H2','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H3','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H4','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H5','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H6','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H7','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H8','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H9','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H10','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H11','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H12','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H13','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H14','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H15','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H16','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H17','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H18','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H19','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H20','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H21','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H22','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H23','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','H24','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H1','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H2','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H3','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H4','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H5','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H6','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H7','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H8','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H9','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H10','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H11','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H12','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H13','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H14','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H15','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H16','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H17','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H18','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H19','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H20','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H21','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H22','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H23','LI_BATTERY',0.167,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H24','LI_BATTERY',0.167,'');
 
 CREATE TABLE "CapacityFactorProcess" (
 	"regions"	text,

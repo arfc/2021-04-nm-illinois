@@ -178,6 +178,7 @@ CREATE TABLE "tech_reserve" (
 	PRIMARY KEY("tech")
 );
 INSERT INTO "tech_reserve" VALUES ('LI_BATTERY', 'battery reserve');
+-- INSERT INTO "tech_reserve" VALUES ('NUCLEAR_EXISTING', 'nuclear reserve');
 
 CREATE TABLE "tech_exchange" (
 	"tech"	text,
@@ -287,23 +288,6 @@ CREATE TABLE "TechInputSplit" (
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
 	PRIMARY KEY("regions","periods","input_comm","tech")
 );
-
-CREATE TABLE RampDown(
-	"regions" text,
-	"tech" text,
-	"ramp_down" real,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	PRIMARY KEY ("regions", "tech")
-);
-
-CREATE TABLE RampUp(
-	"regions" text,
-	"tech" text,
-	"ramp_up" real,
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
-	PRIMARY KEY ("regions", "tech")
-);
-
 
 CREATE TABLE "StorageDuration" (
 	"regions"	text,
@@ -675,11 +659,30 @@ CREATE TABLE "PlanningReserveMargin" (
 );
 INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
 
+CREATE TABLE RampDown(
+	"regions" text,
+	"tech" text,
+	"ramp_down" real,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY ("regions", "tech")
+);
+INSERT INTO "RampDown" VALUES ('IL', 'NUCLEAR_EXISTING', 0.1);
+
+CREATE TABLE RampUp(
+	"regions" text,
+	"tech" text,
+	"ramp_up" real,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY ("regions", "tech")
+);
+INSERT INTO "RampUp" VALUES ('IL', 'NUCLEAR_EXISTING', 0.1);
+
 CREATE TABLE tech_ramping (
 	"tech" text,
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("tech")
 );
+INSERT INTO "tech_ramping" VALUES ('NUCLEAR_EXISTING');
 
 CREATE TABLE "MyopicBaseyear" (
 	"year"	real
