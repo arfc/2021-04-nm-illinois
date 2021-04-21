@@ -8,4 +8,4 @@ nuclear_new,6.232687856814705,121.09222121811426,0.009158235218176708,0.0,0.0,0.
 solar_utility,1.5935329279627475,19.33405212726194,0.0,0.0,0.0,0.0,0.0,4.8e-05,"""NREL Annual Technology Baseline 2020""","utility scale solar, photovoltaic, chicago",co2eq is the median value from the Fifth IPCC Assessement
 solar_residential,3.1076944840346297,22.38679719998751,0.0,0.0,0.0,0.0,0.0,4.1e-05,"""NREL Annual Technology Baseline 2020""","residential solar, photovoltaic, chicago",co2eq is the median value from the Fifth IPCC Assessement
 wind_utility,1.878455801417134,43.7560127090665,0.0,0.0,0.0,0.0,0.0,1.1e-05,"""NREL Annual Technology Baseline 2020""","utility scale wind turbines, assume Class 7 wind speeds",co2eq is the median value from the Fifth IPCC Assessement
-li_battery,1.608,34.11,0.0,0.0,0.0,0.0,0.0,2.3164003044140027e-05,"""NREL Annual Technology Baseline 2020"", MISC",lithium ion battery,n/a
+li_battery,1.608,34.11,0.0,0.0,0.0,0.0,0.0,2.3164003044140027e-05,"""NREL Annual Technology Baseline 2020"", MISC","lithium ion battery, 4 hour energy capacity",co2eq is the mean value from the SERI 2019 report
