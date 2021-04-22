@@ -2,7 +2,8 @@ Net generation for all fuels (utility-scale) monthly
 https://www.eia.gov/electricity/data/browser/#/topic/0?agg=1,0,2&fuel=g&geo=vvvvvvvvvvvvo&sec=o3g&linechart=ELEC.GEN.ALL-IL-99.M&columnchart=ELEC.GEN.ALL-NEW-99.M~ELEC.GEN.ALL-MAT-99.M~ELEC.GEN.ALL-ENC-99.M~ELEC.GEN.ALL-WNC-99.M~ELEC.GEN.ALL-SAT-99.M~ELEC.GEN.ALL-ESC-99.M~ELEC.GEN.ALL-MTN-99.M~ELEC.GEN.ALL-WSC-99.M~ELEC.GEN.ALL-PCN-99.M~ELEC.GEN.ALL-PCC-99.M&map=ELEC.GEN.ALL-US-99.M&freq=M&start=200101&end=202101&ctype=linechart&ltype=pin&rtype=s&maptype=0&rse=0&pin=
 10:12:22 GMT-0500 (Central Daylight Time)
 Source: U.S. Energy Information Administration
-Month,Illinois : all sectors thousand megawatthours
+Month,Illinois : all sectors GWh
+
 Jan 2021,16194.26004
 Dec 2020,15991.8331
 Nov 2020,14522.68036
