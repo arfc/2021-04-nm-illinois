@@ -2,7 +2,7 @@ Retail sales of electricity monthly
 https://www.eia.gov/electricity/data/browser/#/topic/5?agg=0,1&geo=vvvvvvvvvvvvo&endsec=vg&linechart=ELEC.SALES.TX-ALL.M~ELEC.SALES.TX-RES.M~ELEC.SALES.TX-COM.M~ELEC.SALES.TX-IND.M~ELEC.SALES.IL-ALL.M&columnchart=ELEC.SALES.TX-ALL.M~ELEC.SALES.TX-RES.M~ELEC.SALES.TX-COM.M~ELEC.SALES.TX-IND.M&map=ELEC.SALES.US-ALL.M&freq=M&start=200101&end=202101&ctype=linechart&ltype=pin&rtype=s&maptype=0&rse=0&pin=
 10:09:42 GMT-0500 (Central Daylight Time)
 Data source: U.S. Energy Information Administration
-Month,Illinois all sectors million kilowatthours
+Month,Illinois all sectors GWh
 Jan 2021,11577.01863
 Dec 2020,11198.14461
 Nov 2020,9686.19655
