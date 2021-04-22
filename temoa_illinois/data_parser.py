@@ -28,7 +28,8 @@ elc_techs = ['NUCLEAR_EXISTING',
              'LI_BATTERY',
              'SOLAR_RESIDENTIAL',
              'NATGAS_PLANT_NEW',
-             'COAL_PLANT_NEW']
+             'COAL_PLANT_NEW',
+             'NUCLEAR_NEW']
 
 emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'NATGAS_PLANT_EXISTING',
@@ -37,7 +38,8 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'COAL_PLANT_NEW',
                        'SOLAR_FARM',
                        'SOLAR_RESIDENTIAL',
-                       'WIND_FARM'],
+                       'WIND_FARM',
+                       'NUCLEAR_NEW'],
              'CO2': ['NATGAS_PLANT_EXISTING',
                      'NATGAS_PLANT_NEW',
                      'COAL_PLANT_EXISTING',
@@ -53,7 +55,8 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
              'e-waste': ['SOLAR_FARM',
                         'SOLAR_RESIDENIAL',
                         'WIND_FARM'],
-             'spent-fuel': ['NUCLEAR_EXISTING']}
+             'spent-fuel': ['NUCLEAR_EXISTING',
+                            'NUCLEAR_NEW']}
 
 
 def data_by_year(datalines, year):
@@ -512,7 +515,7 @@ def get_output_files():
         The list of paths to output files.
     """
 
-    path = "./data_files/**/*.log"
+    path = "./**/data_files/**/*.log"
 
     path_list = glob.glob(path, recursive=True)
     return path_list
