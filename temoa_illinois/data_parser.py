@@ -326,7 +326,7 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
         os.mkdir(target_folder)
 
     units = {'generation': '[GWh]',
-             'capacity': '[MW]',
+             'capacity': '[GW]',
              'emissions': '[metric tons]',
              'transportation': '[kGGE]',
              'distribution': r'[\%]'}
@@ -345,6 +345,8 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
         for bar, hatch in zip(bars, hatches):
             bar.set_hatch(hatch)
     else:
+        if (variable.lower() == 'capacity'):
+            dataframe = dataframe/1000
         ax = dataframe.loc[1:, dataframe.columns !=
                            'total'].plot.bar(stacked=True)
         bars = ax.patches
