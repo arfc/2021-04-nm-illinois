@@ -43,6 +43,10 @@ INSERT INTO `time_periods` VALUES (2020,'e');
 -- PERIODS WHEN UTILITY SOLAR WAS BUILT
 INSERT INTO `time_periods` VALUES (2014,'e');
 
+-- PERIODS WHEN BATTERIES WERE BUILT
+INSERT INTO `time_periods` VALUES (2013,'e');
+
+
 -- PERIODS WHEN COAL PLANTS WERE BUILT
 INSERT INTO `time_periods` VALUES (1953,'e');
 INSERT INTO `time_periods` VALUES (1954,'e');
@@ -125,21 +129,24 @@ CREATE TABLE "technologies" (
 	FOREIGN KEY("flag") REFERENCES "technology_labels"("tech_labels"),
 	PRIMARY KEY("tech")
 );
-INSERT INTO "technologies" VALUES ('NUCLEAR_EXISTING','p','electric', 'current nuclear technology','uranium');
-INSERT INTO "technologies" VALUES ('COAL_PLANT_EXISTING','p','electric', 'current coal technology','coal');
-INSERT INTO "technologies" VALUES ('COAL_PLANT_NEW','p','electric', 'new coal technology','coal');
+INSERT INTO "technologies" VALUES ('NUCLEAR_EXISTING','pb','electric', 'current nuclear technology','uranium');
+INSERT INTO "technologies" VALUES ('COAL_PLANT_EXISTING','pb','electric', 'current coal technology','coal');
+INSERT INTO "technologies" VALUES ('COAL_PLANT_NEW','pb','electric', 'new coal technology','coal');
 INSERT INTO "technologies" VALUES ('NATGAS_PLANT_EXISTING','p','electric', 'current natgas technology','natural gas');
 INSERT INTO "technologies" VALUES ('NATGAS_PLANT_NEW','p','electric', 'new natgas technology','natural gas');
 INSERT INTO "technologies" VALUES ('SOLAR_FARM','p','electric', 'utility solar','solar energy');
 INSERT INTO "technologies" VALUES ('SOLAR_RESIDENTIAL','p','electric', 'residential solar','solar energy');
 INSERT INTO "technologies" VALUES ('WIND_FARM','p','electric', 'utility wind','wind energy');
 INSERT INTO "technologies" VALUES ('TRANSMISSION','r','transmission', 'connects generation to end-use','NULL');
+INSERT INTO "technologies" VALUES ('LI_BATTERY','ps','electric', 'connects generation to end-use','NULL');
 
 CREATE TABLE "tech_reserve" (
 	"tech"	text,
 	"notes"	text,
 	PRIMARY KEY("tech")
 );
+INSERT INTO "tech_reserve" VALUES ('LI_BATTERY', 'battery reserve');
+
 CREATE TABLE "tech_exchange" (
 	"tech"	text,
 	"notes"	text,
@@ -151,6 +158,10 @@ CREATE TABLE "tech_curtailment" (
 	PRIMARY KEY("tech"),
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
+INSERT INTO "tech_curtailment" VALUES ('SOLAR_FARM', '');
+INSERT INTO "tech_curtailment" VALUES ('SOLAR_RESIDENTIAL', '');
+INSERT INTO "tech_curtailment" VALUES ('WIND_FARM', '');
+
 CREATE TABLE "tech_flex" (
 	"tech"	text,
 	"notes"	TEXT,
@@ -249,6 +260,7 @@ CREATE TABLE "StorageDuration" (
 	"duration_notes"	text,
 	PRIMARY KEY("regions","tech")
 );
+INSERT INTO "StorageDuration" VALUES ('IL', 'LI_BATTERY', 2.0, '2 hour storage');
 
 CREATE TABLE "SegFrac" (
 	"season_name"	text,
@@ -272,6 +284,7 @@ CREATE TABLE "PlanningReserveMargin" (
 	PRIMARY KEY(regions),
 	FOREIGN KEY(`regions`) REFERENCES regions
 );
+INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
 
 CREATE TABLE "MyopicBaseyear" (
 	"year"	real
@@ -388,6 +401,7 @@ INSERT INTO "LifetimeTech" VALUES ('IL','COAL_PLANT_NEW',40.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','WIND_FARM',25.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','SOLAR_FARM',25.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','SOLAR_RESIDENTIAL',25.0,'');
+INSERT INTO "LifetimeTech" VALUES ('IL','LI_BATTERY',12.0,'');
 INSERT INTO "LifetimeTech" VALUES ('IL','TRANSMISSION',1000.0,'');
 
 CREATE TABLE "LifetimeProcess" (
@@ -417,6 +431,7 @@ INSERT INTO "LifetimeLoanTech" VALUES ('IL','COAL_PLANT_NEW',25.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','WIND_FARM',10.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','SOLAR_FARM',10.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','SOLAR_RESIDENTIAL',10.0,'');
+INSERT INTO "LifetimeLoanTech" VALUES ('IL','LI_BATTERY',5.0,'');
 -- INSERT INTO "LifetimeLoanTech" VALUES ('IL','TRANSMISSION',1025.0,'');
 
 
@@ -491,6 +506,12 @@ INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2017, 2.1, 'MW', 'MW e
 INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2019, 3.5, 'MW', 'MW electric');
 INSERT INTO "ExistingCapacity" VALUES ('IL','SOLAR_FARM', 2020, 71.9, 'MW', 'MW electric');
 
+-- EXISTING BATTERY STORAGE
+INSERT INTO "ExistingCapacity" VALUES ('IL','LI_BATTERY', 2015, 71.1, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','LI_BATTERY', 2016, 19.8, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','LI_BATTERY', 2017, 0.3, 'MW', 'MW electric');
+INSERT INTO "ExistingCapacity" VALUES ('IL','LI_BATTERY', 2018, 20.0, 'MW', 'MW electric');
+
 -- EXISTING COAL
 INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1953, 366.6, 'MW','MWe');
 INSERT INTO "ExistingCapacity" VALUES ('IL','COAL_PLANT_EXISTING', 1954, 366.6, 'MW','MWe');
@@ -563,6 +584,12 @@ CREATE TABLE "EmissionLimit" (
 	FOREIGN KEY("emis_comm") REFERENCES "commodities"("comm_name"),
 	PRIMARY KEY("regions","periods","emis_comm")
 );
+
+INSERT INTO "EmissionLimit" VALUES ('IL', 2030, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+INSERT INTO "EmissionLimit" VALUES ('IL', 2035, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+INSERT INTO "EmissionLimit" VALUES ('IL', 2040, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+INSERT INTO "EmissionLimit" VALUES ('IL', 2045, 'CO2', 0.00, 'MT', 'zero emissions allowed');
+INSERT INTO "EmissionLimit" VALUES ('IL', 2050, 'CO2', 0.00, 'MT', 'zero emissions allowed');
 
 CREATE TABLE "EmissionActivity" (
 	"regions"	text,
@@ -1065,6 +1092,11 @@ INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1985,'ELC',1.0,
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1987,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',1988,'ELC',1.0,'MWe to MWe');
 
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY', 2015, 'ELC', 0.85, 'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY', 2016, 'ELC', 0.85, 'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY', 2017, 'ELC', 0.85, 'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY', 2018, 'ELC', 0.85, 'round trip efficiency');
+
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2003, 'ELC', 1.0, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2004, 'ELC', 1.0, 'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','WIND_FARM', 2005, 'ELC', 1.0, 'MWe to MWe');
@@ -1149,6 +1181,12 @@ INSERT INTO "Efficiency" VALUES ('IL','ethos','NATGAS_PLANT_EXISTING',2019,'ELC'
 
 
 -- NEW BUILDS
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2025,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2030,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2035,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2040,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2045,'ELC',0.85,'round trip efficiency');
+INSERT INTO "Efficiency" VALUES ('IL','ELC','LI_BATTERY',2050,'ELC',0.85,'round trip efficiency');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2025,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2030,'ELC',1.0,'MWe to MWe');
 INSERT INTO "Efficiency" VALUES ('IL','ethos','NUCLEAR_EXISTING',2035,'ELC',1.0,'MWe to MWe');
@@ -1823,6 +1861,15 @@ INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 1.8784558, 'M$/MW', 'o
 INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
 INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 1.8784558, 'M$/MW', 'on shore wind, 33% capacity factor');
 
+-- BATTERY
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2025, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2030, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2035, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2040, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2045, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2050, 0.859857, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+
+
 CREATE TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
@@ -2186,7 +2233,10 @@ INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2005, 0.04070
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2009, 0.0407033, 'M$/MWh','source: NREL ATB');
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2012, 0.0407033, 'M$/MWh','source: NREL ATB');
 
-
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2015,0.013127, ' M$/MW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2016,0.013127, ' M$/MW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2017,0.013127, ' M$/MW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2018,0.013127, ' M$/MW-year','based on 2-hour storage at 50 MW');
 /*
 FUTURE CAPACITY
 */
@@ -2405,6 +2455,28 @@ INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2045, 0.04375601, 'M$/M
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2050, 0.04375601, 'M$/MW-year', 'source: NREL ATB');
 
 
+-- BATTERY STORAGE
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2025,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2025,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2025,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2030,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2030,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2030,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2035,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2035,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2035,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2040,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2040,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2040,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2045,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2045,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2050,0.013127,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+
 
 CREATE TABLE "CapacityToActivity" (
 	"regions"	text,
@@ -2494,6 +2566,14 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','SOLAR_RESIDENTIAL'
 INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','SOLAR_RESIDENTIAL',0.0,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','SOLAR_RESIDENTIAL',0.15,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','SOLAR_RESIDENTIAL',0.0,'');
+
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','day','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','inter','night','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','day','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','night','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','day','LI_BATTERY',0.083,'');
+INSERT INTO `CapacityFactorTech` VALUES ('IL','summer','night','LI_BATTERY',0.083,'');
+
 
 CREATE TABLE "CapacityFactorProcess" (
 	"regions"	text,

@@ -27,7 +27,8 @@ elc_techs = ['NUCLEAR_EXISTING',
              'COAL_PLANT_NEW',
              'SOLAR_FARM',
              'SOLAR_RESIDENTIAL',
-             'WIND_FARM']
+             'WIND_FARM',
+             'LI_BATTERY']
 
 emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'NATGAS_PLANT_EXISTING',
