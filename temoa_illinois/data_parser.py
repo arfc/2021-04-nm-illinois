@@ -699,7 +699,7 @@ def make_emissions_plots(data_paths, to_save=True, df_save=True):
     return
 
 
-def make_capacity_plots(data_paths, to_save=True, df_save=True):
+def make_capacity_plots(data_paths, to_save=True, df_save=False):
     """
     This function produces all plots and puts them in a folder
     called 'figure.'
