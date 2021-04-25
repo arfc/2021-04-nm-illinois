@@ -658,7 +658,7 @@ CREATE TABLE "PlanningReserveMargin" (
 	PRIMARY KEY(regions),
 	FOREIGN KEY(`regions`) REFERENCES regions
 );
-INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
+INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.15);
 
 CREATE TABLE RampDown(
 	"regions" text,
@@ -719,13 +719,21 @@ CREATE TABLE "MinCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
--- INSERT INTO "MinCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- ALL EXISTING NUCLEAR MUST STAY OPEN
+INSERT INTO "MinCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
+INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_NEW', 4334.7704, 'MWe', 'cannot build more than existing capacity');
+
+INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
 
 CREATE TABLE "MinActivity" (
 	"regions"	text,
@@ -738,21 +746,6 @@ CREATE TABLE "MinActivity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","periods","tech")
 );
-
--- INSERT INTO "MinActivity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 92000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 74000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 55000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 50000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 55000.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 66943.044, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 38726.208, 'MWe', 'cannot build more than existing capacity');
-
--- INSERT INTO "MinActivity" VALUES ('IL', 2025, 'SOLAR_FARM', 219.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2030, 'SOLAR_FARM', 200.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2035, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2040, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinActivity" VALUES ('IL', 2045, 'SOLAR_FARM', 180.0, 'MWe', 'cannot build more than existing capacity');
-
 
 CREATE TABLE "MaxCapacity" (
 	"regions"	text,
@@ -774,13 +767,6 @@ CREATE TABLE "MaxCapacity" (
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
-INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
-
 -- Shutdown at the end of their current licenses.
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
@@ -797,13 +783,15 @@ INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 8032.0, 'MWe',
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2541.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
--- Existing Coal
--- INSERT INTO `MaxCapacity` VALUES ('IL',2025,'COAL_PLANT_EXISTING',9829.7,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2030,'COAL_PLANT_EXISTING',9503.3,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2035,'COAL_PLANT_EXISTING',8450.6,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2040,'COAL_PLANT_EXISTING',6226.0,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2045,'COAL_PLANT_EXISTING',3442.1,'MWe','cannot be expanded');
--- INSERT INTO `MaxCapacity` VALUES ('IL',2050,'COAL_PLANT_EXISTING',2544.4,'MWe','cannot be expanded');
+
+INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 6900.0, 'MWe', 'restricted to theoretical max from NREL');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 12500.0, 'MWe', 'restricted to theoretical max from NREL');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 22500.0, 'MWe', 'restricted to theoretical max from NREL');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 30000.0, 'MWe', 'restricted to theoretical max from NREL');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 34000.0, 'MWe', 'restricted to theoretical max from NREL');
+
+INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'WIND_FARM', 13825.9, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_FARM', 10000.0, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
 
 
 
@@ -860,7 +848,7 @@ CREATE TABLE "LifetimeLoanTech" (
 	PRIMARY KEY("regions","tech")
 );
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','NUCLEAR_EXISTING',10.0,'');
-INSERT INTO "LifetimeLoanTech" VALUES ('IL','NUCLEAR_NEW',10.0,'');
+INSERT INTO "LifetimeLoanTech" VALUES ('IL','NUCLEAR_NEW',20.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','NATGAS_PLANT_EXISTING',25.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','NATGAS_PLANT_NEW',25.0,'');
 INSERT INTO "LifetimeLoanTech" VALUES ('IL','COAL_PLANT_EXISTING',25.0,'');
@@ -908,24 +896,24 @@ CREATE TABLE "ExistingCapacity" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	PRIMARY KEY("regions","tech","vintage")
 );
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,985,'MWe','Dresden Unit 2');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,985,'MWe','Dresden Unit 3');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,1970,'MWe','Quad Cities Unit 1+2');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1982,1182,'MWe','LaSalle Unit 1');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1984,1182,'MWe','LaSalle Unit 2');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,1215,'MWe','Byron Unit 1');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,3697,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
--- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1988,1215,'MWe','Braidwood Unit 2');
-
--- Premature Closure
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,0.01,'MWe','Dresden Unit 2');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,0.01,'MWe','Dresden Unit 3');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,985,'MWe','Dresden Unit 2');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,985,'MWe','Dresden Unit 3');
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,1970,'MWe','Quad Cities Unit 1+2');
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1982,1182,'MWe','LaSalle Unit 1');
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1984,1182,'MWe','LaSalle Unit 2');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,0.01,'MWe','Byron Unit 1');
-INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,2482,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,1215,'MWe','Byron Unit 1');
+INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,3697,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
 INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1988,1215,'MWe','Braidwood Unit 2');
+
+-- Premature Closure
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1969,0.01,'MWe','Dresden Unit 2');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1971,0.01,'MWe','Dresden Unit 3');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1972,1970,'MWe','Quad Cities Unit 1+2');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1982,1182,'MWe','LaSalle Unit 1');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1984,1182,'MWe','LaSalle Unit 2');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1985,0.01,'MWe','Byron Unit 1');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1987,2482,'MWe','Clinton, Byron Unit 2, Braidwood Unit 1');
+-- INSERT INTO "ExistingCapacity" VALUES ('IL','NUCLEAR_EXISTING',1988,1215,'MWe','Braidwood Unit 2');
 
 
 -- EXISTING WIND
@@ -1536,6 +1524,12 @@ INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2035,'
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2040,'ELC',0.168297,'t/GWh','NULL');
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2045,'ELC',0.168297,'t/GWh','NULL');
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2050,'ELC',0.168297,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2025,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2030,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2035,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2040,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2045,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2050,'ELC',1.8494,'t/GWh','NULL');
 
 
 CREATE TABLE "Efficiency" (
@@ -1752,501 +1746,501 @@ CREATE TABLE "CostVariable" (
 /*
 NUCLEAR ONLY HAS A VARIABLE COST IN THE STANDARD BAU
 */
-INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 0.006291, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 
-INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 0.006291, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 
-INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 0.006291, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 
-INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 0.006291, 'M$/GW-year', 'BWR');
-INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 0.006291, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 0.005811, 'M$/GW-year', 'BWR');
+INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 
-INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 0.006291, 'M$/GW-year', 'PWR');
-INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 0.006291, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 0.005811, 'M$/GW-year', 'PWR');
+INSERT INTO "CostVariable" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 0.005811, 'M$/GW-year', 'PWR');
 
 
 
 -- NON NUCLEAR
 -- EXISTING COAL
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1953, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1954, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1955, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1958, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1962, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1963, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1967, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1968, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1970, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1972, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1973, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1975, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1977, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1978, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1987, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1989, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1991, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1994, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1997, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1998, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2005, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2009, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2012, 0.054169, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1953, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1954, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1955, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1958, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1962, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1963, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1967, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1968, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1970, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1972, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1973, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1975, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1977, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1978, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1987, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1989, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1991, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1994, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1997, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 1998, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2005, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2009, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2012, 0.021369, 'M$/GWh','fully depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1953, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1954, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1955, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1958, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1962, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1963, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1967, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1968, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1970, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1972, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1973, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1975, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1977, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1978, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1987, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1989, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1991, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1994, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1997, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1998, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2005, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2009, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2012, 0.054169, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1953, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1954, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1955, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1958, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1962, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1963, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1967, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1968, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1970, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1972, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1973, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1975, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1977, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1978, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1987, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1989, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1991, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1994, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1997, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 1998, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2005, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2009, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2012, 0.021369, 'M$/GWh','fully depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1958, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1962, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1963, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1967, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1968, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1970, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1972, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1973, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1975, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1977, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1978, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1987, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1989, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1991, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1994, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1997, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1998, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2005, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2009, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2012, 0.054169, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1958, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1962, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1963, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1967, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1968, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1970, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1972, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1973, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1975, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1977, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1978, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1987, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1989, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1991, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1994, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1997, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 1998, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2005, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2009, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2012, 0.021369, 'M$/GWh','fully depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1962, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1963, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1967, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1968, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1970, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1972, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1973, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1975, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1977, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1978, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1987, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1989, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1991, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1994, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1997, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1998, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2005, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2009, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2012, 0.054169, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1962, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1963, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1967, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1968, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1970, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1972, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1973, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1975, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1977, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1978, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1987, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1989, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1991, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1994, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1997, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 1998, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2005, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2009, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2012, 0.021369, 'M$/GWh','fully depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1967, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1968, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1970, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1972, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1973, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1975, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1977, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1978, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1987, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1989, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1991, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1994, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1997, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1998, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2005, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2009, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2012, 0.054169, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1967, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1968, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1970, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1972, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1973, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1975, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1977, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1978, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1987, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1989, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1991, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1994, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1997, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 1998, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2005, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2009, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2012, 0.021369, 'M$/GWh','fully depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1972, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1973, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1975, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1977, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1978, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1987, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1989, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1991, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1994, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1997, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1998, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2005, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2009, 0.054169, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2012, 0.054169, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1972, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1973, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1975, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1977, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1978, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1987, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1989, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1991, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1994, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1997, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 1998, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2005, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2009, 0.021369, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2012, 0.021369, 'M$/GWh','fully depreciated');
 
 -- EXISTING NATURAL GAS
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1948, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1951, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1953, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1958, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1959, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1960, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1962, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1965, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1966, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1970, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1974, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1985, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1987, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1988, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1990, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1991, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1993, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1995, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1996, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1997, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1998, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1999, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2000, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2001, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2002, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2003, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2004, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2005, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2012, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2015, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2016, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2019, 0.041987, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1948, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1951, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1953, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1958, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1959, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1960, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1962, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1965, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1966, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1970, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1974, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1985, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1987, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1988, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1990, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1991, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1993, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1995, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1996, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1997, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1998, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1999, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2000, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2001, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2002, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2003, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2004, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2005, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2012, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2015, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2016, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2019, 0.022387, 'M$/GWh','not depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1951, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1953, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1958, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1959, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1960, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1962, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1965, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1966, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1970, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1974, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1985, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1987, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1988, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1990, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1991, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1993, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1995, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1996, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1997, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1998, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1999, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2000, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2001, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2002, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2003, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2004, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2005, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2012, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2015, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2016, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2019, 0.041987, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1951, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1953, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1958, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1959, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1960, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1962, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1965, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1966, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1970, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1974, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1985, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1987, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1988, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1990, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1991, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1993, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1995, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1996, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1997, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1998, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 1999, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2000, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2001, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2002, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2003, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2004, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2005, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2012, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2015, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2016, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2019, 0.022387, 'M$/GWh','not depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1958, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1959, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1960, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1962, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1965, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1966, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1970, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1974, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1985, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1987, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1988, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1990, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1991, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1993, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1995, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1996, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1997, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1998, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1999, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2000, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2001, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2002, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2003, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2004, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2005, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2012, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2015, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2016, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2019, 0.041987, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1958, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1959, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1960, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1962, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1965, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1966, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1970, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1974, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1985, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1987, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1988, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1990, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1991, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1993, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1995, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1996, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1997, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1998, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 1999, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2000, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2001, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2002, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2003, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2004, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2005, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2012, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2015, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2016, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2019, 0.022387, 'M$/GWh','not depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1962, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1965, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1966, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1970, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1974, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1985, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1987, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1988, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1990, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1991, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1993, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1995, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1996, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1997, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1998, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1999, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2000, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2001, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2002, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2003, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2004, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2005, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2012, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2015, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2016, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2019, 0.041987, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1962, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1965, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1966, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1970, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1974, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1985, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1987, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1988, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1990, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1991, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1993, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1995, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1996, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1997, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1998, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 1999, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2000, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2001, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2002, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2003, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2004, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2005, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2012, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2015, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2016, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2019, 0.022387, 'M$/GWh','not depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1966, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1970, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1974, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1985, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1987, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1988, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1990, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1991, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1993, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1995, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1996, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1997, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1998, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1999, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2000, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2001, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2002, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2003, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2004, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2005, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2012, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2015, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2016, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2019, 0.041987, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1966, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1970, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1974, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1985, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1987, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1988, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1990, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1991, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1993, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1995, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1996, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1997, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1998, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 1999, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2000, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2001, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2002, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2003, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2004, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2005, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2012, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2015, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2016, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2019, 0.022387, 'M$/GWh','not depreciated');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1974, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1985, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1987, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1988, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1990, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1991, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1993, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1995, 0.041987, 'M$/GWh','fully depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1996, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1997, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1998, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1999, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2000, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2001, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2002, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2003, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2004, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2005, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2012, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2015, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2016, 0.041987, 'M$/GWh','not depreciated');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2019, 0.041987, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1974, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1985, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1987, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1988, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1990, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1991, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1993, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1995, 0.022387, 'M$/GWh','fully depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1996, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1997, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1998, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 1999, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2000, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2001, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2002, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2003, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2004, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2005, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2012, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2015, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2016, 0.022387, 'M$/GWh','not depreciated');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2019, 0.022387, 'M$/GWh','not depreciated');
 
 
 /*
 FUTURE CAPACITY
 */
 
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 0.006291, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 0.006291, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 0.006291, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 0.006291, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 0.006291, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 0.006291, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 0.005811, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 0.006291, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 0.005811, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NUCLEAR_NEW', 2025, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_NEW', 2025, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2025, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2025, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2025, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2025, 0.009638, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NUCLEAR_NEW', 2025, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_NEW', 2025, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2025, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2025, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2025, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2025, 0.009158, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_NEW', 2030, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2030, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2030, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2030, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2030, 0.009638, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NUCLEAR_NEW', 2030, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2030, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2030, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2030, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2030, 0.009158, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2035, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2035, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2035, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2035, 0.009638, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2035, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2035, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2035, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2035, 0.009158, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2040, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2040, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2040, 0.009638, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2040, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2040, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2040, 0.009158, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2045, 0.009638, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2045, 0.009638, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2045, 0.009158, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2045, 0.009158, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2050, 0.009638, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2050, 0.009158, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2025, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2025, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2025, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2025, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2025, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2025, 0.054169, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2025, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2025, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2025, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2025, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2025, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2025, 0.021369, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2030, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2030, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2030, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2030, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2030, 0.054169, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2030, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2030, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2030, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2030, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2030, 0.021369, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2035, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2035, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2035, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2035, 0.054169, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_EXISTING', 2035, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2035, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2035, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2035, 0.021369, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2040, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2040, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2040, 0.054169, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_EXISTING', 2040, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2040, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2040, 0.021369, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2045, 0.054169, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2045, 0.054169, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_EXISTING', 2045, 0.021369, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2045, 0.021369, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2050, 0.054169, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2050, 0.021369, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_NEW', 2025, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_NEW', 2025, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_NEW', 2025, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_NEW', 2025, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2025, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2025, 0.045433, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'COAL_PLANT_NEW', 2025, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_NEW', 2025, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_NEW', 2025, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_NEW', 2025, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2025, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2025, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_NEW', 2030, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_NEW', 2030, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_NEW', 2030, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2030, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2030, 0.045433, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'COAL_PLANT_NEW', 2030, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_NEW', 2030, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_NEW', 2030, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2030, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2030, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_NEW', 2035, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_NEW', 2035, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2035, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2035, 0.045433, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'COAL_PLANT_NEW', 2035, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_NEW', 2035, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2035, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2035, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_NEW', 2040, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2040, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2040, 0.045433, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'COAL_PLANT_NEW', 2040, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2040, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2040, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2045, 0.045433, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2045, 0.045433, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'COAL_PLANT_NEW', 2045, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2045, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2050, 0.045433, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'COAL_PLANT_NEW', 2050, 0.0366329, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2025, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2025, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2025, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2025, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2025, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2025, 0.041987, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 2025, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2025, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2025, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2025, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2025, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2025, 0.022387, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2030, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2030, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2030, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2030, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2030, 0.041987, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_EXISTING', 2030, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2030, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2030, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2030, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2030, 0.022387, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2035, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2035, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2035, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2035, 0.041987, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_EXISTING', 2035, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2035, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2035, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2035, 0.022387, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2040, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2040, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2040, 0.041987, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_EXISTING', 2040, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2040, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2040, 0.022387, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2045, 0.041987, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2045, 0.041987, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_EXISTING', 2045, 0.022387, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2045, 0.022387, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2050, 0.041987, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 2050, 0.022387, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_NEW', 2025, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_NEW', 2025, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_NEW', 2025, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_NEW', 2025, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2025, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2025, 0.34275, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2025, 'NATGAS_PLANT_NEW', 2025, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_NEW', 2025, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_NEW', 2025, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_NEW', 2025, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2025, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2025, 0.027474, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_NEW', 2030, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_NEW', 2030, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_NEW', 2030, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2030, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2030, 0.34275, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2030, 'NATGAS_PLANT_NEW', 2030, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_NEW', 2030, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_NEW', 2030, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2030, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2030, 0.027474, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_NEW', 2035, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_NEW', 2035, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2035, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2035, 0.34275, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2035, 'NATGAS_PLANT_NEW', 2035, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_NEW', 2035, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2035, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2035, 0.027474, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_NEW', 2040, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2040, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2040, 0.34275, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2040, 'NATGAS_PLANT_NEW', 2040, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2040, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2040, 0.027474, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2045, 0.34275, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2045, 0.34275, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2045, 'NATGAS_PLANT_NEW', 2045, 0.027474, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2045, 0.027474, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2050, 0.34275, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostVariable" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2050, 0.027474, 'M$/GW-year', 'source: NREL ATB');
 
 
 
@@ -2269,6 +2263,21 @@ INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2035, 0.05, 'M$/MW', 
 INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2040, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
 INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2045, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
 INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2050, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
+
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2025, 5.905853, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2030, 5.734473, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2035, 5.544668, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2040, 5.340865, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2045, 5.155078, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2050, 4.916458, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2025, 11.811706, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2030, 11.468946, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2035, 11.089336, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2040, 10.681730, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2045, 10.310156, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2050, 9.8329100, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2025, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2030, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2035, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
@@ -2294,35 +2303,35 @@ INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_NEW', 2050, 2.7128728, 'M$/
 
 -- SOLAR FARM
 INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2025, 1.593533, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2030, 1.593533, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2035, 1.593533, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2040, 1.593533, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2045, 1.593533, 'M$/MW', 'utility solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2050, 1.593533, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2030, 0.818600, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2035, 0.782241, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2040, 0.745883, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2045, 0.709525, 'M$/MW', 'utility solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_FARM', 2050, 0.673166, 'M$/MW', 'utility solar');
 
 -- SOLAR RESIDENTIAL
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2025, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2030, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2035, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2040, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2045, 3.107694, 'M$/MW', 'residential solar');
-INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2050, 3.107694, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2025, 2.036413, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2030, 1.124614, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2035, 1.057875, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2040, 0.991136, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2045, 0.924396, 'M$/MW', 'residential solar');
+INSERT INTO "CostInvest" VALUES ('IL', 'SOLAR_RESIDENTIAL', 2050, 0.857657, 'M$/MW', 'residential solar');
 
 --WIND
 INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2025, 1.878456, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2030, 1.878456, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2035, 1.878456, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 1.878456, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 1.878456, 'M$/MW', 'on shore wind, 33% capacity factor');
-INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 1.878456, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2030, 1.614811, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2035, 1.411854, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2040, 1.356812, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2045, 1.299927, 'M$/MW', 'on shore wind, 33% capacity factor');
+INSERT INTO "CostInvest" VALUES ('IL', 'WIND_FARM', 2050, 1.241198, 'M$/MW', 'on shore wind, 33% capacity factor');
 
 -- BATTERY
 INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2025, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2030, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2035, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2040, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2045, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
-INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2050, 1.608, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2030, 1.182, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2035, 0.964, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2040, 0.902, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2045, 0.844, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
+INSERT INTO "CostInvest" VALUES ('IL', 'LI_BATTERY', 2050, 0.781, 'M$/MW', 'lithium-ion battery, based on 2-hour storage');
 
 
 CREATE TABLE "CostFixed" (
@@ -2339,43 +2348,6 @@ CREATE TABLE "CostFixed" (
 	PRIMARY KEY("regions","periods","tech","vintage")
 );
 
-/*
-COMMENT ABOUT NUCLEAR FIXED COSTS: Existing nuclear capacity will age out by 2050
-if their licenses are not extended.
-*/
--- FIXED COST FOR EXISTING NUCLEAR
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 224.82238, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 224.82238, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 224.82238, 'M$/GW-year', 'PWR');
-
-
-/*
-UNCOMMENT the following lines for Business-As-Usual, SD5
-*/
 INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 177.73741, 'M$/GW-year', 'BWR');
 INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 177.73741, 'M$/GW-year', 'BWR');
 INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 177.73741, 'M$/GW-year', 'BWR');
@@ -2404,112 +2376,81 @@ INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 177.73741, '
 INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 177.73741, 'M$/GW-year', 'PWR');
 INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 177.73741, 'M$/GW-year', 'PWR');
 
-/*
-UNCOMMENT the following lines for Business-As-Usual 2 (No variable cost)
-*/
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1969, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1971, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1972, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1982, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1984, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1985, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2025,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1971, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1982, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1984, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1985, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2030,'NUCLEAR_EXISTING', 1972, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1982, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1984, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1985, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2035,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1982, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1984, 181.40022, 'M$/GW-year', 'BWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1985, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2040,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1987, 181.40022, 'M$/GW-year', 'PWR');
--- INSERT INTO "CostFixed" VALUES('IL', 2045,'NUCLEAR_EXISTING', 1988, 181.40022, 'M$/GW-year', 'PWR');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2009, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2009, 19.3341, 'M$/GW-year', 'MW electric');
 
-INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2009, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2009, 23.370660, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2012, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2012, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2012, 19.3341, 'M$/GW-year', 'MW electric');
 
-INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2012, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2012, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2012, 23.370660, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2015, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2015, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2015, 19.3341, 'M$/GW-year', 'MW electric');
 
-INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2015, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2015, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2015, 23.370660, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2016, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2016, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2016, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2016, 19.3341, 'M$/GW-year', 'MW electric');
 
-INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2016, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2016, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2016, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2016, 23.370660, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2017, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2017, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2017, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2017, 19.3341, 'M$/GW-year', 'MW electric');
 
-INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2017, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2017, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2017, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2017, 23.370660, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2019, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2019, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2019, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2019, 19.3341, 'M$/GW-year', 'MW electric');
 
-INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2019, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2019, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2019, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2019, 23.370660, 'M$/GW-year', 'MW electric');
-
-INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2020, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2020, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2020, 23.370660, 'M$/GW-year', 'MW electric');
-INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2020, 23.370660, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'SOLAR_FARM', 2020, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'SOLAR_FARM', 2020, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'SOLAR_FARM', 2020, 19.3341, 'M$/GW-year', 'MW electric');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'SOLAR_FARM', 2020, 19.3341, 'M$/GW-year', 'MW electric');
 
 -- FIXED COST FOR EXISTING WIND
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2003, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2004, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2005, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2007, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2008, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2009, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2010, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2011, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2012, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2015, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2016, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2017, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2018, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2019, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2020, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2003,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2004,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2005,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2007,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2008,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2009,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2010,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2011,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2012,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2015,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2016,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2017,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2018,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2019,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2020,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2007, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2008, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2009, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2010, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2011, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2012, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2015, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2016, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2017, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2018, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2019, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2020, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2007,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2008,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2009,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2010,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2011,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2012,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2015,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2016,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2017,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2018,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2019,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2020,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2011, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2012, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2015, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2016, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2017, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2018, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2019, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2020, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2011,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2012,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2015,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2016,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2017,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2018,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2019,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2020,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2016, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2017, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2018, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2019, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2020, 45.043382, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2016,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2017,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2018,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2019,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2020,43.7560, 'M$/GW-year', 'onshore, 33% capacity factor');
 
 INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1996, 11.1934, 'M$/GW-year','still paying loan');
 INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NATGAS_PLANT_EXISTING', 1997, 11.1934, 'M$/GW-year','still paying loan');
@@ -2723,44 +2664,10 @@ INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2005, 40.7033
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2009, 40.7033, 'M$/GWh','source: NREL ATB');
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 2012, 40.7033, 'M$/GWh','source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2015, 35.462323, ' M$/GW-year','based on 2-hour storage at 50 MW');
-INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2016, 35.462323, ' M$/GW-year','based on 2-hour storage at 50 MW');
-INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2017, 35.462323, ' M$/GW-year','based on 2-hour storage at 50 MW');
-INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2018, 35.462323, ' M$/GW-year','based on 2-hour storage at 50 MW');
-/*
-FUTURE CAPACITY
-*/
--- INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 224.82238, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 224.82238, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 224.82238, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 224.82238, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 224.82238, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 224.82238, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 224.82238, 'M$/GW-year', 'source: NREL ATB');
-
-/*
-UNCOMMENT the following lines for Business-As-Usual
-Fixed Cost without Fuel and Variable OM
-*/
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2015, 13.127, ' M$/GW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2016, 13.127, ' M$/GW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2017, 13.127, ' M$/GW-year','based on 2-hour storage at 50 MW');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2018, 13.127, ' M$/GW-year','based on 2-hour storage at 50 MW');
 
 INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
 INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 177.73741, 'M$/GW-year', 'source: NREL ATB');
@@ -2789,64 +2696,32 @@ INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 177.73741,
 
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 177.73741, 'M$/GW-year', 'source: NREL ATB');
 
-/*
-UNCOMMENT the following lines for Business-As-Usual 2
-No Variable Cost for Nuclear
-*/
--- INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2025, 181.40022, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2030, 181.40022, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 2035, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2035, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2035, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2035, 181.40022, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 2040, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2040, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2040, 181.40022, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2045, 181.40022, 'M$/GW-year', 'source: NREL ATB');
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2045, 181.40022, 'M$/GW-year', 'source: NREL ATB');
---
--- INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 2050, 181.40022, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_NEW', 2025, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_NEW', 2025, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2025, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2025, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2025, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2025, 121.09221, 'M$/GW-year', 'source: NREL ATB');
 
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_NEW', 2030, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2030, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2030, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2030, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2030, 121.09221, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'NUCLEAR_NEW', 2025, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_NEW', 2025, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2025, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2025, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2025, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2025, 121.092221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2035, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2035, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2035, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2035, 121.09221, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'NUCLEAR_NEW', 2030, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2030, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2030, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2030, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2030, 121.092221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2040, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2040, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2040, 121.09221, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'NUCLEAR_NEW', 2035, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2035, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2035, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2035, 121.092221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2045, 121.09221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2045, 121.09221, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'NUCLEAR_NEW', 2040, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2040, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2040, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'NUCLEAR_NEW', 2045, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2045, 121.092221, 'M$/GW-year', 'source: NREL ATB');
-
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2050, 121.092221, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NUCLEAR_NEW', 2050, 121.09221, 'M$/GW-year', 'source: NREL ATB');
 
 INSERT INTO "CostFixed" VALUES ('IL', 2025, 'COAL_PLANT_EXISTING', 2025, 40.7033, 'M$/GW-year', 'source: NREL ATB');
 INSERT INTO "CostFixed" VALUES ('IL', 2030, 'COAL_PLANT_EXISTING', 2025, 40.7033, 'M$/GW-year', 'source: NREL ATB');
@@ -2956,106 +2831,106 @@ INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2045, 27.4747, '
 
 INSERT INTO "CostFixed" VALUES ('IL', 2050, 'NATGAS_PLANT_NEW', 2050, 27.4747, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'SOLAR_FARM', 2025, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_FARM', 2025, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2025, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2025, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2025, 23.370660, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'SOLAR_FARM', 2025, 12.824, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_FARM', 2025, 12.824, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2025, 12.824, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2025, 12.824, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2025, 12.824, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_FARM', 2030, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2030, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2030, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2030, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2030, 23.370660, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_FARM', 2030, 9.795, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2030, 9.795, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2030, 9.795, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2030, 9.795, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2030, 9.795, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2035, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2035, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2035, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2035, 23.370660, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_FARM', 2035, 9.360, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2035, 9.360, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2035, 9.360, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2035, 9.360, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2040, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2040, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2040, 23.370660, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_FARM', 2040, 8.925, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2040, 8.925, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2040, 8.925, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2045, 23.370660, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2045, 23.370660, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_FARM', 2045, 8.490, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2045, 8.490, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2050, 23.370660, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_FARM', 2050, 8.055, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'SOLAR_RESIDENTIAL', 2025, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 2025, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2025, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2025, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2025, 24.972749, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'SOLAR_RESIDENTIAL', 2025, 14.133, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 2025, 14.133, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2025, 14.133, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2025, 14.133, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2025, 14.133, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 2030, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2030, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2030, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2030, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2030, 24.972749, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 2030, 8.435, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2030, 8.435, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2030, 8.435, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2030, 8.435, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2030, 8.435, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2035, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2035, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2035, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2035, 24.972749, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 2035, 7.934, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2035, 7.934, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2035, 7.934, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2035, 7.934, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2040, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2040, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2040, 24.972749, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 2040, 7.434, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2040, 7.434, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2040, 7.434, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2045, 24.972749, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2045, 24.972749, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 2045, 6.933, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2045, 6.933, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2050, 24.972749, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 2050, 6.432, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2025, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2025, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2025, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2025, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2025, 45.043382, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2025, 'WIND_FARM', 2025, 40.723, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2025, 40.723, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2025, 40.723, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2025, 40.723, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2025, 40.723, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2030, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2030, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2030, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2030, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2030, 45.043382, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2030, 'WIND_FARM', 2030, 38.950, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2030, 38.950, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2030, 38.950, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2030, 38.950, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2030, 38.950, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2035, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2035, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2035, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2035, 45.043382, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2035, 'WIND_FARM', 2035, 37.489, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2035, 37.489, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2035, 37.489, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2035, 37.489, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2040, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2040, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2040, 45.043382, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2040, 'WIND_FARM', 2040, 36.029, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2040, 36.029, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2040, 36.029, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2045, 45.043382, 'M$/GW-year', 'source: NREL ATB');
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2045, 45.043382, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2045, 'WIND_FARM', 2045, 34.568, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2045, 34.568, 'M$/GW-year', 'source: NREL ATB');
 
-INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2050, 45.043382, 'M$/GW-year', 'source: NREL ATB');
+INSERT INTO "CostFixed" VALUES ('IL', 2050, 'WIND_FARM', 2050, 33.107, 'M$/GW-year', 'source: NREL ATB');
 
 
 -- BATTERY STORAGE
-INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2025,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2025,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2025,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2025,'LI_BATTERY',2025, 25.102,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2025, 25.102,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2025, 25.102,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2030,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2030,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2030,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2030,'LI_BATTERY',2030, 20.431,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2030, 20.431,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2030, 20.431,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2035,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2035,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2035,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2035,'LI_BATTERY',2035, 19.154,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2035, 19.154,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2035, 19.154,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2040,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2040,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2040,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2040,'LI_BATTERY',2040, 17.877,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2040, 17.877,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2040, 17.877,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2045,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
-INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2045,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2045,'LI_BATTERY',2045, 16.600,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2045, 16.600,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
-INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2050,35.462323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
+INSERT INTO "CostFixed" VALUES ('IL',2050,'LI_BATTERY',2050, 15.323,'based on 2-hour storage at 50 MW', 'source: NREL & SL');
 
 
 CREATE TABLE "CapacityToActivity" (
@@ -3067,6 +2942,7 @@ CREATE TABLE "CapacityToActivity" (
 	PRIMARY KEY("regions","tech")
 );
 INSERT INTO "CapacityToActivity" VALUES ('IL','NUCLEAR_EXISTING',8.76, '');
+INSERT INTO "CapacityToActivity" VALUES ('IL','NUCLEAR_NEW',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','COAL_PLANT_EXISTING',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','COAL_PLANT_NEW',8.76, '');
 INSERT INTO "CapacityToActivity" VALUES ('IL','NATGAS_PLANT_EXISTING',8.76, '');
@@ -3350,7 +3226,6 @@ INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H21','NUCLEAR_NEW',0.925
 INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H22','NUCLEAR_NEW',0.925,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H23','NUCLEAR_NEW',0.925,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','winter','H24','NUCLEAR_NEW',0.925,'');
-
 
 INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H1','COAL_PLANT_EXISTING',0.54,'');
 INSERT INTO `CapacityFactorTech` VALUES ('IL','spring','H2','COAL_PLANT_EXISTING',0.54,'');
