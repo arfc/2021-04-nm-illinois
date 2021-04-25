@@ -720,20 +720,22 @@ CREATE TABLE "MinCapacity" (
 	PRIMARY KEY("regions","periods","tech")
 );
 -- ALL EXISTING NUCLEAR MUST STAY OPEN
--- INSERT INTO "MinCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
--- INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
-INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_NEW', 7601.2239, 'MWe', 'cannot build more than existing capacity');
 
-INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'LI_BATTERY', 42527.7761, 'MWe', 'required capacity for high renewable penetration');
-INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'LI_BATTERY', 43512.7761, 'MWe', 'required capacity for high renewable penetration');
-INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'LI_BATTERY', 46467.7761, 'MWe', 'required capacity for high renewable penetration');
-INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'LI_BATTERY', 50046.7761, 'MWe', 'required capacity for high renewable penetration');
-INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 54958.7761, 'MWe', 'required capacity for high renewable penetration');
+
+
+-- INSERT INTO "MinCapacity" VALUES ('IL', 2025, 'LI_BATTERY', 45902.0, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'LI_BATTERY', 45902.0, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'LI_BATTERY', 45902.0, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'LI_BATTERY', 45902.0, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'LI_BATTERY', 45902.0, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 45902.0, 'MWe', 'required capacity for high renewable penetration');
 
 
 CREATE TABLE "MinActivity" (
@@ -769,12 +771,12 @@ CREATE TABLE "MaxCapacity" (
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
 -- Shutdown at the end of their current licenses.
-INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'NUCLEAR_EXISTING', 11446.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 8491.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 4912.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
 -- Shutdown prematurely
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2025, 'NUCLEAR_EXISTING', 8032.0, 'MWe', 'cannot build more than existing capacity');
@@ -784,6 +786,8 @@ INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'c
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2541.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
+INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_NEW', 0.0, 'MWe', 'cannot build more than existing capacity');
+
 
 INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 6900.0, 'MWe', 'restricted to theoretical max from NREL');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 12500.0, 'MWe', 'restricted to theoretical max from NREL');
@@ -791,8 +795,8 @@ INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 22500.0, 'MWe
 INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 30000.0, 'MWe', 'restricted to theoretical max from NREL');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 34000.0, 'MWe', 'restricted to theoretical max from NREL');
 
-INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'WIND_FARM', 13825.9, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_FARM', 10000.0, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'WIND_FARM', 13825.9, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_FARM', 10000.0, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
 
 
 
@@ -882,7 +886,7 @@ CREATE TABLE "GrowthRateMax" (
 );
 
 CREATE TABLE "GlobalDiscountRate" (
-	"rate"	realPlanning
+	"rate"	real
 );
 INSERT INTO `GlobalDiscountRate` VALUES (0.05);
 
@@ -1531,6 +1535,7 @@ INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2035,'E
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2040,'ELC',1.8494,'t/GWh','NULL');
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2045,'ELC',1.8494,'t/GWh','NULL');
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2050,'ELC',1.8494,'t/GWh','NULL');
+
 
 CREATE TABLE "Efficiency" (
 	"regions"	text,
@@ -2264,13 +2269,19 @@ INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2040, 0.05, 'M$/MW', 
 INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2045, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
 INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2050, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
 
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2025, 5.905853, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2030, 5.734473, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2035, 5.544668, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2040, 5.340865, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2045, 5.155078, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2050, 4.916458, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2025, 5.905853, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2030, 5.734473, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2035, 5.544668, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2040, 5.340865, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2045, 5.155078, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2050, 4.916458, 'M$/MW', 'advanced nuclear, source: NREL ATB');
 
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2025, 11.811706, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2030, 11.468946, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2035, 11.089336, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2040, 10.681730, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2045, 10.310156, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2050, 9.8329100, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
 
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2025, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2030, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');

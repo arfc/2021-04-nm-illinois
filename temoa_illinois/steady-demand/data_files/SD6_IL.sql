@@ -658,7 +658,7 @@ CREATE TABLE "PlanningReserveMargin" (
 	PRIMARY KEY(regions),
 	FOREIGN KEY(`regions`) REFERENCES regions
 );
-INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
+INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.15);
 
 CREATE TABLE RampDown(
 	"regions" text,
@@ -727,8 +727,13 @@ INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe'
 INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
-INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 45902.0, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'NUCLEAR_NEW', 4334.7704, 'MWe', 'cannot build more than existing capacity');
 
+INSERT INTO "MinCapacity" VALUES ('IL', 2030, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2035, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
+INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 45794.2296, 'MWe', 'required capacity for high renewable penetration');
 
 CREATE TABLE "MinActivity" (
 	"regions"	text,
@@ -782,8 +787,8 @@ CREATE TABLE "MaxCapacity" (
 INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 6900.0, 'MWe', 'restricted to theoretical max from NREL');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 12500.0, 'MWe', 'restricted to theoretical max from NREL');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 22500.0, 'MWe', 'restricted to theoretical max from NREL');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 33000.0, 'MWe', 'restricted to theoretical max from NREL');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 44100.0, 'MWe', 'restricted to theoretical max from NREL');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 30000.0, 'MWe', 'restricted to theoretical max from NREL');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 34000.0, 'MWe', 'restricted to theoretical max from NREL');
 
 INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'WIND_FARM', 13825.9, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_FARM', 10000.0, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
@@ -1519,6 +1524,12 @@ INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2035,'
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2040,'ELC',0.168297,'t/GWh','NULL');
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2045,'ELC',0.168297,'t/GWh','NULL');
 INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ethos','WIND_FARM',2050,'ELC',0.168297,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2025,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2030,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2035,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2040,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2045,'ELC',1.8494,'t/GWh','NULL');
+INSERT INTO "EmissionActivity" VALUES ('IL','e-waste','ELC','LI_BATTERY',2050,'ELC',1.8494,'t/GWh','NULL');
 
 
 CREATE TABLE "Efficiency" (

@@ -179,6 +179,8 @@ CREATE TABLE "tech_reserve" (
 	PRIMARY KEY("tech")
 );
 INSERT INTO "tech_reserve" VALUES ('LI_BATTERY', 'battery reserve');
+INSERT INTO "tech_reserve" VALUES ('NATGAS_PLANT_EXISTING', 'natural gas reserve');
+
 -- INSERT INTO "tech_reserve" VALUES ('NUCLEAR_EXISTING', 'nuclear reserve');
 
 CREATE TABLE "tech_exchange" (
@@ -658,7 +660,7 @@ CREATE TABLE "PlanningReserveMargin" (
 	PRIMARY KEY(regions),
 	FOREIGN KEY(`regions`) REFERENCES regions
 );
-INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
+INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.15);
 
 CREATE TABLE RampDown(
 	"regions" text,

@@ -179,6 +179,7 @@ CREATE TABLE "tech_reserve" (
 	PRIMARY KEY("tech")
 );
 INSERT INTO "tech_reserve" VALUES ('LI_BATTERY', 'battery reserve');
+INSERT INTO "tech_reserve" VALUES ('NATGAS_PLANT_EXISTING', 'natural gas reserve');
 -- INSERT INTO "tech_reserve" VALUES ('NUCLEAR_EXISTING', 'nuclear reserve');
 
 CREATE TABLE "tech_exchange" (
@@ -658,7 +659,7 @@ CREATE TABLE "PlanningReserveMargin" (
 	PRIMARY KEY(regions),
 	FOREIGN KEY(`regions`) REFERENCES regions
 );
-INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.35);
+INSERT INTO "PlanningReserveMargin" VALUES ('IL', 0.15);
 
 CREATE TABLE RampDown(
 	"regions" text,
@@ -780,8 +781,8 @@ INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'c
 INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 6900.0, 'MWe', 'restricted to theoretical max from NREL');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2035, 'SOLAR_RESIDENTIAL', 12500.0, 'MWe', 'restricted to theoretical max from NREL');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'SOLAR_RESIDENTIAL', 22500.0, 'MWe', 'restricted to theoretical max from NREL');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 33000.0, 'MWe', 'restricted to theoretical max from NREL');
-INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 44100.0, 'MWe', 'restricted to theoretical max from NREL');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'SOLAR_RESIDENTIAL', 30000.0, 'MWe', 'restricted to theoretical max from NREL');
+INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'SOLAR_RESIDENTIAL', 34000.0, 'MWe', 'restricted to theoretical max from NREL');
 
 INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'WIND_FARM', 13825.9, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_FARM', 10000.0, 'MWe', 'Aggressive build indicated by Clean Energy Jobs Act');

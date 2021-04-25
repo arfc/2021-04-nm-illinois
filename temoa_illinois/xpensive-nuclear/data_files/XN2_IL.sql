@@ -735,7 +735,6 @@ INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'LI_BATTERY', 46467.7761, 'MWe', '
 INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'LI_BATTERY', 50046.7761, 'MWe', 'required capacity for high renewable penetration');
 INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 54958.7761, 'MWe', 'required capacity for high renewable penetration');
 
-
 CREATE TABLE "MinActivity" (
 	"regions"	text,
 	"periods"	integer,
@@ -882,7 +881,7 @@ CREATE TABLE "GrowthRateMax" (
 );
 
 CREATE TABLE "GlobalDiscountRate" (
-	"rate"	realPlanning
+	"rate"	real
 );
 INSERT INTO `GlobalDiscountRate` VALUES (0.05);
 
@@ -2264,13 +2263,19 @@ INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2040, 0.05, 'M$/MW', 
 INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2045, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
 INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_EXISTING', 2050, 0.05, 'M$/MW', 'existing nuclear, source: NRC license renewal');
 
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2025, 5.905853, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2030, 5.734473, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2035, 5.544668, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2040, 5.340865, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2045, 5.155078, 'M$/MW', 'advanced nuclear, source: NREL ATB');
-INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2050, 4.916458, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2025, 5.905853, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2030, 5.734473, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2035, 5.544668, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2040, 5.340865, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2045, 5.155078, 'M$/MW', 'advanced nuclear, source: NREL ATB');
+-- INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2050, 4.916458, 'M$/MW', 'advanced nuclear, source: NREL ATB');
 
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2025, 11.811706, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2030, 11.468946, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2035, 11.089336, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2040, 10.681730, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2045, 10.310156, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
+INSERT INTO "CostInvest" VALUES ('IL', 'NUCLEAR_NEW', 2050, 9.8329100, 'M$/MW', 'advanced nuclear, source: NREL ATB, 200% cost overruns');
 
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2025, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
 INSERT INTO "CostInvest" VALUES ('IL', 'NATGAS_PLANT_EXISTING', 2030, 0.9595800, 'M$/MW', 'current tech, source: NREL ATB');
