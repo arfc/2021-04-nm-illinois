@@ -40,6 +40,7 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'SOLAR_FARM',
                        'SOLAR_RESIDENTIAL',
                        'WIND_FARM',
+                       'LI_BATTERY'
                        ],
              'CO2': ['NATGAS_PLANT_EXISTING',
                      'NATGAS_PLANT_NEW',
@@ -55,7 +56,8 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                      'COAL_PLANT_NEW',],
              'e-waste': ['SOLAR_FARM',
                         'SOLAR_RESIDENTIAL',
-                        'WIND_FARM'],
+                        'WIND_FARM',
+                        'LI_BATTERY'],
              'spent-fuel': ['NUCLEAR_EXISTING',
                             'NUCLEAR_NEW']}
 
@@ -325,9 +327,10 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
         If save is true, the plot will be saved rather than
         shown. Default is true.
     """
-    target_folder = "./figures/"
-    if not os.path.isdir(target_folder):
-        os.mkdir(target_folder)
+    if save:
+        target_folder = "./figures/"
+        if not os.path.isdir(target_folder):
+            os.mkdir(target_folder)
 
     units = {'generation': '[GWh]',
              'capacity': '[GW]',
@@ -456,9 +459,10 @@ def emissions_plot(dataframe, variable, scenario, emission, sector, save=True):
         If save is true, the plot will be saved rather than
         shown. Default is true.
     """
-    target_folder = "./figures/"
-    if not os.path.isdir(target_folder):
-        os.mkdir(target_folder)
+    if save:
+        target_folder = "./figures/"
+        if not os.path.isdir(target_folder):
+            os.mkdir(target_folder)
 
     units = {'emissions': f'[million metric tons {emission}]'}
 
