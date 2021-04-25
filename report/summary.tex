@@ -9,61 +9,57 @@ have recently successfully underbid emissions-free nuclear energy.
 Corresponding revenue shortfalls in the hundreds of millions of dollars
 undermine the economic feasibility of these plants. 
 
+This report explores the extent to which these closures would undermine 
+economic and decarbonization goals in the state of Illinois.  Specifically, 
+proposals in Illinois include agressive carbon reduction targets (namely, zero carbon by 2030) 
+that would necessitate not only maintenance but expansion of firm, 
+emissions-free baseload energy capacity. Energy analysis literature 
+(\cite{national_accelerating_2021,others}) implies that those clean energy 
+goals will not be reached if these nuclear plants prematurely retire and that 
+the economic value provided by these plants to the surrounding community will 
+be lost \cite{economic_impact_studies}. 
+Our findings are consistent with that literature, particularly the February 
+2021 National Academy of Sciences, Engineering, and Medicine report, 
+``Accelerating Decarbonization of the U.S. Energy System,'' which determined 
+unequivocally that US decarbonization will require keeping existing nuclear 
+plants open \cite{national_accelerating_2021}.
 
-This report explores the extent to which economic and decarbonization goals in
-the state of Illinois will be undermined by these closures. Specifically, the
-Illinois state legislature is considering agressive carbon reduction goals that
-would necessitate not only maintenance but expansion of firm, emissions-free
-baseload energy capacity.  Clean energy goals will not be reached if these
-plants prematurely retire.  Additionally, the economic value provided by these
-plants to the surrounding community will be lost. 
+\textbf{The simulations in this report minimize future Illinois electric system cost 
+in the context of constraints imposed by various policy futures.} These simulations utilized the 
+Temoa tool from \gls{NCSU} for Techno-economic modeling, optimization, and 
+analysis. We primarily leveraged data from \gls{EIA}, \gls{IEA}, 
+\gls{NREL}, and \gls{NEI}. Based on this framework, this work explored the economic 
+and emissions impacts of prematurely closing nuclear plants, capping 
+emissions, pricing carbon, agressivly installing renewable generation, and deploying advanced nuclear plants.
 
-Our regional findings are consistent with the February 2021 National Academy of 
-Sciences, Engineering, and Medicine report, ``Accelerating Decarbonization of 
-the U.S. Energy System,'' which determined unequivocally that US decarbonization 
-will require keeping existing nuclear plants open 
-\cite{national_accelerating_2021}.
+The energy mixtures that minimized cost in each scenario demonstrated that nuclear energy is necessary to 
+reach Illinois' carbon reduction goals unless nearly all farmland in 
+Illinois were dedicated to solar and wind deployments. 
+Keeping all of Illinois' existing nuclear plants open through 2050 avoids 25 
+million metric tons of lifecycle CO$^2$ emissions. 
+Additionally, a carbon-free grid in Illinois will require significant 
+grid-scale battery storage,  which meets the strategic reserve requirement of 35\%.
+Keeping all Illinois' existing nuclear plants open through 2050 would reduce 
+e-waste by 600,000 metric tons and deploying advanced nuclear avoids 
+approximately 900,000 metric tons of e-waste. 
 
+Without preserving existing nuclear and deploying advanced reactors, the 
+required land use for solar and wind generation is 
+unattainable, particularly since the Illinois land appropriate for wind and solar 
+is already in use as the vital farmland the nation currently relies on for \todo{percent} of its 
+corn and \todo{percent} of its soybeans.
+Specifically, strategies which allow nuclear plants to close before 2050 
+require approximately 12\% of the land area of Illinois to be devoted to 
+renewable generation \todo{this would be better broken down into types of 
+generation\ldots } with  4\% of Illinois' land area in use for rooftop solar. 
+Keeping the nuclear plants open through 2050 halves this requirement.
 
-Describe the simulations at a high level.
-Describe the major assumptions.
-(how did we model the carbon emissions, what generation did we assume would 
-replace these plants, etc.)
-
-These simulations explored business 
-Business as usual (premature closure, no carbon cap)
-SD2 (scheduled closure, no carbon cap)
-SD3 (nuclear closes after 2050, no carbon cap)
-SD4 (premature closure, with carbon cap)
-SD5 (scheduled closure, with carbon cap)
-SD6 (nuclear closes after 2050, with carbon cap)
---- Simulating aggressive cost overruns (200%) for advanced nuclear projects (eXpensive Nuclear)
-XN1 (premature closure, with carbon cap, advanced nuclear is twice as expensive)
-XN2 (scheduled closure, with carbon cap, advanced nuclear is twice as expensive)
-XN3 (existing nuclear closes after 2050, with carbon cap, advanced nuclear is twice as expensive)
---- Simulating zero advanced nuclear allowed (Zero Nuclear)
-ZN1 (premature closure, with carbon cap)
-ZN2 (scheduled closure, with carbon cap)
-ZN1 (existing nuclear closes after 2050, with carbon cap)
-Every scenario has a required battery storage applied Section \ref{sec:storage} 
-and battery waste accumulated in Section \ref{sec:waste}.
-
-Basic constraints;
-In SDx and XNx
-
-Utility scale solar is restricted to 10 GW by 2030, reflecting an aggressive and optimistic build out based on CEJA goals.
-Wind turbines are restricted to 13.8 GW by 2030, reflecting an aggressive and optimistic build out based on CEJA goals.
-Residential solar is allowed to increase at a steady rate, but is capped at 75% of the technical resource availability, determined from a GIS analysis by NREL (i.e. 75% of the theoretical limit).
-In ZNx
-
-The constraints on utility scale wind and solar are lifted. It is not possible to achieve zero carbon without advanced nuclear under the above constraints.
-Key observations:
-
-Increasing the investment cost for advanced nuclear by 200% has an almost negligible impact on total system cost.
-Zero advanced nuclear scenarios are technically less costly, but require an unimaginably aggressive build of solar by 2030 (56 GW!!)
-Zero advanced nuclear scenarios require about 12% land use change for renewables (4% land area for rooftop solar). Keeping the nuclear plants open through 2050 halves this requirement (since nuclear is half of IL generation, currently).
-Keeping the nuclear plants open through 2050 would reduce e-waste by 600,000 metric tons. Using advanced nuclear saves about 900,000 metric tons.
-Keeping the nuclear plants open through 2050 avoids 25 million metric tons of lifecycle CO2 emissions if advanced nuclear is used, and 30 million metric tons if majority renewables is used. Pursuing advanced nuclear over renewables saves about 5 million metric tons.
+Finally, simulations exploring the possible impact of cost overruns in advanced nuclear power 
+plant deployment showed that even 200\% capital cost overruns in advanced 
+nuclear deployments would have a negligible impact on total system cost.
+That is, even if advanced nuclear were twice as expensive as predicted, it 
+would still be wise to deploy it in Illinois by 2030, given the state's carbon 
+reduction goals.
 
 %nice text from the ANS students
 %Exelon Generation plans to close Byron and Dresden Nuclear Plants in the fall of 
