@@ -1,32 +1,26 @@
 \section{Summary}
-
 % These are draft comments, various summary sentences to frame the gist.
-Exelon Generation annouced planned premautre closures of two nuclear plants, .  
-Byron and Dresden. 
-Both plants, within the PJM interconnection \todo{double check} have suffered 
-under the capacity market situation.
-Nuclear is carbon free, high energy density, etc.
-This report explores the extent to which economic and decarbonization goals in 
-the state of Illinois will be undermined by these closures.  
-Clean energy goals will not be reached if these plants prematurely retire. 
-Additionally, the economic value provided by these plants to the surrounding community will be lost. 
-
-Eleven (11) carbon free nuclear power reactors at 6 sites produce the majority of 
-electricity in Illinois and critically underpin its clean energy future. This 
-report quantitatively demonstrates the role nuclear energy must play in 
-maximizing job creation, minimizing cost, and meeting Illinois’ carbon goals 
-through 2050. We have conducted a 50-year techno-economic optimization of 
-the Illinois energy system to analyze scenarios with and without the 
-at-risk plants. With these, we compared and contrasted the economic and carbon implications of 
-these energy futures. 
+On August 27, 2020, Exelon Generation annouced planned premautre closures of two nuclear plants, 
+Byron and Dresden \cite{larson_exelon_2020}. These premature closures reflect 
+the economic challenges these plants face in competition with fossil fueled 
+plants in the market forces within the PJM interconnection. Specifically, in PJM capacity 
+auctions,  low-cost fossil fueled plants, particularly natural gas generation, 
+have recently successfully underbid emissions-free nuclear energy. 
+Corresponding revenue shortfalls in the hundreds of millions of dollars
+undermine the economic feasibility of these plants. 
 
 
-Statements from the ANS students
-%If Dresden and Byron close:
-%Illinois will see a 30\% hit to carbon-free electricity
+This report explores the extent to which economic and decarbonization goals in
+the state of Illinois will be undermined by these closures. Specifically, the
+Illinois state legislature is considering agressive carbon reduction goals that
+would necessitate not only maintenance but expansion of firm, emissions-free
+baseload energy capacity.  Clean energy goals will not be reached if these
+plants prematurely retire.  Additionally, the economic value provided by these
+plants to the surrounding community will be lost. 
+
 Our regional findings are consistent with the February 2021 National Academy of 
-Sciences, Engineering, and Medicine report, “Accelerating Decarbonization of 
-the U.S. Energy System”, which determined unequivocally that US decarbonization 
+Sciences, Engineering, and Medicine report, ``Accelerating Decarbonization of 
+the U.S. Energy System,'' which determined unequivocally that US decarbonization 
 will require keeping existing nuclear plants open 
 \cite{national_accelerating_2021}.
 
@@ -35,6 +29,41 @@ Describe the simulations at a high level.
 Describe the major assumptions.
 (how did we model the carbon emissions, what generation did we assume would 
 replace these plants, etc.)
+
+These simulations explored business 
+Business as usual (premature closure, no carbon cap)
+SD2 (scheduled closure, no carbon cap)
+SD3 (nuclear closes after 2050, no carbon cap)
+SD4 (premature closure, with carbon cap)
+SD5 (scheduled closure, with carbon cap)
+SD6 (nuclear closes after 2050, with carbon cap)
+--- Simulating aggressive cost overruns (200%) for advanced nuclear projects (eXpensive Nuclear)
+XN1 (premature closure, with carbon cap, advanced nuclear is twice as expensive)
+XN2 (scheduled closure, with carbon cap, advanced nuclear is twice as expensive)
+XN3 (existing nuclear closes after 2050, with carbon cap, advanced nuclear is twice as expensive)
+--- Simulating zero advanced nuclear allowed (Zero Nuclear)
+ZN1 (premature closure, with carbon cap)
+ZN2 (scheduled closure, with carbon cap)
+ZN1 (existing nuclear closes after 2050, with carbon cap)
+Every scenario has a required battery storage applied Section \ref{sec:storage} 
+and battery waste accumulated in Section \ref{sec:waste}.
+
+Basic constraints;
+In SDx and XNx
+
+Utility scale solar is restricted to 10 GW by 2030, reflecting an aggressive and optimistic build out based on CEJA goals.
+Wind turbines are restricted to 13.8 GW by 2030, reflecting an aggressive and optimistic build out based on CEJA goals.
+Residential solar is allowed to increase at a steady rate, but is capped at 75% of the technical resource availability, determined from a GIS analysis by NREL (i.e. 75% of the theoretical limit).
+In ZNx
+
+The constraints on utility scale wind and solar are lifted. It is not possible to achieve zero carbon without advanced nuclear under the above constraints.
+Key observations:
+
+Increasing the investment cost for advanced nuclear by 200% has an almost negligible impact on total system cost.
+Zero advanced nuclear scenarios are technically less costly, but require an unimaginably aggressive build of solar by 2030 (56 GW!!)
+Zero advanced nuclear scenarios require about 12% land use change for renewables (4% land area for rooftop solar). Keeping the nuclear plants open through 2050 halves this requirement (since nuclear is half of IL generation, currently).
+Keeping the nuclear plants open through 2050 would reduce e-waste by 600,000 metric tons. Using advanced nuclear saves about 900,000 metric tons.
+Keeping the nuclear plants open through 2050 avoids 25 million metric tons of lifecycle CO2 emissions if advanced nuclear is used, and 30 million metric tons if majority renewables is used. Pursuing advanced nuclear over renewables saves about 5 million metric tons.
 
 %nice text from the ANS students
 %Exelon Generation plans to close Byron and Dresden Nuclear Plants in the fall of 
