@@ -32,6 +32,7 @@ elc_techs = ['NUCLEAR_EXISTING',
              'NUCLEAR_NEW']
 
 emissions = {'CO2eq': ['NUCLEAR_EXISTING',
+                       'NUCLEAR_NEW',
                        'NATGAS_PLANT_EXISTING',
                        'NATGAS_PLANT_NEW',
                        'COAL_PLANT_EXISTING',
@@ -39,7 +40,7 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'SOLAR_FARM',
                        'SOLAR_RESIDENTIAL',
                        'WIND_FARM',
-                       'NUCLEAR_NEW'],
+                       ],
              'CO2': ['NATGAS_PLANT_EXISTING',
                      'NATGAS_PLANT_NEW',
                      'COAL_PLANT_EXISTING',
@@ -53,7 +54,7 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                      'COAL_PLANT_EXISTING',
                      'COAL_PLANT_NEW',],
              'e-waste': ['SOLAR_FARM',
-                        'SOLAR_RESIDENIAL',
+                        'SOLAR_RESIDENTIAL',
                         'WIND_FARM'],
              'spent-fuel': ['NUCLEAR_EXISTING',
                             'NUCLEAR_NEW']}
@@ -375,7 +376,7 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
         ax.set_xticklabels(years, rotation=0, fontsize=24)
 
     plt.yticks(fontsize=24)
-    ax.legend(loc=(1.02, 0.5), fancybox=True, shadow=True,
+    ax.legend(loc=(1.02, 0.1), fancybox=True, shadow=True,
               fontsize=12, prop={'size': 24})
     plt.title(f"Sector: {sector.upper()}", fontsize=24)
     plt.xlabel("Year", fontsize=24)
@@ -647,7 +648,7 @@ def make_plots(data_paths, to_save=True):
     return
 
 
-def make_emissions_plots(data_paths, to_save=True, df_save=True):
+def make_emissions_plots(data_paths, to_save=True, df_save=False):
     """
     This function produces all plots and puts them in a folder
     called 'figure.'

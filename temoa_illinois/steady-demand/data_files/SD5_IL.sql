@@ -727,6 +727,7 @@ CREATE TABLE "MinCapacity" (
 -- INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
+INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 55151.0, 'MWe', 'required capacity for high renewable penetration');
 
 CREATE TABLE "MinActivity" (
 	"regions"	text,
@@ -874,7 +875,7 @@ CREATE TABLE "GrowthRateMax" (
 );
 
 CREATE TABLE "GlobalDiscountRate" (
-	"rate"	real
+	"rate"	realPlanning
 );
 INSERT INTO `GlobalDiscountRate` VALUES (0.05);
 

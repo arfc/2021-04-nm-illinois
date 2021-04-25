@@ -727,6 +727,8 @@ INSERT INTO "MinCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 12431.0, 'MWe'
 INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
+INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 45902.0, 'MWe', 'required capacity for high renewable penetration');
+
 
 CREATE TABLE "MinActivity" (
 	"regions"	text,

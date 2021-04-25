@@ -727,6 +727,7 @@ CREATE TABLE "MinCapacity" (
 -- INSERT INTO "MinCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 12431.0, 'MWe', 'cannot build more than existing capacity');
 
+INSERT INTO "MinCapacity" VALUES ('IL', 2050, 'LI_BATTERY', 52560.0, 'MWe', 'required capacity for high renewable penetration');
 
 CREATE TABLE "MinActivity" (
 	"regions"	text,
@@ -775,6 +776,8 @@ CREATE TABLE "MaxCapacity" (
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2040, 'NUCLEAR_EXISTING', 4905.0, 'MWe', 'cannot build more than existing capacity');
 -- INSERT INTO "MaxCapacity" VALUES ('IL', 2045, 'NUCLEAR_EXISTING', 2541.0, 'MWe', 'cannot build more than existing capacity');
 INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NUCLEAR_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'NATGAS_PLANT_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
+-- INSERT INTO "MaxCapacity" VALUES ('IL', 2050, 'COAL_PLANT_EXISTING', 0.0, 'MWe', 'cannot build more than existing capacity');
 
 
 INSERT INTO "MaxCapacity" VALUES ('IL', 2030, 'SOLAR_RESIDENTIAL', 6900.0, 'MWe', 'restricted to theoretical max from NREL');
