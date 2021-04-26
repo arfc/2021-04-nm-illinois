@@ -1,11 +1,53 @@
 \section{Methods}
 %describe the methods, the data, the assumptions, the scenarios, a brief few 
 %sentences on Temoa itself.
-Our current model leverages a robust dataset that populates multiple analytic 
-models, trained neural networks, and  the Temoa framework (Tools for Energy 
-Model Optimization and Analysis). Temoa is an open-source framework for 
-simulating and optimizing energy systems. With our UIUC microgrid model in 
-Temoa (Figure 1), we are able to determine the optimal energy generation mix 
+
+This work collected data from multiple sources to populate a model of the 
+Illinois electric grid. We built this simulated representation of the state of 
+Illinois atop the Temoa framework, an open source tool built by the North 
+Carolina State University that enables energy system optimization and techno-economic analysis. 
+
+
+For this report, we modeled, simulated, and evaluated optimal solutions to 
+various scenarios which illuminate the potential impact of nuclear plant 
+closures and other policy options on the cost of power in Illinois. These 
+simulations  also explore the state of Illinois' ability to meet its aggressive 
+carbon goals with and without maintenance and expansion of nuclear power 
+capacity. 
+
+Assumptions and constraints in these simulations differentiate the scenarios 
+presented here. An optimization problem like the ones presented here is 
+comprised of two key components. First an objective function in this case 
+minimizes the total system cost of the energy Grid in the state of Illinois. 
+The second feature of an optimization problem of this nature is a set of 
+constraints limiting the model. Dissimulation optimization then proceeded by 
+varying all free parameters within the scope of the Define constraints in order 
+to meet the objective. In this case the free parameters are the deployed 
+generation Technologies mixed into the electric state of Illinois. The 
+simulations each began in the year 2020 and proceed through 2050. The initial 
+condition in 2020 represents the current state of play and energy mixture used 
+for generating electricity in the state of Illinois today.
+
+% paragraph on data sources
+
+Data sources for this project included multiple national and regional 
+databases. Primarily this work relied on federal and international databases from the 
+Energy Information Administration, the International Energy Agency, the Nuclear 
+Regulatory Commission and the Department of Energy's EERE and NE offices. 
+Industry sources included the World Nuclear Association, the Nuclear Energy 
+Institute, Rockland Capital Generation, Sargent \& Lundy, Lazard, and others.
+
+
+% paragraph on reproducibility and location of data/analysis
+
+
+
+\section{Scenarios Simulated}\label{sec:simulations}
+
+This model of Illinois' electric generation leverages robust data and populates 
+an open-source framework for simulating and optimizing energy systems, 
+the Temoa framework (Tools for Energy Model Optimization and Analysis). In this 
+work, we have creamicrogrid model in Temoa (Figure 1), we are able to determine the optimal energy generation mix 
 for the UIUC microgrid for various objective functions (minimize carbon, 
 minimize cost, etc.) while meeting system constraints (zero carbon by 2050, 
 practical deployment speeds, realistic improvements in storage technology 
