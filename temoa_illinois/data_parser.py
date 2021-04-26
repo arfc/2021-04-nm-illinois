@@ -32,6 +32,7 @@ elc_techs = ['NUCLEAR_EXISTING',
              'NUCLEAR_NEW']
 
 emissions = {'CO2eq': ['NUCLEAR_EXISTING',
+                       'NUCLEAR_NEW',
                        'NATGAS_PLANT_EXISTING',
                        'NATGAS_PLANT_NEW',
                        'COAL_PLANT_EXISTING',
@@ -39,7 +40,8 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                        'SOLAR_FARM',
                        'SOLAR_RESIDENTIAL',
                        'WIND_FARM',
-                       'NUCLEAR_NEW'],
+                       'LI_BATTERY'
+                       ],
              'CO2': ['NATGAS_PLANT_EXISTING',
                      'NATGAS_PLANT_NEW',
                      'COAL_PLANT_EXISTING',
@@ -53,8 +55,9 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
                      'COAL_PLANT_EXISTING',
                      'COAL_PLANT_NEW',],
              'e-waste': ['SOLAR_FARM',
-                        'SOLAR_RESIDENIAL',
-                        'WIND_FARM'],
+                        'SOLAR_RESIDENTIAL',
+                        'WIND_FARM',
+                        'LI_BATTERY'],
              'spent-fuel': ['NUCLEAR_EXISTING',
                             'NUCLEAR_NEW']}
 
@@ -324,9 +327,10 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
         If save is true, the plot will be saved rather than
         shown. Default is true.
     """
-    target_folder = "./figures/"
-    if not os.path.isdir(target_folder):
-        os.mkdir(target_folder)
+    if save:
+        target_folder = "./figures/"
+        if not os.path.isdir(target_folder):
+            os.mkdir(target_folder)
 
     units = {'generation': '[GWh]',
              'capacity': '[GW]',
@@ -375,7 +379,7 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
         ax.set_xticklabels(years, rotation=0, fontsize=24)
 
     plt.yticks(fontsize=24)
-    ax.legend(loc=(1.02, 0.5), fancybox=True, shadow=True,
+    ax.legend(loc=(1.02, 0.1), fancybox=True, shadow=True,
               fontsize=12, prop={'size': 24})
     plt.title(f"Sector: {sector.upper()}", fontsize=24)
     plt.xlabel("Year", fontsize=24)
@@ -455,9 +459,10 @@ def emissions_plot(dataframe, variable, scenario, emission, sector, save=True):
         If save is true, the plot will be saved rather than
         shown. Default is true.
     """
-    target_folder = "./figures/"
-    if not os.path.isdir(target_folder):
-        os.mkdir(target_folder)
+    if save:
+        target_folder = "./figures/"
+        if not os.path.isdir(target_folder):
+            os.mkdir(target_folder)
 
     units = {'emissions': f'[million metric tons {emission}]'}
 
@@ -647,7 +652,7 @@ def make_plots(data_paths, to_save=True):
     return
 
 
-def make_emissions_plots(data_paths, to_save=True, df_save=True):
+def make_emissions_plots(data_paths, to_save=True, df_save=False):
     """
     This function produces all plots and puts them in a folder
     called 'figure.'
@@ -699,7 +704,7 @@ def make_emissions_plots(data_paths, to_save=True, df_save=True):
     return
 
 
-def make_capacity_plots(data_paths, to_save=True, df_save=True):
+def make_capacity_plots(data_paths, to_save=True, df_save=False):
     """
     This function produces all plots and puts them in a folder
     called 'figure.'
