@@ -68,6 +68,9 @@
 % but glossaries behaves best if after hyperref
 \usepackage[acronym,toc]{glossaries}
 
+% Allows for FloatBarrier
+\usepackage{placeins}
+
 \usepackage[colorinlistoftodos]{todonotes}
 \include{acros}
 \makeglossaries
@@ -187,7 +190,7 @@
 \input{methods}
 \input{results}
 \input{discussion}
-
+\FloatBarrier
 
 \bibliographystyle{unsrt}
 \bibliography{2021-04-nm-illinois}
