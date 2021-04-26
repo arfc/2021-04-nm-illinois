@@ -5,9 +5,11 @@
 This work collected data from multiple sources to populate a model of the 
 Illinois electric grid. We built this simulated representation of the state of 
 Illinois atop the Temoa framework, an open source tool built by the North 
-Carolina State University that enables energy system optimization and techno-economic analysis. 
+Carolina State University that enables energy system optimization and 
+techno-economic analysis 
+\cite{decarolis_temoa_2010,decarolis_modelling_2016,decarolis_formalizing_2017}.
 
-
+\subsection{Optimization Analysis}
 For this report, we modeled, simulated, and evaluated optimal solutions to 
 various scenarios which illuminate the potential impact of nuclear plant 
 closures and other policy options on the cost of power in Illinois. These 
@@ -28,14 +30,56 @@ simulations each began in the year 2020 and proceed through 2050. The initial
 condition in 2020 represents the current state of play and energy mixture used 
 for generating electricity in the state of Illinois today.
 
+\subsection{Data}
 % paragraph on data sources
 
 Data sources for this project included multiple national and regional 
 databases. Primarily this work relied on federal and international databases from the 
-Energy Information Administration, the International Energy Agency, the Nuclear 
-Regulatory Commission and the Department of Energy's EERE and NE offices. 
-Industry sources included the World Nuclear Association, the Nuclear Energy 
-Institute, Rockland Capital Generation, Sargent \& Lundy, Lazard, and others.
+Energy Information Administration 
+\cite{us_energy_information_administration_eia_preliminary_2021,energy_information_administration_state_2020,us_energy_information_administration_eia_electric_2021,us_energy_information_administration_eia_illinois_2020}, 
+the U.S. Geological Survey \cite{hoen_united_2018}, 
+International Energy Agency \cite{lorenczik_projected_2020}, 
+the Nuclear Energy Agency \cite{crozat_full_2018,}
+, the Nuclear Regulatory Commission \cite{united_states_nuclear_regulatory_commission_illinois_2020}, 
+the Intergovernmental Panel on Climate Change 
+\cite{intergovernmental_panel_on_climate_change_annex_2014,intergovernmental_panel_on_climate_change_climate_2014,intergovernmental_panel_on_climate_change_climate_2014-1,intergovernmental_panel_on_climate_change_climate_2014-2}
+the Interstate Renewable Energy Council 
+\cite{sherwood_us_2009,sherwood_us_2010,sherwood_us_2011,brown_solid_1996,sherwood_us_2012,sherwood_us_2013,sherwood_us_2014}
+and the Department of Energy's EERE and NE offices 
+\cite{us_department_of_energy_capital_2016}, the National Renewable Energy 
+Laboratory \cite{nrel_national_renewable_energy_laboratory_2020_2020}.
+Industry sources included the World Nuclear Association
+\cite{world_nuclear_association_nuclear_2017}
+, 
+the Nuclear Energy Institute 
+\cite{desai_nuclear_2018,desai_nuclear_2020,murphy_impacts_2019,tessum_air_2019},
+Rockland Capital Generation \cite{rockland_capital_natural_2021},
+Sargent \& Lundy \cite{sargent__lundy_capital_2020}, 
+Lazard \cite{ray_lazards_2020},
+and others 
+\cite{the_solar_foundation_national_2020,solar_energy_industries_association_illinois_2020,rutovitz_calculating_2015}.
+
+\cite{makovich_ensuring_2018}
+\cite{berkman_ohio_2017}
+\cite{gross_renewables_2020}
+\cite{ortega_employment_2015}
+\cite{cameron_employment_2015}
+\cite{american_clean_power_american_2020}
+\cite{cleveland_health_2017}
+\cite{ringkjob_review_2018}
+\cite{noauthor_homer_nodate}
+\cite{ramli_comparison_2017}
+\cite{zethmayr_six_2019}
+\cite{gutowski_energy_2013}
+\cite{emilsson_lithium-ion_2019}
+\cite{milligan_methods_2011}
+\cite{reimers_impact_2019}
+\cite{lopez_us_2012}
+\cite{gagnon_rooftop_2016}
+\cite{bresser_chapter_2015}
+\cite{larson_exelon_2020}
+\cite{fonte_wind_2021}
+\cite{velazquez-martinez_critical_2019}
 
 
 % paragraph on reproducibility and location of data/analysis
@@ -46,14 +90,14 @@ open source repository at
 \href{https://github.com/arfc/2021-04-nm-illinois}{github.com/arfc/2021-04-nm-illinois}.
 
 
-
-
 \section{Scenarios Simulated}\label{sec:simulations}
 
 This model of Illinois' electric generation leverages robust data and populates 
 an open-source framework for simulating and optimizing energy systems, 
-the Temoa framework (Tools for Energy Model Optimization and Analysis). In this 
-work, we have creamicrogrid model in Temoa (Figure 1), we are able to determine the optimal energy generation mix 
+the Temoa framework (Tools for Energy Model Optimization and Analysis). 
+In this work 
+
+we are able to determine the optimal energy generation mix 
 for the UIUC microgrid for various objective functions (minimize carbon, 
 minimize cost, etc.) while meeting system constraints (zero carbon by 2050, 
 practical deployment speeds, realistic improvements in storage technology 
