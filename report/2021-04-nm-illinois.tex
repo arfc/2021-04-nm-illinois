@@ -18,7 +18,7 @@
 % bibliographic identification and priority concerns. This information may
 % appear in the title page or in the back of the title page.
 
-% This document has been modified from its original version by Kathryn Huff 
+% This document has been modified from its original version by Kathryn Huff
 % Acknowledgement of the original version is below.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,17 +35,17 @@
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-% 
-% Instructions for using this template:
-% This title page is capable of being compiled as is. This is not useful for 
-% including it in another document. To do this, you have two options: 
 %
-% 1) Copy/paste everything between \begin{document} and \end{document} 
-% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for
+% including it in another document. To do this, you have two options:
+%
+% 1) Copy/paste everything between \begin{document} and \end{document}
+% starting at \begin{titlepage} and paste this into another LaTeX file where you
 % want your title page.
 % OR
 % 2) Remove everything outside the \begin{titlepage} and \end{titlepage}, rename
-% this file and move it to the same directory as the LaTeX file you wish to add it to. 
+% this file and move it to the same directory as the LaTeX file you wish to add it to.
 % Then add \input{./<new filename>.tex} to your LaTeX file where you want your
 % title page.
 %
@@ -61,7 +61,9 @@
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
 \usepackage{mathpazo} % Palatino font
+\usepackage{float}
 \usepackage{graphicx} % For the logo
+\graphicspath{{"./img/"}}
 
 % hyperref usually has to go last
 \usepackage[hidelinks]{hyperref}
@@ -83,7 +85,7 @@
 
 \begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
     \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
-    
+
     \center % Centre everything on the page
 
     %------------------------------------------------
@@ -102,7 +104,7 @@
     \vspace{0.2cm}
     \HRule
     \vspace{0.5cm}
-    
+
     %------------------------------------------------
     %    Author(s)
     %------------------------------------------------
@@ -131,7 +133,7 @@
                        Erin R. \textsc{Fanning}
                \end{flushright}
     \end{minipage}
-    
+
     % If you don't want a supervisor, uncomment the two lines below and comment the code above
     %{\large\textit{Author}}\\
     %John \textsc{Smith} % Your name
@@ -142,11 +144,11 @@
     \vspace{.5cm}
     \textsc{\LARGE\bfseries UIUC-ARFC-2021-01} % Replace YYYY with the year, NN with report index
     \vspace{0.2cm}
-    
+
     %------------------------------------------------
     %    Date
     %------------------------------------------------
-    
+
     \vspace{0.5cm} % Position the date further down the remaining page
     {\large April 20, 2021} % January 1, 3000
     % Use the date of actual publication, change the \today to a set date if you want to be precise
@@ -155,31 +157,31 @@
 %------------------------------------------------
     %    Headings
     %------------------------------------------------
-    
+
     \textsc{\LARGE Advanced Reactors and Fuel Cycles}\\[0.25cm] % Research Group
-    
+
     \textsc{\large Dept. of Nuclear, Plasma, \& Radiological Engineering}\\% Department
-    
+
     \textsc{\large University of Illiois at Urbana-Champaign}\\ % University
 
 
-    
+
     %------------------------------------------------
     %    Logo
     %------------------------------------------------
-    
+
     \vspace{0.5cm}
     \includegraphics[width=0.8\textwidth]{./img/illinois.eps}\\[1cm] % Include a department/university logo - this will require the graphicx package
-     
+
     %----------------------------------------------------------------------------------------
 
     %------------------------------------------------
-    %   Funding 
+    %   Funding
     %------------------------------------------------
-    % For this section, either use \vfill to fill the space 
+    % For this section, either use \vfill to fill the space
     % or insert funding acknowledgement
-    \textit{This research was performed using funding received from Nuclear 
-    Matters, Contract Number NN-NNNN.} 
+    \textit{This research was performed using funding received from Nuclear
+    Matters, Contract Number NN-NNNN.}
 
 \end{titlepage}
 %----------------------------------------------------------------------------------------
@@ -195,4 +197,3 @@
 \bibliographystyle{unsrt}
 \bibliography{2021-04-nm-illinois}
 \end{document}
-
