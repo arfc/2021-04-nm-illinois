@@ -328,7 +328,10 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
         shown. Default is true.
     """
     if save:
-        target_folder = "./figures/"
+        primary = f"../report/img/temoa/"
+        if not os.path.isdir(primary):
+            os.mkdir(primary)
+        target_folder = f"../report/img/temoa/{scenario}/"
         if not os.path.isdir(target_folder):
             os.mkdir(target_folder)
 
@@ -460,7 +463,10 @@ def emissions_plot(dataframe, variable, scenario, emission, sector, save=True):
         shown. Default is true.
     """
     if save:
-        target_folder = "./figures/"
+        primary = f"../report/img/temoa/"
+        if not os.path.isdir(primary):
+            os.mkdir(primary)
+        target_folder = f"../report/img/temoa/{scenario}/"
         if not os.path.isdir(target_folder):
             os.mkdir(target_folder)
 
