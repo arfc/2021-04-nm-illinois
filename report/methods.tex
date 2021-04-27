@@ -1,7 +1,6 @@
 \section{Methods}
 %describe the methods, the data, the assumptions, the scenarios, a brief few 
 %sentences on Temoa itself.
-
 This work collected data from multiple sources to populate a model of the 
 Illinois electric grid. This simulated representation of the state of 
 Illinois relies on the Temoa framework, an open source tool built by the North 
@@ -18,17 +17,19 @@ carbon goals with and without maintenance and expansion of nuclear power
 capacity. 
 
 Assumptions and constraints in these simulations differentiate the scenarios 
-presented here. An optimization problem like the ones presented here is 
-comprised of two key components. First an objective function in this case 
-minimizes the total system cost of the energy Grid in the state of Illinois. 
-The second feature of an optimization problem of this nature is a set of 
-constraints limiting the model. Dissimulation optimization then proceeded by 
-varying all free parameters within the scope of the Define constraints in order 
-to meet the objective. In this case the free parameters are the deployed 
-generation Technologies mixed into the electric state of Illinois. The 
-simulations each began in the year 2020 and proceed through 2050. The initial 
-condition in 2020 represents the current state of play and energy mixture used 
-for generating electricity in the state of Illinois today.
+presented here. Each optimized scenario is the solution to a linear programming 
+problem  comprised of two key components. First, the objective function in this case 
+minimizes the total system cost of the energy grid in the state of Illinois. 
+Second, a set of constraints limit the model soluations. Then, optimization 
+proceeds by varying all free parameters within the scope of the defined constraints in order 
+to meet the objective.
+
+In this case, Temoa varies the deployed ratio of generation technologies on the 
+Illinois electric grid, within the constraints of various policies, to minimize 
+cost. The simulations each begin in the year 2020 
+and proceed through 2050. The initial condition in 2020 represents the current 
+electricity generation mix in the state of Illinois today.
+
 
 \subsection{Data}
 % paragraph on data sources
