@@ -75,10 +75,10 @@ This work was conducted in the open under a BSD-3 open-source license by the
 Advanced Reactors and Fuel Cycles group at the University of Illinois. The 
 data, models, and assumptions used in his work can all be found and explored at 
 open source repository at 
-\href{https://github.com/arfc/2021-04-nm-illinois}{github.com/arfc/2021-04-nm-illinois}.
+\url{https://github.com/arfc/2021-04-nm-illinois}{github.com/arfc/2021-04-nm-illinois}.
 
 \FloatBarrier
-\section{Scenarios Simulated}\label{sec:simulations}
+\subsection{Scenarios Simulated}\label{sec:simulations}
 
 This model of Illinois' electric generation leverages robust data and populates 
 an open-source framework for simulating and optimizing energy systems, 
@@ -102,9 +102,18 @@ All begin with the same initial condition and. The following parameters and limi
 This report will describe the results of the scenarios described in Table \ref{tab:scenarios}. 
 There are twelve, in three major categories. First, the steady demand cases SD1-6 include one business as usual case and five cases exploring the impact of carbon limits and premature nuclear energy closure on the minimum achievable cost. These simulations make conservative assumptions about the cost and availability of advanced nuclear power. To explore the importance of these assumptions, two additonal classes of simulations were explored. In the XN (expensive nuclear) cases, advanced nuclear reactors are assumed to be twice as expensive to build than is currently expected. In the ZN (zero advanced nuclear) cases, advanced nuclear power is not available in time to contribute to carbon reductions in Illinois before 2050.  
 
-\section{Constraints}
+\subsection{Constraints}
 Basic constraints;
-In SDx and XNx
+In CCx and XNx
+
+In all scenarios:
+\begin{itemize}
+        \item The initial conditions in 2020 reflect the true energy mix in 
+                Illinois in 2020.
+        \item Technology models are identical across all simulations with the exception of the capital cost of advanced nuclear, which is altered for the XN scenarios.
+        \item Reliability standard (strategic reserve power?)
+	\item ...
+\end{itemize}
 
 Utility scale solar is restricted to 10 GW by 2030, reflecting an aggressive and optimistic build out based on CEJA goals.
 Wind turbines are restricted to 13.8 GW by 2030, reflecting an aggressive and optimistic build out based on CEJA goals.
@@ -119,3 +128,41 @@ Zero advanced nuclear scenarios are technically less costly, but require an unim
 Zero advanced nuclear scenarios require about 12% land use change for renewables (4% land area for rooftop solar). Keeping the nuclear plants open through 2050 halves this requirement (since nuclear is half of IL generation, currently).
 Keeping the nuclear plants open through 2050 would reduce e-waste by 600,000 metric tons. Using advanced nuclear saves about 900,000 metric tons.
 Keeping the nuclear plants open through 2050 avoids 25 million metric tons of lifecycle CO2 emissions if advanced nuclear is used, and 30 million metric tons if majority renewables is used. Pursuing advanced nuclear over renewables saves about 5 million metric tons.
+\subsection{Technology Models}
+The technology models in Temoa are simple. 
+\subsubsection{Solar Energy Model}
+\subsubsection{Wind Energy Model}
+\subsubsection{Nuclear Energy Model}
+\subsubsection{Coal Energy Model}
+Coal emissions (NO$_x$, SO$_x$, and CO$_2$)
+\subsubsection{Natural Gas Energy Model}
+\subsection{Cost Modeling}
+Where available price and cost data could only be found for previous years, we 
+                accounted for the time value of money by adjusting for 
+                inflation using the ``cpi`` (consumer price index) from the 
+                Bureau of Labor Statistics. The adjusted price becomes: 
+
+\begin{align}
+        P_{2020} &= \mbox{adjusted price in 2020 dollars }[\$]\\
+                &= \frac{P_{n} \cdot CPI_{2020}}{CPI_{n}}\\
+        \intertext{where}
+        P_n &= \mbox{price in year previous year, n } [\$]\\
+        CPI_{2020} &= \mbox{consumer price index for 2020 } [-]\\
+        CPI_n &= \mbox{consumer price indes for year n } [-].
+\end{align}
+
+
+\subsection{Carbon Pricing of Life Cycle Emissions}
+All energy generation technologies have some life cycle emissions.
+In order to account for the cost of lifecycle carbon emissions from each 
+technology, a carbon price was applied to the fixed cost of renewables and 
+nuclear, thus,
+
+\begin{align}
+P_c &= \left[\frac{\$}{tCO2}\right] = \left[\frac{M\$}{MTCO2}\right]\\
+R_c &= \left[\frac{MTCO2}{GWh}\right]\\\\
+FC_c &= R_c\cdot P_c \cdot CF \cdot \frac{hours}{year} = \left[\frac{M\$}{GW-year}\right]
+\end{align}
+
+For fossil fuels, this price was included in their variable costs.
+
