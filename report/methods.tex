@@ -62,7 +62,7 @@ today.
 This model of Illinois' electric generation in the 
 Temoa framework
 is populated by robust data from a variety of sources.
-Data sources for this model of Illinois included multiple national and regional 
+Data sources for this model included multiple national and regional 
 databases. Primarily, this work relied on federal and international databases from the 
 Energy Information Administration 
 \cite{us_energy_information_administration_eia_preliminary_2021,energy_information_administration_state_2020,us_energy_information_administration_eia_electric_2021,us_energy_information_administration_eia_illinois_2020}, 
@@ -102,18 +102,21 @@ open source repository at
 \subsection{Scenarios Simulated}\label{sec:simulations}
 
 The scenarios we conducted are described in Table \ref{tab:scenarios}.
+All share the same objective function, which seeks to minimize total system cost.
 They are clustered in four major categories. First, the business-as-usual cases 
 (BAU) assume no carbon limit, while the carbon constrained cases (CC) assume a zero 
-carbon target in 2030. 
-These simulations reveal the impact of carbon limits and premature nuclear energy closure on 
+carbon target in 2030. Comparing these two simulation categories reveals the 
+potential impact of carbon limits and premature nuclear energy closure on 
 the minimum achievable cost. These simulations make conservative assumptions 
 about the cost and availability of advanced nuclear power. 
-To explore the 
-importance of these assumptions, two additional classes of simulations were 
-explored. In the XN (expensive nuclear) cases, advanced nuclear reactors are 
-assumed to be twice as expensive to build than is currently expected. In the ZN 
-(zero advanced nuclear) cases, advanced nuclear power is not available in time 
-to contribute to carbon reductions in Illinois before 2050.  
+
+To explore the importance of these assumptions, two additional classes of 
+simulations were explored. In the XN (expensive nuclear) cases, advanced 
+nuclear reactors are assumed to be twice as expensive to build than the best 
+conservative estimates. In the ZN (zero advanced nuclear) cases, advanced 
+nuclear power is not available in time to contribute to carbon reductions in 
+Illinois before 2050. These scenarios are summarized in Table 
+\ref{tab:scenarios}. 
 
 \input{scenarios-table}
 
