@@ -143,8 +143,8 @@ to the timing of nuclear plant closures, inclusion of
 carbon targets, and land-use limits for the growth of renewables.
 
 \subsubsection{Byron and Dresden Closures}
-In each family of scenarios the impact of closing Byron \& Dresden is explored 
-by assuming either the two plants: 
+In each family of scenarios, the impact of closing Byron \& Dresden was explored 
+by assuming one of three assumptions. The two plants either:
 \begin{itemize} 
         \item close prematurely, in 2021,
         \item close as scheduled, when their current licenses expire in 20 and 10 
@@ -155,7 +155,7 @@ by assuming either the two plants:
 
 \subsubsection{Other Existing Nuclear}
 In each family of sencarios, the other existing nuclear power plants in 
-Illinois are  either:
+Illinois were  either:
 \begin{itemize}
         \item decommissioned as scheduled according to their current 
 licenses, or 
@@ -204,6 +204,7 @@ power installations are the same regions the nation currently relies on for
 Specifically, strategies which allow nuclear plants to close before 2050 require 10,000$km^2$ of this land to be dedicated to solar as well as 4\% of Illinois' land area in use for rooftop solar. Keeping the nuclear plants open through 2050 halves this requirement.  
 The constraints on utility scale wind and solar are lifted. It is not possible to achieve zero carbon without advanced nuclear under the above constraints.
 
+\FloatBarrier
 \subsection{Technology Models}
 The technology models in Temoa are simple. 
 \subsubsection{Solar Energy Model}
@@ -279,39 +280,38 @@ Natural gas emissions (NO$_x$, SO$_x$, and CO$_2$) data were retrieved from the
 for Utility Scale Power Generating Technologies 
 \cite{sargent__lundy_capital_2020}.
 \subsection{Demand Model}
-Illinois electricity demand has been steady at approximately 140.7 TWh per year
-for the last decade
-\cite{us_energy_information_administration_eia_illinois_2020}. All scenarios
+Illinois electricity demand has remained steady at approximately 140.7 TWh per 
+year for the last decade 
+\cite{us_energy_information_administration_eia_illinois_2020}. All scenarios 
 simulated in this report assume that this demand remains steady annually.
-
-Temoa is able to accept definitions of demand that capture seasonal and daily 
-fluctuations. The typical hourly demand profile and seasonal variation in 
-hourly demand were both retrieved from the \gls{EIA} 
-\cite{us_energy_information_administration_eia_illinois_2020}.  
-Temoa allows the former 
-(Figure \ref{fig:hourly_demand}) can then be 
-modulated by the latter (Figure \ref{fig:seasonal_hourly_demand}. 
-
-If Illinois transportation is fully electrified by 2050, this assumption will
+If Illinois transportation is fully electrified by 2050, this assumption will 
 not be valid.  However, postulating such growth scenarios is  beyond the scope 
 of this report. 
+
+As part of model configuratino, the Temoa framework accepts demand profiles 
+capturing seasonal and daily fluctuations. The typical Illinois hourly demand profile and seasonal variation in hourly demand were both retrieved from the \gls{EIA} 
+\cite{us_energy_information_administration_eia_illinois_2020}. Figure 
+\ref{fig:seasonal_hourly_demand} shows the variation in hourly demand.
+In our simulations, the demand is seasonally modulated by this information.
+
 
 
 \begin{figure}[htbp!]
         \begin{center}
                \includegraphics[width=0.8\textwidth]{seasonal_hourly_demand.png}
-        \end{center}
         \caption{The seasonal variation in hourly demand in Illinois was retrieved from the \gls{EIA} 
         \cite{us_energy_information_administration_eia_illinois_2020} and 
         loaded into Temoa \cite{decarolis_modelling_2016}.}
         \label{fig:seasonal_hourly_demand}
+        \end{center}
 \end{figure}
 
 \subsection{Cost Modeling}
 Where available price and cost data could only be found for previous years, we 
                 accounted for the time value of money by adjusting for 
-                inflation using the ``cpi`` (consumer price index) from the 
-                Bureau of Labor Statistics. The adjusted price becomes: 
+                inflation using the consumer price index from the 
+                Bureau of Labor Statistics \cite{bls_consumer_2021}. The 
+                adjusted price becomes: 
 
 \begin{align}
         P_{2020} &= \mbox{adjusted price in 2020 dollars }[\$]\\
