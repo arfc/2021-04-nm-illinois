@@ -1,104 +1,75 @@
-# Purpose of this Repository:
-This repository is intended as a template to standardize and ease the initialization 
+# Economic and Carbon Impacts of Potential Illinois Nuclear Plant Closures
+This repository holds the data, report text, and analysis related to a report 
+by the Advanced Reactors and Fuel Cycles group at the University of Illinois at 
+Urbana-Champaign. This repository is open in order to enable interested readers 
+to explore the data, question the assumptions, and engage with the work. We 
+welcome your comments. If you would like to make a comment, correction, or 
+improvement, please open an issue in this repository. 
+
+
+## Purpose of the report
+On August 27, 2020, Exelon Generation announced planned premature closures of 
+two Illinois nuclear plants (4 reactor units) which compete economically with 
+fossil fueled plants within the Pennsylvania-New Jersey-Maryland (PJM) 
+interconnection [1]. This report quantitatively explores how these closures 
+would undermine economic and decarbonization goals in the state of Illinois, 
+such as an aggressive target to achieve a zero carbon electric grid by 2030.
+
+
+Previous energy systems research has shown that such clean energy goals cannot 
+be reached if nuclear plants prematurely retire. In particular, the February 
+2021 National Academy of Sciences, Engineering, and Medicine consensus report, 
+“Accelerating Decarbonization of the U.S. Energy System,” determined 
+unequivocally that US decarbonization will require keeping existing nuclear 
+plants open [2]. Consistent with that liter-ture, our simulations indicate that 
+decarbonization in Illinois will require not only maintenance but expansion of 
+nuclear energy capacity. The simulations in this report minimize future 
+Illinois electric system cost in the context of potential policy constraints 
+and demonstrate that:
+
+- nuclear energy is necessary to reach Illinois’ carbon reduction goals,
+- without existing nuclear power, reaching zero carbon would require
+solar deployments to displace 10, 000km2 of critical Illinois farmland.
+- and deploying new advanced nuclear generation is the least expensive way to 
+  allow Illinois farmland to remain farmland while reaching zero-carbon by 
+  2030.
+
+
+These simulations also revealed many specific, complementary conclusions, such as:
+
+- Keeping Illinois’ existing nuclear plants open through 2050 avoids 25 million 
+  metric tons of life-cycle CO2 emissions and 600,000 metric tons of e-waste.
+- Even if advanced nuclear deployments experienced 200% capitalcost overruns, 
+  total system cost impacts would be negligible.
+- Deploying advanced nuclear avoids approximately 900,000metrictons of e-waste.
+- Significant grid-scale battery storage is required to meet any zero- carbon target.
+
+
+intended as a template to standardize and ease the initialization 
+Purpose of this Repository:
 process for Technical Reports from members of the Advanced Reactors and Fuel 
 Cycles group at the University of Illinois at Urbana-Champaign. While this version 
 of the template is geared towards an ARFC Member's report, it can be adapted to 
 any individual's needs.
 
 
-# How to Use this Template:
-
-1. Select the option to "Use this template," located next to the option to clone this repository.
-2. Name the repository, and select "Create repository from template."
-3. Clone your repository with SSH keys.
+# How to Build The Report
+1. Clone your repository with SSH keys.
 	* Open a command line or terminal on your device and enter the directory into which you want to clone your template based repository. 
-	* Enter `git clone git@github.com:USERNAME/REPONAME`. Where USERNAME and REPONAME are replaced respectively by your github account's username and the name you chose to give this repository.
-	* Enter `git remote add upstream git@github.com:USERNAME/REPONAME`
-4. Now you can make edits and changes to the files on your device and push changes to your Github repository as with any other repository.
+	* Enter `git clone git@github.com:arfc/2021-04-nm-illinois`. 
+2. The report directory holds the report. You can build it with LaTeX using 
+   the `make` command. 
+3. The pdf will appear in your report directory. 
 
+# How to Run The Models
+1. Clone your repository with SSH keys.
+	* Open a command line or terminal on your device and enter the directory into which you want to clone your template based repository. 
+	* Enter `git clone git@github.com:arfc/2021-04-nm-illinois`. 
+3. You will need to install the Temoa tool. Use the instructions at 
+   [https://temoacloud.com/](https://temoacloud.com/).
+2. In the temoa-illinois directory you will find sql input files for all Temoa simulations.
+3. Once Temoa is installed, you can run our configured model using the `.sql` 
+   input files in this repository. 
 
-This repository serves as a template, for more information on making and using a template repository, see the 
-[appropriate help article](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
-
-
-# How to Initialize this Repository:
-After you have cloned this repository and are ready to see how it renders, 
-perform the following commands based on which type of document you are trying to produce. 
-
-
-Run the command
-`make {insert type here}`
-
-
-For pdf, insert `all-via-pdf` or `all`.
-
-For dvi, insert `all-via-dvi`.
-
-For epub, insert `epub`.
-
-For zip, insert `zip`.
-
-*Note: Do not include the {} from the make command line, replace the whole {insert type here} text with the command corresponding to the correct file type.*
-
-*Ex: To make as a pdf, the full command should be: `make all-via-pdf`*
-
-### To Clean your Local Directory Run:
-
-`make clean` or `make realclean`
-
-### Some Initialization Notes:
-If the make commands yield errors of:
-
-	I found no \citation commands---while reading file title.aux
-	
-	I found no \bibdata command---while reading file title.aux
-	
-	I found no \bibstyle command---while reading file title.aux
-
-Open the title.tex file and remove the % from infront of the lines
-
-	%\input{main}
-	
-	%\bibliography{bibliography}{}
-	
-	%\bibliographystyle{unsrt}
-	
-located at the bottom of the page. This will allow your `main.tex` file, or any other files 
-you want to use the input command on, to compile and render into your title file. 
-
-
-
-
-# Adding Citations:
-To cite something you have to first add a citation to the bibliography.bib file in your local directory, 
-then insert a citation tag to the element you are citing.
-
-
-### Example Format for a Citation in the Bibliography File:
-	@misc{ call_tag,
-		address = {Example Place},
-		title = {Example Title},
-		abstract = {Details of article you are referencing},
-		booktitle = {Example Title},
-		publisher = {Example Publisher},
-		author = {Example Author},
-		month = {Dec},
-		year = {2017},
-		file = {Example File Extension, to something like Zotero},
-	}
-
-
-
-### Adding a Citation to Elements in your Local Directory:
-
-	This sentence is used as an example citation call ~\cite{call_tag}.
-
-An important note is that the citation is made with what the example called "call_tag." 
-The first line in the example bibliography.bib code contains this tag, and connects the 
-content to the Reference section that will be generated in the document.
-
-
-
-# ARFC Report Manual
-For ARFC specific guidelines for making a report, read the specifics at
-http://arfc.npre.illinois.edu/manual/guides/writing/report
+# How to Cite this Work
+TBD
