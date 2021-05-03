@@ -1,10 +1,12 @@
-\section{Methods}
+\section{Methods}\label{sec:methods}
 %describe the methods, the data, the assumptions, the scenarios, a brief few 
 %sentences on Temoa itself.
 This work collected data from multiple sources to populate a model of the 
-Illinois electric grid. This simulated representation of the state of 
-Illinois relies on the Temoa framework, an open source tool built by the North 
-Carolina State University that enables energy system optimization and 
+Illinois electric grid, including existing generation capacities, potential 
+generation technologies, the costs and wastes associated with each, and the 
+electricity demand profile. This simulated representation of the state of 
+Illinois relies on the Temoa framework, an open source tool built by 
+researchers as \gls{NCSU} which enables energy system optimization and 
 techno-economic analysis 
 \cite{decarolis_temoa_2010,decarolis_modelling_2016,decarolis_formalizing_2017}.
 
@@ -16,38 +18,67 @@ simulations  also explore the state of Illinois' ability to meet its aggressive
 carbon goals with and without maintenance and expansion of nuclear power 
 capacity. 
 
-Assumptions and constraints in these simulations differentiate the scenarios 
-presented here. Each optimized scenario is the solution to a linear programming 
-problem  comprised of two key components. First, the objective function in this case 
-minimizes the total system cost of the energy grid in the state of Illinois. 
-Second, a set of constraints limit the model soluations. Then, optimization 
-proceeds by varying all free parameters within the scope of the defined constraints in order 
-to meet the objective.
+Assumptions and constraints in these simulated scenarios differentiate them. 
+Each optimized scenario is the solution to a linear programming 
+problem  comprised of two key components. First, the objective function in this 
+case minimizes the total system cost of the energy grid in the state of 
+Illinois. 
+Such an objective function is stated thus:
 
-In this case, Temoa varies the deployed ratio of generation technologies on the 
-Illinois electric grid, within the constraints of various policies, to minimize 
-cost. The simulations each begin in the year 2020 
-and proceed through 2050. The initial condition in 2020 represents the current 
-electricity generation mix in the state of Illinois today.
+\begin{align}
+\intertext{minimize} 
+        &\sum_{g=1}^G\int_{t=2030}^{t=2050} (c_g(t)x_g(t))\\
+\intertext{where}
+        G&=\text{number of generation technologies}&\nonumber\\
+        x_g(t)&=\text{capacity of technology g in year t }[TW] &\nonumber\\
+        c_g(t)&=\text{total cost of technology g in year t }\left[\frac{\$}{TW}\right]&\nonumber\\
+        c_g(t)&= (l_g(t) + f_g(t) + v_g(t)cf_g(t)t)x_g(t)\nonumber\\
+        cf_g(t)&=\text{capacity factor of technology g in year t }[\%] &\nonumber\\
+        l_g(t)&=\text{loan cost of technology g in year t }\left[\frac{\$}{TW}\right]&\nonumber\\
+        f_g(t)&=\text{fixed cost of technology g in year t }\left[\frac{\$}{TW}\right]&\nonumber\\
+        v_g(t)&=\text{variable cost of technology g in year t }\left[\frac{\$}{TWh}\right].&\nonumber
+\end{align}
 
+Second, a set of constraints limit the model solutions. In this case, such 
+constraints include balancing electric supply with electric demand, reducing 
+carbon to zero by 2030, specifying renewable energy and energy
+storage deployment speeds, and limiting land use based on availability.
+All begin with the same initial condition. 
+Then, optimization 
+proceeds by varying all free parameters within the scope of the defined 
+constraints in order to meet the objective. Ultimately the simulation solution 
+gives the energy generation mix, $\vec{x_g}$, for the Illinois electric grid that minimizes system cost. 
+In this case, Temoa varies the 
+deployed ratio of generation technologies on the Illinois electric grid, within 
+the constraints of various policies, to minimize cost. The simulations each 
+begin in the year 2020 and proceed through 2050. The initial condition in 2020 
+represents the current electricity generation mix in the state of Illinois 
+today.
 
+\FloatBarrier
 \subsection{Data}
 % paragraph on data sources
-Data sources for this model of Illinois included multiple national and regional 
-databases. Primarily this work relied on federal and international databases from the 
+
+This model of Illinois' electric generation in the 
+Temoa framework
+is populated by robust data from a variety of sources.
+Data sources for this model included multiple national and regional 
+databases. Primarily, this work relied on federal and international databases from the 
 Energy Information Administration 
 \cite{us_energy_information_administration_eia_preliminary_2021,energy_information_administration_state_2020,us_energy_information_administration_eia_electric_2021,us_energy_information_administration_eia_illinois_2020}, 
 the U.S. Geological Survey \cite{hoen_united_2018}, 
 International Energy Agency \cite{lorenczik_projected_2020}, 
-the Nuclear Energy Agency \cite{crozat_full_2018}
-, the Nuclear Regulatory Commission \cite{united_states_nuclear_regulatory_commission_illinois_2020}, 
+the Nuclear Energy Agency \cite{crozat_full_2018}, 
+the Nuclear Regulatory Commission 
+\cite{united_states_nuclear_regulatory_commission_illinois_2020}, 
 the Intergovernmental Panel on Climate Change 
-\cite{intergovernmental_panel_on_climate_change_annex_2014,intergovernmental_panel_on_climate_change_climate_2014,intergovernmental_panel_on_climate_change_climate_2014-1,intergovernmental_panel_on_climate_change_climate_2014-2}
+\cite{intergovernmental_panel_on_climate_change_annex_2014,intergovernmental_panel_on_climate_change_climate_2014,intergovernmental_panel_on_climate_change_climate_2014-1,intergovernmental_panel_on_climate_change_climate_2014-2},
 the Interstate Renewable Energy Council 
-\cite{sherwood_us_2009,sherwood_us_2010,sherwood_us_2011,brown_solid_1996,sherwood_us_2012,sherwood_us_2013,sherwood_us_2014}
-and the Department of Energy's EERE and NE offices 
-\cite{us_department_of_energy_capital_2016}, the National Renewable Energy 
-Laboratory \cite{nrel_national_renewable_energy_laboratory_2020_2020}.
+\cite{sherwood_us_2009,sherwood_us_2010,sherwood_us_2011,brown_solid_1996,sherwood_us_2012,sherwood_us_2013,sherwood_us_2014}, 
+the Department of Energy's EERE and NE offices 
+\cite{us_department_of_energy_capital_2016}, and the National Renewable Energy 
+Laboratory 
+\cite{nrel_national_renewable_energy_laboratory_2020_2020,sengupta_national_2018}.
 Industry sources included the World Nuclear Association
 \cite{world_nuclear_association_nuclear_2017}
 , 
@@ -62,37 +93,254 @@ and others
 
 % paragraph on reproducibility and location of data/analysis
 This work was conducted in the open under a BSD-3 open-source license by the 
-Advanced Reactors and Fuel Cycles group at the University of Illinois. The 
+Advanced Reactors and Fuel Cycles group at the University of Illinois. All 
 data, models, and assumptions used in his work can all be found and explored at 
 open source repository at 
-\href{https://github.com/arfc/2021-04-nm-illinois}{github.com/arfc/2021-04-nm-illinois}.
+\url{https://github.com/arfc/2021-04-nm-illinois}{github.com/arfc/2021-04-nm-illinois}.
+
+\FloatBarrier
+\subsection{Scenarios Simulated}\label{sec:simulations}
+
+The scenarios we conducted are described in Table \ref{tab:scenarios}.
+All share the same objective function, which seeks to minimize total system cost.
+They are clustered in four major categories. First, the business-as-usual cases 
+(BAU) assume no carbon limit, while the carbon constrained cases (CC) assume a zero 
+carbon target in 2030. Comparing these two simulation categories reveals the 
+potential impact of carbon limits and premature nuclear energy closure on 
+the minimum achievable cost. These simulations make conservative assumptions 
+about the cost and availability of advanced nuclear power. 
+
+To explore the importance of these assumptions, two additional classes of 
+simulations were explored. In the XN (expensive nuclear) cases, advanced 
+nuclear reactors are assumed to be twice as expensive to build than the best 
+conservative estimates. In the ZN (zero advanced nuclear) cases, advanced 
+nuclear power is not available in time to contribute to carbon reductions in 
+Illinois before 2050. These scenarios are summarized in Table 
+\ref{tab:scenarios}. 
+
+\input{scenarios-table}
+
+%\begin{figure}
+%  \centering
+%\includegraphics[width=0.3\linewidth]{../data/bau_illinois_input_graphviz/bau_illinois.png}
+%\caption{The directed graph, implemented in Temoa, representing the electric grid in Illinois.} \label{fig:temoa_graph}
+%\end{figure}
 
 
-\section{Scenarios Simulated}\label{sec:simulations}
 
-This model of Illinois' electric generation leverages robust data and populates 
-an open-source framework for simulating and optimizing energy systems, 
-the Temoa framework (Tools for Energy Model Optimization and Analysis). 
-In this work 
+\FloatBarrier
+\subsection{Constraints}
+Some constraints are shared among all scenarios:
+\begin{itemize}
+        \item The initial conditions in 2020 reflect the true energy mix in Illinois in 2020.
+        \item Power supply must meet power demand in each time step.
+        \item Strategic planning reserve must be greater than 15\% of demand.
+        \item Technology models are identical across all simulations with the exception of the capital cost of advanced nuclear, which is altered for the XN scenarios.  
+\end{itemize}
 
-we are able to determine the optimal energy generation mix 
-for the UIUC microgrid for various objective functions (minimize carbon, 
-minimize cost, etc.) while meeting system constraints (zero carbon by 2050, 
-practical deployment speeds, realistic improvements in storage technology 
-capabilities, etc.). The UIUC microgrid model includes transportation as well 
-as campus steam, electric, and chilled water demand and provides cross-decadal 
-deployment solutions which optimize the scenario objective function (Figure 2).
+The simulations diverge due to their differing treatment of constraints related 
+to the timing of nuclear plant closures, inclusion of 
+carbon targets, and land-use limits for the growth of renewables.
 
-This model is underpinned by multiple advanced techniques. For example, a 
-predictive model of net electricity demand on campus has been created with an 
-echo state network machine learning approach to generate representative 
-synthetic predictions of net grid load (Figure 3). This predictive model 
-incorporates weather information to account for solar and wind power generation 
-as well as heating and air-conditioning demands. Such predictive models are 
-trained using multi-year historic campus electricity generation and consumption 
-data. A similar approach will be used in the proposed simulations of the state 
-as a whole.
+\subsubsection{Byron and Dresden Closures}
+In each family of scenarios, the impact of closing Byron \& Dresden was explored 
+by assuming one of three assumptions. The two plants either:
+\begin{itemize} 
+        \item close prematurely, in 2021,
+        \item close as scheduled, when their current licenses expire in 20 and 10 
+        years, or
+        \item receive license extensions and continue operating through 2050.
+\end{itemize}
 
-\input{solid-waste}
 
+\subsubsection{Other Existing Nuclear}
+In each family of sencarios, the other existing nuclear power plants in 
+Illinois were  either:
+\begin{itemize}
+        \item decommissioned as scheduled according to their current 
+licenses, or 
+        \item awarded license extensions and continue operating through 2050.
+\end{itemize}
+
+\subsubsection{Zero Carbon Target}
+In the business as usual cases (BAU1-3), the simulations were not carbon limited. In all 
+other simulations, a linear reduction in carbon emissions beginning in 2020 and 
+reaching zero carbon emissions by 2030. This constrains energy 
+deployment options in those simulations.
+
+\subsubsection{Renewable Growth Rate}
+In the business-as-usual cases, the growth rate for renewable energy is limited by economics, 
+primarly. In the carbon constrained and expensive nuclear scenarios, an 
+optimistic growth rate is enabled.
+In those cases, utility scale solar is allowed to grow to 10 GWe by 2030, 
+reflecting the aggressive and optimistic build out proposed in the Illinois 
+Clean Energy Jobs Act. Similarly, wind turbine deployments grow to 13.8 GWe 
+by 2030. Finally, residential solar is allowed to 
+increase at a steady rate, but is capped at 75\% of the technical resource 
+availability to reflect deployment on 75\% of Illinois buildings 
+\cite{gagnon_rooftop_2016}. 
+
+Without preserving existing nuclear or deploying advanced reactors, the
+required land use for solar and wind generation is infeasible, since the 
+Illinois land appropriate for wind and solar is already in use as vital 
+farmland. The southern and central regions of Illinois most suitable for solar 
+power installations are the same regions the nation currently relies on for 
+15\% of its corn and 14\% of its soybeans \cite{schleusener_illinois_2020}.  
+
+\begin{figure}[htbp!]
+        \begin{center}
+                \includegraphics[height=0.4\textheight]{solar-suitability.png}\\
+                \vspace{0.5cm}
+                \includegraphics[width=\textwidth]{corn-and-soy.png}
+        \end{center}
+        \caption{Corn (bottom left) and soybean (bottom right) crops in Illinois lie predominantly in the 
+        same portion of the state corresponding to the 
+        region of highest solar panel suitability (top) 
+        \cite{schleusener_illinois_2020,eispc_energy_2021,sengupta_national_2018}.}
+        \label{fig:corn-and-soy}
+\end{figure}
+
+
+Specifically, strategies which allow nuclear plants to close before 2050 require 10,000$km^2$ of this land to be dedicated to solar as well as 4\% of Illinois' land area in use for rooftop solar. Keeping the nuclear plants open through 2050 halves this requirement.  
+The constraints on utility scale wind and solar are lifted. It is not possible to achieve zero carbon without advanced nuclear under the above constraints.
+
+\FloatBarrier
+\subsection{Technology Models}
+The technology models in Temoa representing energy source are configured with 
+data regarding fundamental techno-economic parameters such as their capacity, 
+capacity factors, seasonal generation profiles, auxilliary products, waste 
+generation metrics, and costs (fixed, capital, variable, and otherwise). 
+The following subsections describe the key assumptions about electricity 
+generation and storage technologies in the Illinois model built for this 
+report.
+
+\subsubsection{Solar Energy Model}
+Existing solar power capacities and cost data were averaged over the state and 
+based on the \gls{NREL} Annual Technology Baseline for 2020. However, power 
+generation profiles loaded into Temoa representing the variability of solar 
+power, such as the seasonal variation in Figure 
+\ref{fig:seasonal_hourly_solar}, were derived from a reference solar farm, UIUC Solar Farm 1.0, located in Champaign, IL. The data was provided by the University of Illinois Facilities and Services Department.
+\FloatBarrier
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\columnwidth]{./img/seasonal_hourly_solar.png}
+	\caption{}
+	\caption{The seasonal variation in hourly generation from Solar Farm 
+        1.0 at \gls{UIUC}, used as a scaled reference in the Temoa model of the Illinois grid. }
+	\label{fig:seasonal_hourly_solar}
+\end{figure}
+
+\FloatBarrier
+
+\subsubsection{Wind Energy Model}
+Existing wind power capacities, capacity factors, and cost data were averaged over the state and 
+based on the \gls{NREL} Annual Technology Baseline for 2020. However, power 
+generation profiles loaded into Temoa representing the variability of wind 
+generation, such as the seasonal variation in Figure 
+\ref{fig:seasonal_hourly_wind}, were derived from a reference wind farm, Railsplitter Wind Farm, 
+located in Lincoln, IL. The data was provided by the University of Illinois 
+F\&S Department. UIUC has a power purchase agreement with Railsplitter Wind 
+Farm.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\columnwidth]{./img/cap/seasonal_hourly_wind.png}
+	\caption{The seasonal variation in hourly generation from the Railsplitter Wind Farm, used as a scaled reference in the Temoa model of the Illinois grid. }
+	\label{fig:seasonal_hourly_wind}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Nuclear Energy Model}
+Existing nuclear plants in Illinois were specified in the model in accordance with their 
+power levels, licensed lifetimes, capacity factors, and costs. Advanced nuclear power plants, 
+when available to the model, used pricing from the \gls{NREL} Annual Technology 
+Baseline as well as the \gls{NEI} Nuclear Costs in Context report series
+\cite{desai_nuclear_2020,desai_nuclear_2018}.
+
+\subsubsection{Battery Technology}
+
+Grid operators must plan for resource adequacy, and these simulations adopted the standard \gls{NERC} recommendation for planning reserve margin, defined as: 
+\begin{align}
+         PRM &= \frac{ C_{\text{firm}} - D_{\text{peak}} }{ D_{\text{peak}} }\\
+        \intertext{where}
+        C_{\text{firm}} &= \text{The firm capacity  [GW]}\nonumber\\
+        D_{\text{peak}} &= \text{The peak demand  [GW]}.\nonumber
+\end{align}
+
+Firm capacity is sometimes considered the amount of power guaranteed to be
+available for the duration of a commitment. We consider firm capacity to be the
+amount of power that is available ``on-demand.'' Thus, renewable energy sources
+do not contribute to firm capacity. In simulations requiring carbon free
+electricity by 2030 in, the only technologies available to contribute to firm
+capacity are nuclear power and battery storage. 
+
+\subsubsection{Coal Energy Model}
+Coal emissions (NO$_x$, SO$_x$, and CO$_2$) data were retrieved from the 2020 
+Sargent and Lundy report, ``Capital Costs and Performance Characteristics for 
+Utility Scale Power Generating Technologies'' \cite{sargent__lundy_capital_2020}.
+
+\subsubsection{Natural Gas Energy Model}
+Natural gas emissions (NO$_x$, SO$_x$, and CO$_2$) data were retrieved from the 
+2020 Sargent and Lundy report on Capital Costs and Performance Characteristics 
+for Utility Scale Power Generating Technologies 
+\cite{sargent__lundy_capital_2020}.
+\subsection{Demand Model}
+Illinois electricity demand has remained steady at approximately 140.7 TWh per 
+year for the last decade 
+\cite{us_energy_information_administration_eia_illinois_2020}. All scenarios 
+simulated in this report assume that this demand remains steady annually.
+If Illinois transportation is fully electrified by 2050, this assumption will 
+not be valid.  However, postulating such growth scenarios is  beyond the scope 
+of this report. 
+
+As part of model configuratino, the Temoa framework accepts demand profiles 
+capturing seasonal and daily fluctuations. The typical Illinois hourly demand profile and seasonal variation in hourly demand were both retrieved from the \gls{EIA} 
+\cite{us_energy_information_administration_eia_illinois_2020}. Figure 
+\ref{fig:seasonal_hourly_demand} shows the variation in hourly demand.
+In our simulations, the demand is seasonally modulated by this information.
+
+
+
+\begin{figure}[htbp!]
+        \begin{center}
+               \includegraphics[width=0.8\textwidth]{seasonal_hourly_demand.png}
+        \caption{The seasonal variation in hourly demand in Illinois was retrieved from the \gls{EIA} 
+        \cite{us_energy_information_administration_eia_illinois_2020} and 
+        loaded into Temoa \cite{decarolis_modelling_2016}.}
+        \label{fig:seasonal_hourly_demand}
+        \end{center}
+\end{figure}
+
+\subsection{Cost Modeling}
+Where available price and cost data could only be found for previous years, we 
+                accounted for the time value of money by adjusting for 
+                inflation using the consumer price index from the 
+                Bureau of Labor Statistics \cite{bls_consumer_2021}. The 
+                adjusted price becomes: 
+
+\begin{align}
+        P_{2020} &= \mbox{adjusted price in 2020 dollars }[\$]\\
+                &= \frac{P_{n} \cdot CPI_{2020}}{CPI_{n}}\\
+        \intertext{where}
+        P_n &= \mbox{price in year previous year, n } [\$]\\
+        CPI_{2020} &= \mbox{consumer price index for 2020 } [-]\\
+        CPI_n &= \mbox{consumer price indes for year n } [-].
+\end{align}
+
+
+\subsection{Carbon Pricing of Life Cycle Emissions}
+All energy generation technologies have some life cycle emissions.
+In order to account for the cost of lifecycle carbon emissions from each 
+technology, a carbon price was applied to the fixed cost of renewables and 
+nuclear, thus,
+
+\begin{align}
+P_c &= \left[\frac{\$}{tCO2}\right] = \left[\frac{M\$}{MTCO2}\right]\\
+R_c &= \left[\frac{MTCO2}{GWh}\right]\\\\
+FC_c &= R_c\cdot P_c \cdot CF \cdot \frac{hours}{year} = \left[\frac{M\$}{GW-year}\right]
+\end{align}
+
+For fossil fuels, this price was included in their variable costs.
 
