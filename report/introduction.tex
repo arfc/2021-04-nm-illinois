@@ -1,40 +1,33 @@
-\section{Introduction}
-% Text from proposal follows
-In the Department of Nuclear, Plasma, and Radiological Engineering at the 
-University of Illinois, we have published multiple energy analysis studies of 
-this kind \cite{stuff}. Most recently, we conducted a detailed techno-economic 
-optimization of the UIUC campus microgrid as part of a DOE-NE award. We propose 
-to expand this UIUC microgrid optimization to capture the state of Illinois by 
-incorporating data directly from the Energy Information Administration, the 
-Illinois Department of Employment Security, and previous reports on this topic 
-(e.g. \cite{stuff}).
-
-Our current model leverages a robust dataset that populates multiple analytic 
-models, trained neural networks, and  the Temoa framework (Tools for Energy 
-Model Optimization and Analysis)\cite{temoa}. Temoa is an open-source framework for 
-simulating and optimizing energy systems developed at North Carolina State 
-University. With our \gls{UIUC} microgrid model in 
-Temoa (Figure 1), we are able to determine the optimal energy generation mix 
-for the \gls{UIUC} microgrid for various objective functions (minimize carbon, 
-minimize cost, etc.) while meeting system constraints (zero carbon by 2050, 
-practical deployment speeds, realistic improvements in storage technology 
-capabilities, etc.). The UIUC microgrid model includes transportation as well 
-as campus steam, electric, and chilled water demand and provides cross-decadal 
-deployment solutions which optimize the scenario objective function.
-
-
-
-Eleven (11) carbon free nuclear power reactors at 6 sites produce the majority of
-electricity in Illinois and critically underpin its clean energy future. This
+\section{Introduction}\label{sec:intro}
+Eleven (11) emissions-free nuclear reactors at six (6) sites produce the majority of
+electricity in Illinois and critically underpin its clean energy future. Four 
+(4) of these reactors, representing over 4GWe of electric capacity, are at the Byron 
+and Dresden plants which face premature closure. This
 report quantitatively demonstrates the role nuclear energy must play in
-minimizing cost while meeting Illinois’ carbon goals
-through 2050. We have conducted techno-economic optimizations of
-the Illinois energy system to establish optimal energy generation scenarios with and without the
-at-risk plants. With these, we compared and contrasted the economic and carbon implications of
-these energy futures. In addition to emissions, this report also considers
-other environmental impacts of available energy choices, such as land use and
-waste burdens.
+minimizing cost while meeting Illinois’ carbon goals through 2050, with a 
+particular focus on those plants. 
 
-Two reactors at the Byron Generating Station together generate over 2 GWe of
-emissions-free nuclear energy. This plant provides the Byron, Illinois region
-with hundreds of skilled jobs and \$38 million annually in taxes.
+We have 
+modeled the Illinois electric grid and conducted optimization simulations of 
+key policy scenarios. These simulations establish the least costly energy 
+generation mixtures with and without the at-risk plants in the context of 
+various policy factors, such as zero-emissions targets. 
+With these solutions, we compared the economic and carbon implications of these energy futures. 
+In addition to emissions, this report also considers
+other environmental impacts of available energy choices, such as land use and
+solid waste generation. Other recent work has reviewed the potential health 
+impacts of these closures \cite{catf_potential_2021}.
+
+Our simulations utilize Temoa, a tool from \gls{NCSU} for techno-economic 
+modeling, optimization, and analysis 
+\cite{decarolis_temoa_2010,decarolis_modelling_2016,decarolis_formalizing_2017}.  
+Atop Temoa, we built a model of Illinois' electric system that leverages high 
+fidelity data from a variety of sources to explore various potential policy 
+scenarios in the 2020-2050 timeframe.  Comparison among optimal solutions 
+quantified the economic and emissions impacts of prematurely closing nuclear 
+plants, capping emissions, aggressively installing renewable generation, and 
+deploying advanced nuclear reactors.  The following sections describe the 
+methods, data, and assumtions used in the modeled scenarios (Section 
+\ref{sec:methods}), the resulting optimal solutions (Section 
+\ref{sec:results}), and a discussion of the key findings (Section 
+\ref{sec:discussion}).  

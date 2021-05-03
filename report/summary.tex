@@ -1,101 +1,54 @@
 \section{Summary}
-% These are draft comments, various summary sentences to frame the gist.
-On August 27, 2020, Exelon Generation annouced planned premautre closures of two nuclear plants, 
-Byron and Dresden \cite{larson_exelon_2020}. These premature closures reflect 
-the economic challenges these plants face in competition with fossil fueled 
-plants in the market forces within the PJM interconnection. Specifically, in PJM capacity 
-auctions,  low-cost fossil fueled plants, particularly natural gas generation, 
-have recently successfully underbid emissions-free nuclear energy. 
-Corresponding revenue shortfalls in the hundreds of millions of dollars
-undermine the economic feasibility of these plants. 
+On August 27, 2020, Exelon Generation announced planned premature closures of 
+two Illinois nuclear plants (4 reactor units) which compete economically with 
+fossil fueled plants within the \gls{PJM} interconnection \cite{larson_exelon_2020}. 
+This report quantitatively explores how these closures would undermine economic 
+and decarbonization goals in the state of Illinois, such as an aggressive 
+target to achieve a zero carbon electric grid by 2030.
 
-This report explores the extent to which these closures would undermine 
-economic and decarbonization goals in the state of Illinois.  Specifically, 
-proposals in Illinois include agressive carbon reduction targets (namely, zero carbon by 2030) 
-that would necessitate not only maintenance but expansion of firm, 
-emissions-free baseload energy capacity. Energy analysis literature 
-(\cite{national_accelerating_2021,larson_net-zero_2020,others}) implies that those clean energy 
-goals will not be reached if these nuclear plants prematurely retire and that 
-the economic value provided by these plants to the surrounding community will 
-be lost \cite{economic_impact_studies}. 
-Our findings are consistent with that literature, particularly the February 
-2021 National Academy of Sciences, Engineering, and Medicine report, 
-``Accelerating Decarbonization of the U.S. Energy System,'' which determined 
-unequivocally that US decarbonization will require keeping existing nuclear 
-plants open \cite{national_accelerating_2021}.
+Previous energy systems research has shown that such clean energy goals cannot 
+be reached if nuclear plants prematurely retire 
+\cite{national_academies_of_sciences_engineering_and_medicine_2021_accelerating_2021,larson_net-zero_2020,davis_net-zero_2018}.  
+In particular, the February 2021 National Academy of Sciences, Engineering, and 
+Medicine consensus report, ``Accelerating Decarbonization of the U.S. Energy 
+System,'' determined unequivocally that US decarbonization will require keeping 
+existing nuclear plants open 
+\cite{national_academies_of_sciences_engineering_and_medicine_2021_accelerating_2021}. 
+Consistent with that literature, our simulations indicate that decarbonization 
+in Illinois will require not only maintenance but expansion of nuclear energy capacity. 
+\textbf{The simulations in this report minimize future Illinois electric system 
+cost in the context of potential policy constraints and demonstrate that:}
 
-\textbf{The simulations in this report minimize future Illinois electric system cost 
-in the context of constraints imposed by various policy futures.} These simulations utilized the 
-Temoa tool from \gls{NCSU} for Techno-economic modeling, optimization, and 
-analysis. We primarily leveraged data from \gls{EIA}, \gls{IEA}, 
-\gls{NREL}, and \gls{NEI}. Based on this framework, this work explored the economic 
-and emissions impacts of prematurely closing nuclear plants, capping 
-emissions, pricing carbon, agressivly installing renewable generation, and deploying advanced nuclear plants.
+\begin{itemize}
+        \item nuclear energy is necessary to reach Illinois' carbon reduction 
+                goals,
+        \item without existing nuclear power, reaching zero carbon would 
+                require solar deployments to displace $10,000km^2$ of critical 
+                Illinois 
+                farmland.
+        \item and deploying new advanced nuclear generation is the least expensive way to 
+                allow Illinois farmland to remain farmland while reaching 
+                zero-carbon by 2030.
+  \end{itemize}
 
-The energy mixtures that minimized cost in each scenario demonstrated that nuclear energy is necessary to 
-reach Illinois' carbon reduction goals unless nearly all farmland in 
-Illinois were dedicated to solar and wind deployments. 
-Keeping all of Illinois' existing nuclear plants open through 2050 avoids 25 
-million metric tons of lifecycle CO$^2$ emissions. 
-Additionally, a carbon-free grid in Illinois will require significant 
-grid-scale battery storage,  which meets the \gls{NERC} recommended planning 
-reserve margin of 15\% \cite{nerc_reserve_margin}.
-Keeping all Illinois' existing nuclear plants open through 2050 would reduce 
-e-waste by 600,000 metric tons and deploying advanced nuclear avoids 
-approximately 900,000 metric tons of e-waste. 
+\textbf{These simulations also revealed many specific, complementary 
+conclusions, such as:}
+\begin{itemize}
+        \item Keeping Illinois' existing nuclear plants open through 
+                2050 avoids 25 million metric tons of life-cycle CO$_2$ 
+                emissions and 600,000 metric tons of e-waste.
+        \item Even if advanced nuclear deployments experienced 200\% capital 
+                cost overruns, total system cost impacts would be negligible.
+        \item Deploying advanced nuclear avoids approximately 900,000 metric 
+                tons of e-waste. 
+        \item Significant grid-scale battery storage is required to meet any zero-carbon 
+                target.
+\end{itemize}
 
-Without preserving existing nuclear and deploying advanced reactors, the 
-required land use for solar and wind generation is 
-unattainable, particularly since the Illinois land appropriate for wind and solar 
-is already in use as the vital farmland the nation currently relies on for \todo{percent} of its 
-corn and \todo{percent} of its soybeans.
-Specifically, strategies which allow nuclear plants to close before 2050 
-require approximately 12\% of the land area of Illinois to be devoted to 
-renewable generation \todo{this would be better broken down into types of 
-generation\ldots } with  4\% of Illinois' land area in use for rooftop solar. 
-Keeping the nuclear plants open through 2050 halves this requirement.
 
-Finally, simulations exploring the possible impact of cost overruns in advanced nuclear power 
-plant deployment showed that even 200\% capital cost overruns in advanced 
-nuclear deployments would have a negligible impact on total system cost.
-That is, even if advanced nuclear were twice as expensive as predicted, it 
-would still be wise to deploy it in Illinois by 2030, given the state's carbon 
-reduction goals.
-
-%nice text from the ANS students
-%Exelon Generation plans to close Byron and Dresden Nuclear Plants in the fall of 
-%2021 closure of these plants is driven by concern over their
-%economic competitiveness in the current electricity market. However, nuclear power plants
-%provide benefits that are not often captured in the revenue they generate, such as a steady
-%supply of carbon-free electricity, a large tax base to the state and local community, and
-%hundreds of permanent, well-paying jobs.
-%wind and solar will not be able to make up this  gap
-%we will have to start using natural gas \& coal in their place
-%Thousands of people’s jobs will be at risk 
-%Including current University of Illinois students
-%Communities will lose a huge source of funding for them 
-%Nuclear power plants in Illinois pay a lot of property taxes that fund schools and communities
-%Exelon has a culture of volunteering and supporting the community
-%Intern Service Projects
-%Quad Cities Interns Raised \$34,100 for River Bend Food Bank and the Quad Cities Disaster Recovery Fund
-%4 other at-risk plants
-%Here are some contributions made by those 4 plants  
-%\$3.5 billion to state GDP
-%28,000 in-state jobs (direct & secondary)
-%Maintain \$149 million in annual state tax revenue 
-%Avoid 45 million metric tons of CO2 emissions each year
-%Illinois consumers and businesses would pay about \$483 million 
-%more annually for electricity without these four plants
-
-%In Illinois, we enjoy a remarkably clean energy mix thanks to our nuclear power 
-%plants. The six modestly-sized plants produce 90\% of the clean electricity in 
-%Illinois and over half of our total electricity  generation. They run reliably 
-%day and night, unaffected by weather. They also require a remarkably small 
-%footprint, and their waste is tiny in volume, carefully managed and presents no 
-%risks to the public, now or in the future. These nuclear plants are the crucial 
-%ingredient in any low-carbon industrial future for the state, and are 
-%threatened with shutdown decades before any need to consider decommissioning 
-%for technical reasons. 
+%That is, even if advanced nuclear were twice as expensive as predicted, it 
+%would still be wise to deploy it in Illinois by 2030, given the state's carbon 
+%reduction goals.
 
 %Luckily, Illinois’ nuclear plants are among the best in the world, and there is 
 %no reason they shouldn’t continue to run for decades to come. Nuclear plants of 
@@ -120,3 +73,9 @@ reduction goals.
 %gas will result in a net job loss for Illinois.  
 
 
+% specifically capacity auctions, have exacerbated the low-cost fossil fueled 
+% plants have underbid emissions-free nuclear energy. Corresponding revenue 
+% shortfalls in the hundreds 
+%of millions of dollars undermined the economic feasibility of the Byron 
+%and Dresden generating etations in northern Illinois, which provide over 4GWe 
+%of firm, emissions-free power.
