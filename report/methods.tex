@@ -90,6 +90,13 @@ Lazard \cite{ray_lazards_2020},
 and others 
 \cite{the_solar_foundation_national_2020,solar_energy_industries_association_illinois_2020,rutovitz_calculating_2015}.
 
+Of particular, the costs assumed in the model configuration for each technology 
+drove the cost optimization. Table \ref{tab:costs_table} shows the cost 
+assumptions in the models.
+
+\input{cost_table}
+
+
 
 % paragraph on reproducibility and location of data/analysis
 This work was conducted in the open under a BSD-3 open-source license by the 
@@ -103,15 +110,15 @@ open source repository at
 
 The scenarios we conducted are described in Table \ref{tab:scenarios}.
 All share the same objective function, which seeks to minimize total system cost.
-They are clustered in four major categories. First, the business-as-usual cases 
-(BAU) assume no carbon limit, while the carbon constrained cases (CC) assume a zero 
+They are clustered in four major categories. First, the \gls{BAU} cases assume 
+no carbon limit, while the carbon constrained cases (CC) assume a zero 
 carbon target in 2030. Comparing these two simulation categories reveals the 
 potential impact of carbon limits and premature nuclear energy closure on 
 the minimum achievable cost. These simulations make conservative assumptions 
 about the cost and availability of advanced nuclear power. 
 
 To explore the importance of these assumptions, two additional classes of 
-simulations were explored. In the XN (expensive nuclear) cases, advanced 
+simulations were explored. In the \gls{XN} cases, advanced 
 nuclear reactors are assumed to be twice as expensive to build than the best 
 conservative estimates. In the ZN (zero advanced nuclear) cases, advanced 
 nuclear power is not available in time to contribute to carbon reductions in 
@@ -127,7 +134,6 @@ Illinois before 2050. These scenarios are summarized in Table
 %\end{figure}
 
 
-
 \FloatBarrier
 \subsection{Constraints}
 Some constraints are shared among all scenarios:
@@ -135,7 +141,9 @@ Some constraints are shared among all scenarios:
         \item The initial conditions in 2020 reflect the true energy mix in Illinois in 2020.
         \item Power supply must meet power demand in each time step.
         \item Strategic planning reserve must be greater than 15\% of demand.
-        \item Technology models are identical across all simulations with the exception of the capital cost of advanced nuclear, which is altered for the XN scenarios.  
+        \item Technology models are identical across all simulations with the 
+                exception of the capital cost of advanced nuclear, which is 
+                altered for the \gls{XN} scenarios.  
 \end{itemize}
 
 The simulations diverge due to their differing treatment of constraints related 
@@ -154,7 +162,7 @@ by assuming one of three assumptions. The two plants either:
 
 
 \subsubsection{Other Existing Nuclear}
-In each family of sencarios, the other existing nuclear power plants in 
+In each family of scenarios, the other existing nuclear power plants in 
 Illinois were  either:
 \begin{itemize}
         \item decommissioned as scheduled according to their current 
@@ -163,14 +171,14 @@ licenses, or
 \end{itemize}
 
 \subsubsection{Zero Carbon Target}
-In the business as usual cases (BAU1-3), the simulations were not carbon limited. In all 
+In the business as usual cases (\gls{BAU}1-3), the simulations were not carbon limited. In all 
 other simulations, a linear reduction in carbon emissions beginning in 2020 and 
 reaching zero carbon emissions by 2030. This constrains energy 
 deployment options in those simulations.
 
 \subsubsection{Renewable Growth Rate}
 In the business-as-usual cases, the growth rate for renewable energy is limited by economics, 
-primarly. In the carbon constrained and expensive nuclear scenarios, an 
+primarily. In the carbon constrained and expensive nuclear scenarios, an 
 optimistic growth rate is enabled.
 In those cases, utility scale solar is allowed to grow to 10 GWe by 2030, 
 reflecting the aggressive and optimistic build out proposed in the Illinois 
@@ -208,7 +216,7 @@ The constraints on utility scale wind and solar are lifted. It is not possible t
 \subsection{Technology Models}
 The technology models in Temoa representing energy source are configured with 
 data regarding fundamental techno-economic parameters such as their capacity, 
-capacity factors, seasonal generation profiles, auxilliary products, waste 
+capacity factors, seasonal generation profiles, auxiliary products, waste 
 generation metrics, and costs (fixed, capital, variable, and otherwise). 
 The following subsections describe the key assumptions about electricity 
 generation and storage technologies in the Illinois model built for this 
@@ -219,7 +227,8 @@ Existing solar power capacities and cost data were averaged over the state and
 based on the \gls{NREL} Annual Technology Baseline for 2020. However, power 
 generation profiles loaded into Temoa representing the variability of solar 
 power, such as the seasonal variation in Figure 
-\ref{fig:seasonal_hourly_solar}, were derived from a reference solar farm, UIUC Solar Farm 1.0, located in Champaign, IL. The data was provided by the University of Illinois Facilities and Services Department.
+\ref{fig:seasonal_hourly_solar}, were derived from a reference solar farm, 
+\gls{UIUC} Solar Farm 1.0, located in Champaign, IL. The data was provided by the University of Illinois Facilities and Services Department.
 \FloatBarrier
 
 \begin{figure}[H]
@@ -240,7 +249,7 @@ generation profiles loaded into Temoa representing the variability of wind
 generation, such as the seasonal variation in Figure 
 \ref{fig:seasonal_hourly_wind}, were derived from a reference wind farm, Railsplitter Wind Farm, 
 located in Lincoln, IL. The data was provided by the University of Illinois 
-F\&S Department. UIUC has a power purchase agreement with Railsplitter Wind 
+F\&S Department. \gls{UIUC} has a power purchase agreement with Railsplitter Wind 
 Farm.
 
 
@@ -295,7 +304,7 @@ If Illinois transportation is fully electrified by 2050, this assumption will
 not be valid.  However, postulating such growth scenarios is  beyond the scope 
 of this report. 
 
-As part of model configuratino, the Temoa framework accepts demand profiles 
+As part of model configuration, the Temoa framework accepts demand profiles 
 capturing seasonal and daily fluctuations. The typical Illinois hourly demand profile and seasonal variation in hourly demand were both retrieved from the \gls{EIA} 
 \cite{us_energy_information_administration_eia_illinois_2020}. Figure 
 \ref{fig:seasonal_hourly_demand} shows the variation in hourly demand.
@@ -326,13 +335,13 @@ Where available price and cost data could only be found for previous years, we
         \intertext{where}
         P_n &= \mbox{price in year previous year, n } [\$]\\
         CPI_{2020} &= \mbox{consumer price index for 2020 } [-]\\
-        CPI_n &= \mbox{consumer price indes for year n } [-].
+        CPI_n &= \mbox{consumer price index for year n } [-].
 \end{align}
 
 
 \subsection{Carbon Pricing of Life Cycle Emissions}
 All energy generation technologies have some life cycle emissions.
-In order to account for the cost of lifecycle carbon emissions from each 
+In order to account for the cost of life cycle carbon emissions from each 
 technology, a carbon price was applied to the fixed cost of renewables and 
 nuclear, thus,
 
