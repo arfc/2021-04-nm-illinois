@@ -72,4 +72,32 @@ any individual's needs.
    input files in this repository. 
 
 # How to Cite this Work
-TBD
+
+Dotson, Samuel G., Amanda M. Bachmann, Zoë M. Richter, Nataly R. Panczyk, 
+Nathan S. Ryan, Anna C. Balla, and Erin R. Fanning. 2021. “Economic and Carbon 
+Impacts of Potential Illinois Nuclear Plant Closures: The Cost of Closures.” 
+Technical Report UIUC-ARFC-2021-02. Advanced Reactors and Fuel Cycles Group 
+Report Series. Urbana, IL: University of Illinois at Urbana-Champaign. 
+github.com/arfc/2021-04-nm-illinois.
+
+
+```tex
+@techreport{dotson_economic_2021,
+	address = {Urbana, IL},
+	type = {Technical {Report}},
+	title = {Economic and {Carbon} {Impacts} of {Potential} {Illinois} {Nuclear} {Plant} {Closures}: {The} {Cost} of {Closures}},
+	shorttitle = {Comissioned by {Nuclear} {Matters}},
+	url = {github.com/arfc/2021-04-nm-illinois},
+	abstract = {n August 27, 2020, Exelon Generation announced planned premature clo- sures of two Illinois nuclear plants (4 reactor units) which compete eco- nomically with fossil fueled plants within the Pennsylvania-New Jersey- Maryland (PJM) interconnection [1]. This report quantitatively explores how these closures would undermine economic and decarbonization goals in the state of Illinois, such as an aggressive target to achieve a zero carbon electric grid by 2030.
+Previous energy systems research has shown that such clean energy goals cannot be reached if nuclear plants prematurely retire [2, 3, 4]. In particular, the February 2021 National Academy of Sciences, Engineering, and Medicine consensus report, {\textquotedblleft}Accelerating Decarbonization of the U.S. Energy System,{\textquotedblright} determined unequivocally that US decarbonization will require keeping existing nuclear plants open [2]. Consistent with that liter- ature, our simulations indicate that decarbonization in Illinois will require not only maintenance but expansion of nuclear energy capacity.},
+	language = {english},
+	number = {UIUC-ARFC-2021-02},
+	institution = {University of Illinois at Urbana-Champaign},
+	author = {Dotson, Samuel G. and Bachmann, Amanda M. and Richter, Zo{\"e} M. and Panczyk, Nataly R. and Ryan, Nathan S. and Balla, Anna C. and Fanning, Erin R.},
+	editor = {Huff, Kathryn D. and Munk, Madicken},
+	month = may,
+	year = {2021},
+	keywords = {arfc, cyclus, nuclear fuel cycle, report},
+	pages = {1--20}
+}
+```
