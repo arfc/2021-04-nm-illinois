@@ -1,14 +1,15 @@
 \section{Results}\label{sec:results}
 %describe the results, stick to the facts.
 
-We report the total system cost, cumulative carbon equivalent emissions,
+We report the deplioyed generation mixes that minimize cost, cumulative carbon 
+equivalent emissions,
 cumulative solid waste produced, and total land use change for each of the
 twelve scenarios considered. Figure \ref{fig:cap-2050} shows the mixture of
 Illinois electricity resources in 2050, the final year of each simulation.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{temoa/final_capacity.png}
+  \includegraphics[width=\linewidth]{temoa/final_generation.png}
   \caption{The mixture of electric generation in Illinois by 2050 for each scenario.}
   \label{fig:cap-2050}
 \end{figure}
@@ -36,32 +37,18 @@ build 34 GW of rooftop solar, 77 percent of the technical limit \cite{gagnon_roo
 
 In every scenario, Illinois will need, at minimum, 45.7 GW of 4.87 hour duration
 energy storage to ensure grid reliability according to NERC recommendations
-\cite{milligan_methods_2011}. With zero firm-capacity from nuclear
-generation, 65.2 GW of battery storage is required.
+\cite{milligan_methods_2011}. With zero firm capacity from nuclear
+generation, 65.2 GW of battery storage is required. Since the current total 
+utility-scale batter storage capacity in the US is just over 1.5GW, such 
+battery storage capacity deployment is unrealistic.
 
-\begin{figure}[htbp!]
-        \begin{center}
-                \includegraphics{temoa/final_generation.png}
-        \end{center}
-        \caption{The final generation mix in the year 2050 in each scenario.}
-        \label{fig:final_generation}
-\end{figure}
-
-\subsection{Total System Cost}
-Figure \ref{fig:system-cost} shows the total system cost for each scenario.
-All of the carbon-constrained scenarios are more expensive than business-as-
-usual. In scenarios XN1, XN2, and XN3, which simulated significant cost overruns
-for advanced nuclear technology, the total system cost is at most 0.06 percent
-higher than in CC1, CC2, and CC3. Thus, the effect of cost overruns in new
-nuclear builds is negligible. The ZNx scenarios are at most 5.5 percent cheaper
-than scenarios with advanced nuclear. 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\columnwidth]{temoa/total_system_cost}
-  \caption{The total system cost for each scenario.}
-  \label{fig:system-cost}
-\end{figure}
+In these optimization simulations, all of the carbon-constrained scenarios were 
+more expensive than business-as-usual. In scenarios XN1, XN2, and XN3, which 
+simulated significant cost overruns for advanced nuclear technology, the total 
+system cost was, at most, 0.06\% higher than in CC1, CC2, and CC3. Thus, the 
+effect of cost overruns in new nuclear builds is negligible. The ZNx scenarios 
+were at most 5.5\% percent cheaper than scenarios with advanced nuclear, which 
+is well within uncertainty for these analyses. 
 
 \subsection{CO$_2$ Equivalent Emissions}
 
@@ -85,13 +72,13 @@ for each scenario are shown in Figure \ref{fig:co2eq-cumulative}
 \end{figure}
 
 Table \ref{tab:co2eq-cumulative} shows that keeping existing nuclear
-plants open, while investing in both advanced nuclear technology and renewable
-energy, generates the lowest lifecycle carbon emissions.
+plants open while investing in both advanced nuclear technology and renewable
+energy generates the lowest lifecycle carbon emissions.
+The scenario with the lowest carbon emissions is listed in bold in Table \ref{tab:co2eq-cumulative}.
 
 \begin{table}[H]
   \centering
-  \caption{Cumulative Lifecycle CO$_2$eq Emissions\\The scenario with the
-  lowest carbon emissions is in bold.}
+        \caption{Cumulative Lifecycle CO$_2$eq Emissions}
   \label{tab:co2eq-cumulative}
   \begin{tabular}{lrc}
     \hline
@@ -114,7 +101,10 @@ energy, generates the lowest lifecycle carbon emissions.
 \subsection{Solid Waste}
 
 Solid waste forms are a key benefit of solar, wind, and nuclear technology since
-society can decide how and where the waste will be stored or recycled. Figure
+society can decide how and where the waste will be stored or recycled. Solid 
+waste is advantageous when compared to liquid or gaseous effluents (e.g. 
+NO$_x$, SO$_x$, CO$_2$, and air particulates) which are 
+more challenging to manage. Figure
 \ref{fig:total-waste} shows the total waste that must be handled by 2050.
 
 \begin{figure}[H]
@@ -134,12 +124,12 @@ through 2050 avoids the most solid waste production. Table \ref{tab:total-waste}
 shows the total accumulated waste. Once again, the scenario that generates the
 least solid waste is CC3/XN3, where the existing nuclear fleet is kept open,
 renewable energy is built aggressively, and advanced nuclear technology is
-pursued.
+pursued. In Table \ref{tab:total-waste}, the scenario with the lowest
+accumulated waste is in bold.
 
 \begin{table}[H]
   \centering
-  \caption{Solid Waste Accumulated by 2050\\The scenario with the
-  lowest accumulated waste is in bold.}
+  \caption{Solid Waste Accumulated by 2050}
   \label{tab:total-waste}
   \begin{tabular}{lrc}
     \hline
