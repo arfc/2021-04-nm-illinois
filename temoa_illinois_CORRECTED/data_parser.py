@@ -53,11 +53,11 @@ emissions = {'CO2eq': ['NUCLEAR_EXISTING',
              'SO2': ['NATGAS_PLANT_EXISTING',
                      'NATGAS_PLANT_NEW',
                      'COAL_PLANT_EXISTING',
-                     'COAL_PLANT_NEW',],
+                     'COAL_PLANT_NEW', ],
              'e-waste': ['SOLAR_FARM',
-                        'SOLAR_RESIDENTIAL',
-                        'WIND_FARM',
-                        'LI_BATTERY'],
+                         'SOLAR_RESIDENTIAL',
+                         'WIND_FARM',
+                         'LI_BATTERY'],
              'spent-fuel': ['NUCLEAR_EXISTING',
                             'NUCLEAR_NEW']}
 
@@ -87,7 +87,7 @@ def data_by_year(datalines, year):
     """
     datayear = []
 
-    for i,line in enumerate(datalines):
+    for i, line in enumerate(datalines):
         line_year = re.findall(r"[-+]?\d*\.\d+|\d+", line)
         if len(line_year) > 1:
             line_year = line_year[1].strip("\'")
@@ -291,7 +291,6 @@ def create_dataframe(
         else:
             dataframe.to_csv(f'{name}_{sector}_{variable}.csv')
 
-
     return dataframe
 
 
@@ -356,22 +355,24 @@ def bar_plot(dataframe, variable, scenario, sector, emission=None, save=True):
             bar.set_hatch(hatch)
     else:
         if (variable.lower() == 'capacity'):
-            dataframe = dataframe/1000
+            dataframe = dataframe / 1000
         ax = dataframe.loc[1:, dataframe.columns !=
                            'total'].plot.bar(stacked=True)
         bars = ax.patches
         if sector == 'vcl':
             plt.suptitle(
                 (f"{scenario.upper()}: Total Annual {variable.capitalize()} in "
-                 f"{units['transportation']}"),
-                fontsize=36)
-            plt.ylabel(f"{variable.capitalize()} {units['transportation']}", fontsize=24)
+                 f"{units['transportation']}"), fontsize=36)
+            plt.ylabel(
+                f"{variable.capitalize()} {units['transportation']}",
+                fontsize=24)
         else:
             plt.suptitle(
                 (f"{scenario.upper()}: Total Annual {variable.capitalize()} in "
-                 f"{units[variable.lower()]}"),
-                fontsize=36)
-            plt.ylabel(f"{variable.capitalize()} {units[variable.lower()]}", fontsize=24)
+                 f"{units[variable.lower()]}"), fontsize=36)
+            plt.ylabel(
+                f"{variable.capitalize()} {units[variable.lower()]}",
+                fontsize=24)
         for bar, hatch in zip(bars, hatches):
             bar.set_hatch(hatch)
 
@@ -490,8 +491,9 @@ def emissions_plot(dataframe, variable, scenario, emission, sector, save=True):
             color='tab:purple',
             label=f'{emission} Emissions')
 
-    plt.suptitle(f"{scenario.upper()}: Total Annual {emission} {variable.capitalize()}",
-                 fontsize=36)
+    plt.suptitle(
+        f"{scenario.upper()}: Total Annual {emission} {variable.capitalize()}",
+        fontsize=36)
     plt.title(f"Sector: {sector.upper()}", fontsize=24)
     plt.ylabel(f"{emission} {units[variable.lower()]}", fontsize=24)
     plt.xlabel("Year", fontsize=24)
@@ -623,11 +625,16 @@ def make_plots(data_paths, to_save=True):
                                        sector='all',
                                        save=to_save)
             else:
-                df_elc = create_dataframe(datalines, var, scenario, sector='elc')
-                df_ind = create_dataframe(datalines, var, scenario, sector='ind')
-                df_vcl = create_dataframe(datalines, var, scenario, sector='vcl')
-                df_chw = create_dataframe(datalines, var, scenario, sector='chw')
-                df_all = create_dataframe(datalines, var, scenario, sector='all')
+                df_elc = create_dataframe(
+                    datalines, var, scenario, sector='elc')
+                df_ind = create_dataframe(
+                    datalines, var, scenario, sector='ind')
+                df_vcl = create_dataframe(
+                    datalines, var, scenario, sector='vcl')
+                df_chw = create_dataframe(
+                    datalines, var, scenario, sector='chw')
+                df_all = create_dataframe(
+                    datalines, var, scenario, sector='all')
                 plot = plots_dict[var]
                 plot(dataframe=df_elc,
                      variable=var,
@@ -810,8 +817,8 @@ def make_reactor_plots(data_paths, to_save=True):
             except KeyError:
                 st = 0
             tot = el + st
-            technology_dict['NBINE'].append(el/tot)
-            technology_dict['UH'].append(st/tot)
+            technology_dict['NBINE'].append(el / tot)
+            technology_dict['UH'].append(st / tot)
 
         dataframe = pd.DataFrame(technology_dict)
         dataframe.set_index('Year', inplace=True)
