@@ -10,21 +10,21 @@ all-via-pdf: $(manuscript).tex $(references)
 	pdflatex $(latexopt) $<
 	pdflatex $(latexopt) $<
 
-all-via-dvi: 
+all-via-dvi:
 	latex $(latexopt) $(manuscript)
 	bibtex $(manuscript).aux
 	latex $(latexopt) $(manuscript)
 	latex $(latexopt) $(manuscript)
 	dvipdf $(manuscript)
 
-epub: 
+epub:
 	latex $(latexopt) $(manuscript)
 	bibtex $(manuscript).aux
 	mk4ht htlatex $(manuscript).tex 'xhtml,charset=utf-8,pmathml' ' -cunihtf -utf8 -cvalidate'
 	ebook-convert $(manuscript).html $(manuscript).epub
 
 clean:
-	rm -f $(manuscript).pdf *.dvi *.toc *.aux *.out *.log *.bbl *.blg *.log *.spl *~ *.spl *.zip *.acn *.glo *.ist *.epub
+	rm -f *.dvi *.toc *.aux *.out *.log *.bbl *.blg *.log *.spl *~ *.spl *.zip *.acn *.glo *.ist *.epub
 
 realclean: clean
 	rm -rf $(manuscript).dvi
